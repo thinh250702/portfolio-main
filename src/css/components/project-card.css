@@ -1,0 +1,32 @@
+@layer components {
+  .project-card {
+    @apply bg-white border border-gray-200 rounded-3xl shadow-md;
+    & > .project-card__thumbnail {
+      @apply px-3 pt-3;
+      & > a {
+        @apply block aspect-4/3 w-full overflow-hidden rounded-xl;
+        & > img {
+          @apply w-full h-full object-cover;
+        }
+      }
+    }
+    & > .project-card__body {
+      @apply px-6 pt-6 pb-5;
+      & > .project-card__meta {
+        @apply flex items-center justify-between mb-3;
+        & > .project-card__category {
+          @apply label-xs uppercase font-medium px-3 py-1.5 bg-gray-100 border border-gray-200 rounded-full;
+        }
+        & > .project-card__year {
+          @apply label-md font-medium tracking-tight
+        }
+      }
+      & > .project-card__title {
+        @apply block h3 font-medium tracking-tight mb-2
+      }
+      & > .project-card__desc {
+        @apply body-md
+      }
+    }
+  }
+}

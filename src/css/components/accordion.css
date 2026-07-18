@@ -1,0 +1,31 @@
+@layer components {
+  .accordion {
+    & .accordion-item {
+      @apply pt-8 border-t cursor-default;
+      & .accordion-header {
+        @apply flex items-center;
+        & > span {
+          @apply inline-block w-[15%] title-md font-medium tracking-tighter;
+        }
+        & > h3 {
+          @apply font-medium tracking-tighter;
+        }
+      }
+      & .accordion-collapse {
+        @apply pl-[15%] pt-2 pb-8 h-0 overflow-hidden;
+        & > p {
+          @apply mb-6 opacity-0;
+        }
+        & > div {
+          @apply flex flex-wrap gap-2 opacity-0;
+        }
+      }
+    }
+  }
+  .accordion-images {
+    @apply aspect-square w-full h-auto relative;
+    & > img {
+      @apply absolute w-full h-full object-cover rounded-3xl opacity-0 invisible
+    }
+  }
+}

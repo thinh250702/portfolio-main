@@ -1,0 +1,147 @@
+@source "../../views";
+@import "tailwindcss";
+
+/* Theme */
+
+/* Base styles */
+@import "./base/fonts.css";
+@import "./base/typography.css";
+@import "./base/grid.css";
+
+/* Utilities */
+
+/* Components */
+@import "./components/button.css";
+@import "./components/project-card.css";
+@import "./components/accordion.css";
+@import "./components/form.css";
+
+@theme {
+  --font-sans: "Zalando Sans", sans-serif;
+  --font-serif: "LC Sac Display", serif;
+
+  --leading-normal: 1.45;
+  --leading-tight: 1.2;
+
+  --text-heading-1: clamp(48px,3.33vw,64px);
+  --text-heading-2: clamp(40px,2.5vw,48px);
+  --text-heading-3: clamp(32px,1.875vw,36px);
+  --text-heading-4: clamp(24px,1.458vw,28px);
+  --text-heading-5: clamp(20px,1.25vw,24px);
+  --text-heading-6: clamp(18px,1.04vw,20px);
+  --text-display-lg: clamp(4rem,5vw,6rem);
+
+  --color-gray-50: oklch(98.5% 0 0);
+  --color-gray-100: oklch(96.7% 0.001 286.4);
+  --color-gray-200: oklch(92% 0.004 286.3);
+  --color-gray-300: oklch(87.1% 0.005 286.3);
+  --color-gray-400: oklch(70.6% 0.014 286);
+  --color-gray-500: oklch(55.2% 0.015 285.9);
+  --color-gray-600: oklch(44.2% 0.016 285.7);
+  --color-gray-700: oklch(37% 0.012 285.8);
+  --color-gray-800: oklch(27.4% 0.005 286);
+  --color-gray-900: oklch(21% 0.006 285.9);
+  --color-gray-950: oklch(11.5% 0 0);
+
+  --radial-x: 50%;
+  --radial-y: 50%;
+
+  --animate-marquee: marquee 30s linear infinite;
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  --animate-shimmer: shimmer 2s linear infinite;
+  @keyframes shimmer {
+    from {
+      background-position: -200% 0;
+    }
+
+    to {
+      background-position: 200% 0;
+    }
+  }
+}
+
+@custom-variant light (.is-light &);
+
+@layer base {
+  h1 {
+    @apply text-heading-1/tight 
+  }
+  h2 {
+    @apply text-heading-2/tight
+  }
+  h3 {
+    @apply text-heading-3/tight
+  }
+  h4 {
+    @apply text-heading-4/tight
+  }
+  h5 {
+    @apply text-heading-5/tight
+  }
+  h6 {
+    @apply text-heading-6/tight
+  }
+  html, body {
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+  }
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer components {
+  .horizontal-logo {
+    @apply bg-black aspect-1296/328 mask-[url('/uploads/logo-ngang.svg')] mask-contain mask-no-repeat mask-center
+  }
+  .vertical-logo {
+    @apply bg-black aspect-370/267 mask-[url('/uploads/logo-doc.svg')] mask-contain mask-no-repeat mask-center
+  }
+  .symbol-logo {
+    @apply bg-black aspect-240/147 mask-[url('/uploads/logo-symbol.svg')] mask-contain mask-no-repeat mask-center
+  }
+  .eyebrow {
+    @apply eyebrow-text inline-block pl-16 relative mb-1;
+    &::before {
+      @apply content-['\0066'] font-['portfolio'] not-italic font-normal text-[56px] leading-6
+      absolute left-0 top-0;
+    }
+  }
+  .hover-text {
+    @apply inline-block overflow-hidden w-full;
+    & > span {
+      @apply block relative transition-transform duration-300
+    }
+    & > span::before {
+      @apply content-[attr(data-label)] absolute top-full 
+    }
+  }
+  .brand-logo {
+    @apply aspect-3/2 h-32.5 relative;
+    & > .brand-logo-img {
+      --logo-image: url('');
+      @apply mask-(--logo-image) mask-contain mask-no-repeat mask-center absolute inset-0 opacity-50 hover:opacity-100 transition duration-300;
+    }
+  }
+  .social-link {
+    @apply flex items-center;
+    & > a {
+      @apply bg-gray-100 border border-gray-200 size-16 rounded-[1.25rem] flex items-center justify-center mr-4;
+      & > i {
+        @apply text-3xl
+      }
+    }
+    & .social-link-handle {
+      @apply mt-0.5 text-gray-400
+    }
+  }
+}

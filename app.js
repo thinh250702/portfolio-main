@@ -4,9 +4,10 @@ import path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import { fileURLToPath } from 'url';
+import { engine } from 'express-handlebars';
 
 import indexRouter from './routes/index.js';
-import usersRouter from './routes/users.js';
+import routes from './routes/index.js';
 
 // Tự định nghĩa __filename và __dirname cho ES Module
 const __filename = fileURLToPath(import.meta.url);
@@ -15,8 +16,15 @@ const __dirname = path.dirname(__filename);
 const app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.engine('hbs', engine({
+    extname: '.hbs',
+    defaultLayout: 'main',
+    layoutsDir: path.join(__dirname, 'views/layouts'),
+    partialsDir: path.join(__dirname, 'views/partials')
+}));
+
 app.set('view engine', 'hbs');
+app.set('views', path.join(__dirname, 'views'));
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -24,8 +32,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use(routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,0 +1,18 @@
+@layer components {
+  .form-control {
+    @apply bg-white w-full block pt-3 pb-5 border-b border-gray-200 focus:border-black outline-none transition duration-200;
+  }
+  .form-label {
+    @apply block label-md font-medium;
+  }
+  .form-check-input {
+    @apply absolute opacity-0 w-0 h-0;
+    &:checked + label {
+      @apply bg-black border-black text-white;
+    }
+  }
+  .form-check-label {
+    @apply inline-block border border-gray-200 px-4 py-2 rounded-full select-none cursor-pointer 
+    hover:border-black transition duration-200;
+  }
+}
