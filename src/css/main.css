@@ -12,9 +12,9 @@
 
 /* Components */
 @import "./components/button.css";
-@import "./components/project-card.css";
 @import "./components/accordion.css";
 @import "./components/form.css";
+@import "./components/badge.css";
 
 @theme {
   --font-sans: "Zalando Sans", sans-serif;
@@ -100,6 +100,17 @@
 }
 
 @layer components {
+  header {
+    .color-transition {
+      @apply transition-colors duration-200;
+    }
+    &.is-scrolled {
+      #header__wrapper {
+        @apply py-1.5 pr-1.5 pl-4 border border-gray-200 bg-white shadow-md;
+      }
+    }
+  }
+  /* SVG Logo */
   .horizontal-logo {
     @apply bg-black aspect-1296/328 mask-[url('/uploads/logo-ngang.svg')] mask-contain mask-no-repeat mask-center
   }
@@ -109,6 +120,7 @@
   .symbol-logo {
     @apply bg-black aspect-240/147 mask-[url('/uploads/logo-symbol.svg')] mask-contain mask-no-repeat mask-center
   }
+  /* Eyebrow Text */
   .eyebrow {
     @apply eyebrow-text inline-block pl-16 relative mb-1;
     &::before {
@@ -116,6 +128,14 @@
       absolute left-0 top-0;
     }
   }
+  /* Nav Link */
+  .nav-link {
+    @apply inline-flex items-center gap-2;
+    &:hover [data-label] {
+      @apply -translate-y-full 
+    }
+  }
+  /* Hover Text */
   .hover-text {
     @apply inline-block overflow-hidden w-full;
     & > span {
@@ -125,6 +145,7 @@
       @apply content-[attr(data-label)] absolute top-full 
     }
   }
+  /* Brand Logo */
   .brand-logo {
     @apply aspect-3/2 h-32.5 relative;
     & > .brand-logo-img {
@@ -132,6 +153,7 @@
       @apply mask-(--logo-image) mask-contain mask-no-repeat mask-center absolute inset-0 opacity-50 hover:opacity-100 transition duration-300;
     }
   }
+  /* Social Link */
   .social-link {
     @apply flex items-center;
     & > a {
@@ -142,6 +164,28 @@
     }
     & .social-link-handle {
       @apply mt-0.5 text-gray-400
+    }
+  }
+  /* Hover Link */
+  .hover-link {
+    @apply title-md relative;
+    &::before {
+      @apply content-[''] absolute w-0 h-0.5 bg-black -bottom-1 transition-all duration-300
+    }
+    &:hover::before {
+      @apply w-full
+    }
+    &::after {
+      @apply content-['\0044'] absolute font-['portfolio'] not-italic font-normal leading-none text-xs
+      top-1/2 translate-x-0 -translate-y-1/2 opacity-0 transition-all duration-300;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    &:hover::after {
+      @apply translate-x-2 opacity-100
+    }
+    &.hover-link-light {
+      @apply text-white opacity-50 hover:opacity-100 before:bg-white
     }
   }
 }

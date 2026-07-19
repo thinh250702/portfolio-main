@@ -1,1 +1,100 @@
-<header>Header</header>
+<header class="is-light fixed top-0 left-0 w-full z-10" data-header>
+  <div class="container mx-auto">
+    <div class="bs-row py-4">
+      <div id="header__wrapper" class="flex items-center rounded-full transition-all duration-300 ease-in-out">
+        <div class="flex-1">
+          <div class="horizontal-logo h-10 light:bg-white color-transition"></div>
+        </div>
+        <nav class="hidden xl:flex gap-10 light:text-white color-transition">
+          <a href="#" class="nav-link">
+            <span class="hover-text">
+              <span data-label="(HOME)">(HOME)</span>
+            </span>
+          </a>
+          <a href="#" class="nav-link">
+            <span class="hover-text">
+              <span data-label="(HOME)">(HOME)</span>
+            </span>
+          </a>
+          <a href="#" class="nav-link">
+            <span class="hover-text">
+              <span data-label="(HOME)">(HOME)</span>
+            </span>
+          </a>
+          <a href="#" class="nav-link">
+            <span class="hover-text">
+              <span data-label="(HOME)">(HOME)</span>
+            </span>
+          </a>
+        </nav>
+        <div class="flex-1 flex justify-end gap-2">
+          {{> components/language-dropdown header=true}}
+          <a href="#" class="btn btn-dark light:bg-white light:text-black color-transition hidden xl:inline-flex">
+            <span class="hover-text">
+              <span data-label="View Resume">View Resume</span>
+            </span>
+            <i class="icon-arrow-up-right text-xs"></i>
+          </a>
+          <button type="button" class="menu-toggle btn btn-dark btn-icon light:bg-white light:text-black color-transition xl:hidden" data-menu-toggle>
+            <i class="icon-menu text-[24px]"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>  
+<div class="fixed top-0 left-0 h-screen w-screen z-15 bg-white flex flex-col p-6 invisible opacity-0 pointer-events-none" data-header-menu>
+  <div class="header-menu__item flex justify-between" data-menu-item>
+    {{> components/language-dropdown}}
+    <button type="button" class="menu-toggle btn bg-gray-200 text-gray-400 btn-icon" data-menu-toggle>
+      <i class="icon-close text-base"></i>
+    </button>
+  </div>
+  <nav class="flex-1 flex flex-col justify-center -z-1">
+    <a href="#" class="header-menu__item nav-link w-full my-2" data-menu-item>
+      <span class="hover-text">
+        <span data-label="Home" class="text-7xl sm:text-8xl leading-none font-bold tracking-tight">Home</span>
+      </span>
+    </a>
+    <a href="#" class="header-menu__item nav-link w-full my-2" data-menu-item>
+      <span class="hover-text">
+        <span data-label="Home" class="text-7xl sm:text-8xl leading-none font-bold tracking-tight">Home</span>
+      </span>
+    </a>
+    <a href="#" class="header-menu__item nav-link w-full my-2" data-menu-item>
+      <span class="hover-text">
+        <span data-label="Home" class="text-7xl sm:text-8xl leading-none font-bold tracking-tight">Home</span>
+      </span>
+    </a>
+    <a href="#" class="header-menu__item nav-link w-full my-2" data-menu-item>
+      <span class="hover-text">
+        <span data-label="Home" class="text-7xl sm:text-8xl leading-none font-bold tracking-tight">Home</span>
+      </span>
+    </a>
+  </nav>
+  <div data-menu-item>
+    <span class="uppercase title-md font-medium">Follow Me</span>
+    <ul class="flex gap-2.5 mt-2">
+      <li>
+        <a href="" class="inline-flex justify-center items-center rounded-full size-10 bg-gray-100">
+          <i class="icon-facebook text-lg"></i>
+        </a>
+      </li>
+      <li>
+        <a href="" class="inline-flex justify-center items-center rounded-full size-10 bg-gray-100">
+          <i class="icon-facebook text-lg"></i>
+        </a>
+      </li>
+      <li>
+        <a href="" class="inline-flex justify-center items-center rounded-full size-10 bg-gray-100">
+          <i class="icon-facebook text-lg"></i>
+        </a>
+      </li>
+      <li>
+        <a href="" class="inline-flex justify-center items-center rounded-full size-10 bg-gray-100">
+          <i class="icon-facebook text-lg"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

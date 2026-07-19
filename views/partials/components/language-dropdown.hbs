@@ -1,0 +1,32 @@
+<div class="relative {{#if header}}hidden xl:block{{/if}}" data-dropdown>
+  <button type="button" class="btn btn-light {{#if header}}btn-ghost light:text-white color-transition{{else}}bg-gray-100{{/if}}">
+    <i class="icon-global text-xl"></i>
+    <span class="hover-text">
+      <span data-label="en">en</span>
+    </span>
+  </button>
+  <ul 
+    class="bg-white absolute p-1 w-max border border-gray-200 rounded-2xl shadow-md z-20 opacity-0 invisible pointer-events-none
+    {{#if header}} mt-3.5 {{else}} mt-2 {{/if}}" 
+    data-dropdown-menu
+  >
+    <li>
+      <a href="#" class="flex p-2 gap-2 rounded-xl hover:bg-gray-100">
+        <img src="/uploads/vn-flag.png" alt="" class="aspect-28/20 h-5 rounded-md">
+        <span class="label-md">Tieng Viet</span>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="flex p-2 gap-2 rounded-xl hover:bg-gray-100">
+        <img src="/uploads/vn-flag.png" alt="" class="aspect-28/20 h-5 rounded-md">
+        <span class="label-md">English</span>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="flex p-2 gap-2 rounded-xl hover:bg-gray-100">
+        <img src="/uploads/vn-flag.png" alt="" class="aspect-28/20 h-5 rounded-md">
+        <span class="label-md">Korean</span>
+      </a>
+    </li>
+  </ul>
+</div>
