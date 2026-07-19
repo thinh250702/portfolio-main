@@ -17,7 +17,6 @@ export default class Header {
   }
 
   init() {
-    // this.cache();   
     this.cacheDOM();
     this.createState();
     this.createScrollTrigger();
@@ -26,16 +25,16 @@ export default class Header {
   }
 
   cacheDOM() {
-    this.$header = this.$root;
     this.dom.body = $("body");
-    this.dom.menu = this.$header.next("[data-header-menu]");
+    this.dom.header = this.$root;
+    this.dom.menu = this.dom.header.next("[data-header-menu]");
     this.dom.menuItems = this.dom.menu.find("[data-menu-item]");
     this.dom.menuToggle = $("[data-menu-toggle]");
   }
 
   createState() {
-    this.state.height = this.$header.outerHeight();
-    this.state.isHomepage = this.$header.hasClass("is-light");
+    this.state.height = this.dom.header.outerHeight();
+    this.state.isHomepage = this.dom.header.hasClass("is-light");
   }
 
   createScrollTrigger() {
@@ -43,10 +42,9 @@ export default class Header {
       trigger: this.dom.body,
       start: () => `top+=${this.state.height} top`,
       end: "max",
-      scrub: 1,
       invalidateOnRefresh: true,
       toggleClass: { 
-        targets: this.$header, 
+        targets: this.dom.header, 
         className: "is-scrolled" 
       },
       onEnter: () => this.onEnter(),
@@ -78,19 +76,19 @@ export default class Header {
 
   onEnter() {
     if (this.state.isHomepage){
-      this.$header.removeClass("is-light");
+      this.dom.header.removeClass("is-light");
     }
   }
 
   onLeaveBack() {
     if (this.state.isHomepage) {
-      this.$header.addClass("is-light");
+      this.dom.header.addClass("is-light");
     }
     this.show();
   }
 
   onUpdate(self) {
-    if (!this.$header.hasClass("is-scrolled")) return;
+    if (!this.dom.header.hasClass("is-scrolled")) return;
     if (self.direction === 1) this.hide();
     if (self.direction === -1) this.show();
   }
@@ -108,7 +106,7 @@ export default class Header {
 
   hide() {
     this.killTween();
-    this.state.tween = gsap.to(this.$header, {
+    this.state.tween = gsap.to(this.dom.header, {
       yPercent: -100,
       duration: this.options.duration,
       ease: this.options.ease
@@ -117,7 +115,7 @@ export default class Header {
 
   show() {
     this.killTween();
-    this.state.tween = gsap.to(this.$header, {
+    this.state.tween = gsap.to(this.dom.header, {
       yPercent: 0,
       duration: this.options.duration,
       ease: this.options.ease

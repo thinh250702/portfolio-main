@@ -1,41 +1,43 @@
-<header class="is-light fixed top-0 left-0 w-full z-10" data-header>
+<header class="{{#if isLight}}is-light{{/if}} fixed top-0 left-0 w-full z-10" data-header>
   <div class="container mx-auto">
     <div class="bs-row py-4">
-      <div id="header__wrapper" class="flex items-center rounded-full transition-all duration-300 ease-in-out">
+      <div class="flex items-center rounded-full transition-all duration-300 ease-in-out" data-header-wrapper>
         <div class="flex-1">
-          <div class="horizontal-logo h-10 light:bg-white color-transition"></div>
+          <a href="/">
+            <div class="horizontal-logo h-10 light:bg-white transition-colors duration-200"></div>
+          </a>
         </div>
-        <nav class="hidden xl:flex gap-10 light:text-white color-transition">
-          <a href="#" class="nav-link">
+        <nav class="hidden xl:flex gap-10 light:text-white transition-colors duration-200">
+          <a href="/" class="nav-link">
             <span class="hover-text">
-              <span data-label="(HOME)">(HOME)</span>
+              <span data-label="(HOME)" class="label-lg">(HOME)</span>
             </span>
           </a>
-          <a href="#" class="nav-link">
+          <a href="/about" class="nav-link">
             <span class="hover-text">
-              <span data-label="(HOME)">(HOME)</span>
+              <span data-label="(ABOUT)" class="label-lg">(ABOUT)</span>
             </span>
           </a>
-          <a href="#" class="nav-link">
+          <a href="/work" class="nav-link">
             <span class="hover-text">
-              <span data-label="(HOME)">(HOME)</span>
+              <span data-label="(WORK)" class="label-lg">(WORK)</span>
             </span>
           </a>
-          <a href="#" class="nav-link">
+          <a href="/contact" class="nav-link">
             <span class="hover-text">
-              <span data-label="(HOME)">(HOME)</span>
+              <span data-label="(CONTACT)" class="label-lg">(CONTACT)</span>
             </span>
           </a>
         </nav>
         <div class="flex-1 flex justify-end gap-2">
           {{> components/language-dropdown header=true}}
-          <a href="#" class="btn btn-dark light:bg-white light:text-black color-transition hidden xl:inline-flex">
+          <a href="#" class="btn btn-dark light:bg-white light:text-black transition-colors duration-200 hidden xl:inline-flex">
             <span class="hover-text">
               <span data-label="View Resume">View Resume</span>
             </span>
             <i class="icon-arrow-up-right text-xs"></i>
           </a>
-          <button type="button" class="menu-toggle btn btn-dark btn-icon light:bg-white light:text-black color-transition xl:hidden" data-menu-toggle>
+          <button type="button" class="menu-toggle btn btn-dark btn-icon light:bg-white light:text-black transition-colors duration-200 xl:hidden" data-menu-toggle>
             <i class="icon-menu text-[24px]"></i>
           </button>
         </div>
@@ -44,31 +46,31 @@
   </div>
 </header>  
 <div class="fixed top-0 left-0 h-screen w-screen z-15 bg-white flex flex-col p-6 invisible opacity-0 pointer-events-none" data-header-menu>
-  <div class="header-menu__item flex justify-between" data-menu-item>
+  <div class="flex justify-between" data-menu-item>
     {{> components/language-dropdown}}
     <button type="button" class="menu-toggle btn bg-gray-200 text-gray-400 btn-icon" data-menu-toggle>
       <i class="icon-close text-base"></i>
     </button>
   </div>
   <nav class="flex-1 flex flex-col justify-center -z-1">
-    <a href="#" class="header-menu__item nav-link w-full my-2" data-menu-item>
+    <a href="/" class="nav-link my-2" data-menu-item>
       <span class="hover-text">
-        <span data-label="Home" class="text-7xl sm:text-8xl leading-none font-bold tracking-tight">Home</span>
+        <span data-label="Home" class="text-7xl xl:text-8xl leading-none font-bold tracking-tight">Home</span>
       </span>
     </a>
-    <a href="#" class="header-menu__item nav-link w-full my-2" data-menu-item>
+    <a href="/about" class="nav-link my-2" data-menu-item>
       <span class="hover-text">
-        <span data-label="Home" class="text-7xl sm:text-8xl leading-none font-bold tracking-tight">Home</span>
+        <span data-label="About" class="text-7xl xl:text-8xl leading-none font-bold tracking-tight">About</span>
       </span>
     </a>
-    <a href="#" class="header-menu__item nav-link w-full my-2" data-menu-item>
+    <a href="/work" class="nav-link my-2" data-menu-item>
       <span class="hover-text">
-        <span data-label="Home" class="text-7xl sm:text-8xl leading-none font-bold tracking-tight">Home</span>
+        <span data-label="Work" class="text-7xl xl:text-8xl leading-none font-bold tracking-tight">Work</span>
       </span>
     </a>
-    <a href="#" class="header-menu__item nav-link w-full my-2" data-menu-item>
+    <a href="/contact" class="nav-link my-2" data-menu-item>
       <span class="hover-text">
-        <span data-label="Home" class="text-7xl sm:text-8xl leading-none font-bold tracking-tight">Home</span>
+        <span data-label="Contact" class="text-7xl xl:text-8xl leading-none font-bold tracking-tight">Contact</span>
       </span>
     </a>
   </nav>
@@ -76,23 +78,23 @@
     <span class="uppercase title-md font-medium">Follow Me</span>
     <ul class="flex gap-2.5 mt-2">
       <li>
-        <a href="" class="inline-flex justify-center items-center rounded-full size-10 bg-gray-100">
+        <a href="https://www.facebook.com/thinh.nguyentruong.1884" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center rounded-full size-10 bg-gray-100">
           <i class="icon-facebook text-lg"></i>
         </a>
       </li>
       <li>
-        <a href="" class="inline-flex justify-center items-center rounded-full size-10 bg-gray-100">
-          <i class="icon-facebook text-lg"></i>
+        <a href="https://www.instagram.com/rion.ng_" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center rounded-full size-10 bg-gray-100">
+          <i class="icon-instagram text-lg"></i>
         </a>
       </li>
       <li>
-        <a href="" class="inline-flex justify-center items-center rounded-full size-10 bg-gray-100">
-          <i class="icon-facebook text-lg"></i>
+        <a href="https://www.behance.net/thinhnguyen93" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center rounded-full size-10 bg-gray-100">
+          <i class="icon-behance text-lg"></i>
         </a>
       </li>
       <li>
-        <a href="" class="inline-flex justify-center items-center rounded-full size-10 bg-gray-100">
-          <i class="icon-facebook text-lg"></i>
+        <a href="https://www.linkedin.com/in/thinhnt02/" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center rounded-full size-10 bg-gray-100">
+          <i class="icon-linkedIn text-lg"></i>
         </a>
       </li>
     </ul>

@@ -5,8 +5,13 @@ import Dropdown from "./modules/Dropdown.js";
 import Marquee from "./modules/Marquee.js";
 
 $(function () {
-  const header = new Header("[data-header]");
-  const nftCard = new NftCard("#nft-card-canvas");
+  $("[data-header]").each(function () {
+    new Header(this);
+  });
+  
+  $("[data-nft-card-canvas]").each(function () {
+    new NftCard(this);
+  });
 
   $("[data-accordion]").each(function () {
     new Accordion(this);

@@ -1,2 +1,22 @@
-<h1>{{title}}</h1>
-<p>Welcome too {{title}}</p>
+<main>
+  <section id="hero" class="pt-40 pb-10 bg-linear-to-b from-gray-200 to-white">
+    <div class="container mx-auto">
+      <div class="bs-row justify-between">
+        <div class="bs-col-12 md:bs-col-8 ">
+          <h1 class="display-lg tracking-tight text-center md:text-left">Selected Projects</h1>
+        </div>
+        <div class="bs-col-12 md:bs-col-4 xl:bs-col-3 flex flex-col justify-end">
+          <p class="text-center md:text-right text-gray-500">A thoughtful selection of work shaped by simplicity and meaningful outcomes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="projects" class="pt-10 pb-20">
+    <!-- <div class="cursor-label">View Project</div> -->
+    <div class="container mx-auto">
+      <ul class="project-grid grid grid-cols-1 md:grid-cols-2 px-6 sm:px-0 gap-x-6 gap-y-6 md:gap-y-10 mb-10">
+        {{> components/project-card}}
+      </ul>
+    </div>
+  </section>
+</main>

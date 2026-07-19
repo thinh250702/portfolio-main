@@ -24,9 +24,9 @@ export default class NftCard {
 
   cacheDOM() {
     this.dom.canvas = this.$root;
-    this.dom.card = this.$root.find("#nft-card");
-    this.dom.content = this.$root.find("#nft-card-text");
-    this.dom.glare = this.$root.find("#nft-card-glare");
+    this.dom.card = this.$root.find("[data-nft-card]");
+    this.dom.content = this.$root.find("[data-nft-card-text]");
+    this.dom.glare = this.$root.find("[data-nft-card-glare]");
   }
 
   createQuickTo() {
