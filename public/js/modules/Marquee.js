@@ -2,16 +2,22 @@ export default class Marquee {
   constructor(element, options = {}) {
     this.$root = $(element);
     this.options = {
-        cloneCount: 1,
-        ...options
+      speed: 80,
+      cloneCount: Number(this.$root.data("marquee-clone")) || 1,
+      pauseOnHover: true,
+      ...options
     };
     this.dom = {};
+    this.state = {};
+
     this.init();
   }
 
   init() {
     this.cacheDOM();
     this.cloneItems();
+    this.createAnimation();
+    this.bindEvents();
   }
 
   cacheDOM() {
@@ -19,8 +25,38 @@ export default class Marquee {
   }
 
   cloneItems() {
+    const $original = this.dom.track.children().clone();
     for (let i = 0; i < this.options.cloneCount; i++) {
-      this.dom.track.children().clone().appendTo(this.dom.track);
+      $original.clone().appendTo(this.dom.track);
     }
+  }
+
+  createAnimation() {
+    const distance = this.dom.track[0].scrollWidth / 2;
+    const duration = distance / this.options.speed;
+
+    this.tl = gsap.to(this.dom.track, { x: -distance, duration, ease: "none", repeat: -1 });
+    // Jump back seamlessly every loop
+    this.tl.eventCallback("onRepeat", () => {
+      gsap.set(this.dom.track, { x: 0 });
+    });
+  }
+
+  bindEvents() {
+    if (!this.options.pauseOnHover) return;
+
+    this.$root
+    .on("mouseenter.marquee", () => {
+      this.tl.pause();
+    })
+
+    .on("mouseleave.marquee", () => {
+      this.tl.resume();
+    });
+  }
+
+  destroy() {
+    this.$root.off(".marquee");
+    this.tl?.kill();
   }
 }

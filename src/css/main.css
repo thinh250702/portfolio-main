@@ -46,15 +46,7 @@
   --radial-x: 50%;
   --radial-y: 50%;
 
-  --animate-marquee: marquee 30s linear infinite;
-  @keyframes marquee {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
+  --header-height: 64px;
 
   --animate-shimmer: shimmer 2s linear infinite;
   @keyframes shimmer {
@@ -108,6 +100,9 @@
       }
     }
   }
+  .card-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6 md:gap-y-10;
+  }
   /* SVG Logo */
   .horizontal-logo {
     @apply bg-black aspect-1296/328 mask-[url('/uploads/logo-ngang.svg')] mask-contain mask-no-repeat mask-center
@@ -151,6 +146,17 @@
       @apply mask-(--logo-image) mask-contain mask-no-repeat mask-center absolute inset-0 opacity-50 hover:opacity-100 transition duration-300;
     }
   }
+  /* Tool Logo */
+  .tool-logo {
+    @apply aspect-square w-40 md:w-49 bg-white flex flex-col justify-center items-center gap-4 rounded-3xl border border-gray-200 mr-6 
+    hover:shadow-lg transition-shadow duration-300;
+    & > img {
+      @apply aspect-120/90 w-[60%];
+    }
+    & > span {
+      @apply label-md;
+    }
+  }
   /* Social Link */
   .social-link {
     @apply flex items-center;
@@ -184,6 +190,175 @@
     }
     &.hover-link-light {
       @apply text-white opacity-50 hover:opacity-100 before:bg-white
+    }
+  }
+  /* Polaroid Hero */
+  #polaroid-hero {
+    @apply flex justify-center py-10 lg:py-16 px-6 sm:px-0 w-max sm:w-full overflow-hidden;
+    & > .polaroid-item {
+      @apply aspect-583/646 w-35 sm:w-40 md:w-45 lg:w-60 xl:w-70 shrink-0 relative shadow-lg;
+      &:not(:first-child) {
+        @apply -ml-20 sm:-ml-15 lg:-ml-20;
+      }
+      &:nth-child(odd) {
+        @apply rotate-5 translate-y-3;
+      }
+      &:nth-child(even) {
+        @apply rotate-[-5deg] -translate-y-3;
+      }
+      &:nth-child(2) {
+        @apply -translate-y-4 xl:-translate-y-6;
+      }
+      &:last-child {
+        @apply lg:translate-y-5 xl:translate-y-6;
+      }
+      & > img {
+        @apply absolute w-full h-full top-0 left-0;
+        &.polaroid-img {
+          @apply px-[5.48%] pt-[7.2%] pb-[23.67%] object-cover;
+        }
+      }
+    }
+  }
+  /* Journey Item */
+  .journey-list {
+    & > .journey-list__item {
+      @apply bs-row px-0 py-8 border-t border-gray-700 gap-y-4;
+      & > .journey-list__title {
+        @apply bs-col-12 lg:bs-col-4 xl:bs-col-3 text-white;
+      }
+      & > .journey-list__body {
+        @apply bs-col-12 lg:bs-col-4 text-gray-400;
+      }
+      & > .journey-list__date {
+        @apply bs-col-12 lg:bs-col-2 lg:bs-offset-2 xl:bs-offset-3 flex lg:justify-end bs-order-first lg:bs-order-last text-gray-500;
+      }
+    }
+  }
+  /* Cursor Label */
+  .cursor-label {
+    @apply fixed top-0 left-0 bg-black text-white uppercase font-medium py-2 px-3.5 rounded-full pointer-events-none opacity-0 invisible z-99 will-change-transform
+  }
+  /* Project Metadata */
+  .metadata-list {
+    @apply border-b border-gray-200;
+    & > .metadata-item {
+      @apply flex justify-between items-center py-4 border-t border-gray-200;
+      & > .metadata-title {
+        @apply uppercase text-gray-500;
+      }
+      & > .metadata-content {
+        @apply title-md font-medium
+      }
+    }
+  }
+  /* Carousel Item */
+  .carousel-item {
+    @apply flex-none basis-auto aspect-4/3 overflow-hidden w-[280px] sm:w-[320px] lg:w-[480px] xl:w-[560px] 2xl:w-[720px] mr-4 sm:mr-5 lg:mr-6 rounded-2xl lg:rounded-3xl;
+    & > img {
+      @apply w-full h-full object-cover;
+    }
+  }
+  .chat-wrapper {
+    & .chat-skeleton-image {
+      @apply bg-linear-to-l from-gray-300 via-gray-200 to-gray-300 bg-size-[200%_100%] animate-shimmer;
+    }
+    & .chat-skeleton-text {
+      @apply bg-linear-to-l from-gray-400 via-gray-300 to-gray-400 bg-size-[200%_100%] animate-shimmer bg-clip-text text-transparent;
+    }
+    & .chat-btn {
+      @apply inline-flex justify-center items-center size-8 rounded-full hover:cursor-pointer transition-colors duration-200;
+      &.chat-btn-filled {
+        @apply bg-black text-white;
+      }
+      &.chat-btn-tonal {
+        @apply bg-gray-200;
+      }
+      &.chat-btn-ghost {
+        @apply hover:bg-black/5
+      }
+      &.chat-btn-outlined {
+        @apply bg-white border border-gray-200 hover:bg-gray-100
+      }
+    }
+  }
+  /* Swatch List */
+  .swatch-list {
+    @apply grid grid-cols-2 md:grid-cols-3 lg:flex gap-4;
+    & > .swatch-item {
+      @apply flex-1 rounded-2xl lg:rounded-[20px] bg-white border border-gray-200 shadow-md;
+      & > .swatch-thumbnail {
+        @apply px-2 lg:px-3 pt-2 lg:pt-3;
+        & > .swatch-color {
+          @apply bg-red-500 aspect-3/2 w-full rounded-lg lg:rounded-xl;
+        }
+      }
+      & > .swatch-body {
+        @apply px-4 lg:px-5 py-3 lg:py-4;
+        & > .swatch-name {
+          @apply body-md lg:body-lg mb-0.5;
+        }
+        & > .swatch-hex {
+          @apply body-xs lg:body-sm text-gray-400;
+        }
+      }
+    }
+  }
+  /* Style Guide Heading */
+  .style-guide-header {
+    @apply bg-gray-100 border border-gray-200 p-8 rounded-3xl;
+    & > h3 {
+      @apply font-medium tracking-tight mb-3;
+    }
+    & > p {
+      @apply text-gray-500
+    }
+  }
+  /* Typeface Item */
+  .typeface-item {
+    @apply flex-1 bg-white border border-gray-200 rounded-3xl overflow-hidden;
+    & > .typeface-heading{
+      @apply px-[32px] pt-[24px] pb-[12px];
+      & > h5 {
+        @apply font-medium mb-2;
+      }
+      & > p {
+
+      }
+    }
+    & > .typeface-body {
+      @apply px-3 py-3;
+      & > .typeface-content {
+        @apply bg-gray-100 px-[20px] py-[16px] rounded-[16px];
+        & > .typeface-name {
+          @apply text-heading-3;
+        }
+        & > .typeface-sample {
+          @apply text-[112px] leading-none;
+        }
+        & > .typeface-alphabet {
+          @apply text-[24px] mt-10 break-all;
+        }
+      }
+    }
+  }
+  /* Component List */
+  .component-list {
+    @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6;
+    & > .component-item {
+      @apply rounded-[20px] bg-white border border-gray-200 shadow-md;
+      & > .component-thumbnail {
+        @apply px-3 pt-3;
+        & > img {
+          @apply aspect-3/2 w-full object-cover rounded-xl;
+        }
+      }
+      & > .component-body {
+        @apply px-5 py-4;
+        & > h4 {
+          @apply title-lg font-medium;
+        }
+      }
     }
   }
 }

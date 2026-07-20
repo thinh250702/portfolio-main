@@ -3,6 +3,9 @@ import NftCard from "./modules/NftCard.js";
 import Accordion from "./modules/Accordion.js";
 import Dropdown from "./modules/Dropdown.js";
 import Marquee from "./modules/Marquee.js";
+import PolaroidHero from "./modules/PolaroidHero.js";
+import CursorLabel from "./modules/CursorLabel.js";
+import Carousel from "./modules/Carousel.js";
 
 $(function () {
   $("[data-header]").each(function () {
@@ -23,5 +26,17 @@ $(function () {
 
   $("[data-marquee]").each(function () {
     new Marquee(this);
+  });
+
+  $("[data-polaroid-hero]").each(function () {
+    new PolaroidHero(this);
+  });
+
+  $("[data-card-grid]").each(function () {
+    new CursorLabel(this);
+  });
+
+  $(".carousel-wrapper").each(function () {
+    new Carousel(this);
   });
 });

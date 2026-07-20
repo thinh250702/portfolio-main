@@ -1,15 +1,22 @@
-<section id="skills" class="bg-gray-900 py-20">
+<section id="skills" class="{{#if isLight}}bg-white{{else}}bg-gray-900{{/if}} py-20">
   <div class="container mx-auto">
     <div class="bs-row mb-10">
       <div class="bs-col-12 md:bs-col-6 md:pt-3">
-        {{> components/eyebrow 
-          label="Skills"
-          color="text-white"
-        }}
+        {{#if isLight}}
+          {{> components/eyebrow 
+            label="Skills"
+            color="text-black"
+          }}
+        {{else}}
+          {{> components/eyebrow 
+            label="Skills"
+            color="text-white"
+          }}
+        {{/if}}
       </div>
-      <div class="bs-col-12 md:bs-col-6">
-        <h2 class="font-medium tracking-tighter text-white mb-4">What can I do?</h2>
-        <p class="body-lg text-white">Selected case studies showing how I solve complex UX challenges across  consumer products</p>
+      <div class="bs-col-12 md:bs-col-6 {{#if isLight}}text-black{{else}}text-white{{/if}}">
+        <h2 class="font-medium tracking-tighter  mb-4">What can I do?</h2>
+        <p class="body-lg">Selected case studies showing how I solve complex UX challenges across  consumer products</p>
       </div>
     </div>
     <div class="bs-row" data-accordion>
@@ -22,45 +29,45 @@
       </div>
       <div class="bs-col-12 md:bs-col-6 bs-order-first md:bs-order-last">
         <ul class="accordion">
-          <li class="accordion-item border-gray-800">
-            <div class="accordion-header"> 
-              <span class="text-white">[01]</span>
-              <h3 class="text-white">UI/UX Design</h3>
+          <li class="accordion-item {{#if isLight}}border-gray-200{{else}}border-gray-800{{/if}}">
+            <div class="accordion-header {{#if isLight}}text-black{{else}}text-white{{/if}}"> 
+              <span>[01]</span>
+              <h3>UI/UX Design</h3>
             </div>
             <div class="accordion-collapse">
               <p class="text-gray-500">We help businesses define who they are and how they're seen. From logos and color palettes to typography and brand guidelines, we create cohesive identities that tell your story and leave a lasting impression.</p>
               <div>
-                <span class="badge badge-dark">Logo Design</span>
-                <span class="badge badge-dark">Visual Identity</span>
-                <span class="badge badge-dark">Motion Design</span>
+                <span class="badge badge-light">Logo Design</span>
+                <span class="badge badge-light">Visual Identity</span>
+                <span class="badge badge-light">Motion Design</span>
               </div>
             </div>
           </li>
-          <li class="accordion-item border-gray-800">
-            <div class="accordion-header"> 
-              <span class="text-white">[01]</span>
-              <h3 class="text-white">UI/UX Design</h3>
+          <li class="accordion-item {{#if isLight}}border-gray-200{{else}}border-gray-800{{/if}}">
+            <div class="accordion-header {{#if isLight}}text-black{{else}}text-white{{/if}}"> 
+              <span>[01]</span>
+              <h3>UI/UX Design</h3>
             </div>
             <div class="accordion-collapse">
               <p class="text-gray-500">We help businesses define who they are and how they're seen. From logos and color palettes to typography and brand guidelines, we create cohesive identities that tell your story and leave a lasting impression.</p>
               <div>
-                <span class="badge badge-dark">Logo Design</span>
-                <span class="badge badge-dark">Visual Identity</span>
-                <span class="badge badge-dark">Motion Design</span>
+                <span class="badge badge-light">Logo Design</span>
+                <span class="badge badge-light">Visual Identity</span>
+                <span class="badge badge-light">Motion Design</span>
               </div>
             </div>
           </li>
-          <li class="accordion-item border-gray-800">
-            <div class="accordion-header"> 
-              <span class="text-white">[01]</span>
-              <h3 class="text-white">UI/UX Design</h3>
+          <li class="accordion-item {{#if isLight}}border-gray-200{{else}}border-gray-800{{/if}}">
+            <div class="accordion-header {{#if isLight}}text-black{{else}}text-white{{/if}}"> 
+              <span>[01]</span>
+              <h3>UI/UX Design</h3>
             </div>
             <div class="accordion-collapse">
               <p class="text-gray-500">We help businesses define who they are and how they're seen. From logos and color palettes to typography and brand guidelines, we create cohesive identities that tell your story and leave a lasting impression.</p>
               <div>
-                <span class="badge badge-dark">Logo Design</span>
-                <span class="badge badge-dark">Visual Identity</span>
-                <span class="badge badge-dark">Motion Design</span>
+                <span class="badge badge-light">Logo Design</span>
+                <span class="badge badge-light">Visual Identity</span>
+                <span class="badge badge-light">Motion Design</span>
               </div>
             </div>
           </li>
