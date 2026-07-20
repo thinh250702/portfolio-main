@@ -1,3 +1,6 @@
+import $ from "../vendors/jquery.js";
+import { gsap } from "../vendors/gsap.js";
+
 export default class NftCard {
   constructor(element, options = {}) {
     this.$root = $(element);

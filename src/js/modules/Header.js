@@ -1,3 +1,6 @@
+import $ from "../vendors/jquery.js";
+import { gsap, ScrollTrigger } from "../vendors/gsap.js";
+
 export default class Header {
   constructor(element, options = {}) {
     this.$root = $(element);

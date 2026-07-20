@@ -1,5 +1,8 @@
 import "../css/main.css";
 
+import $ from "./vendors/jquery.js";
+import { gsap } from "./vendors/gsap.js";
+
 import Header from "./modules/Header.js";
 import NftCard from "./modules/NftCard.js";
 import Accordion from "./modules/Accordion.js";

@@ -5,9 +5,15 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import { fileURLToPath } from 'url';
 import { engine } from 'express-handlebars';
+import dotenv from "dotenv";
 
 import indexRouter from './routes/index.js';
 import routes from './routes/index.js';
+
+import * as helpers from './helpers/index.js'
+
+// dot env config
+dotenv.config();
 
 // Tự định nghĩa __filename và __dirname cho ES Module
 const __filename = fileURLToPath(import.meta.url);
@@ -17,10 +23,11 @@ const app = express();
 
 // view engine setup
 app.engine('hbs', engine({
-    extname: '.hbs',
-    defaultLayout: 'main',
-    layoutsDir: path.join(__dirname, 'views/layouts'),
-    partialsDir: path.join(__dirname, 'views/partials')
+  extname: '.hbs',
+  defaultLayout: 'main',
+  layoutsDir: path.join(__dirname, 'views/layouts'),
+  partialsDir: path.join(__dirname, 'views/partials'),
+  helpers
 }));
 
 app.set('view engine', 'hbs');
