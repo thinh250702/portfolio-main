@@ -1,3 +1,5 @@
+import "../css/main.css";
+
 import Header from "./modules/Header.js";
 import NftCard from "./modules/NftCard.js";
 import Accordion from "./modules/Accordion.js";

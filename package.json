@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "nodemon ./bin/www",
-    "dev:css": "tailwindcss -i ./src/css/main.css -o ./public/css/main.css --watch",
-    "build:css": "tailwindcss -i ./src/css/main.css -o ./public/css/main.css --minify"
+    "dev": "vite",
+    "build": "vite build",
+    "server": "nodemon ./bin/www"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "^4.22.2",
@@ -18,8 +19,8 @@
     "morgan": "^1.11.0"
   },
   "devDependencies": {
-    "@tailwindcss/cli": "^4.3.3",
     "nodemon": "^3.1.14",
-    "tailwindcss": "^4.3.3"
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.1.5"
   }
 }
