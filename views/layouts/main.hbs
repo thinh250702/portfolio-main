@@ -5,9 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{title}}</title>
   {{{vite "main.js"}}}
+  <script type="module" src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js"></script>
 </head>
 <body>
-  
+  <div class="page-transition" data-page-transition>
+    <div class="pt-wrapper">
+      <div class="pt-column"></div>
+      <div class="pt-column"></div>
+      <div class="pt-column"></div>
+      <div class="pt-column"></div>
+      <div class="pt-column"></div>
+      <div class="pt-column"></div>
+      <div class="pt-column"></div>
+      <div class="pt-column"></div>
+      <div class="pt-column"></div>
+      <div class="pt-column"></div>
+      <div class="pt-column"></div>
+      <div class="pt-column"></div>
+    </div>
+    <div class="pt-logo symbol-logo"></div>
+  </div>
   {{> common/header isLight=isHomepage}}
   <main>
     {{{body}}}

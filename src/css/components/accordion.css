@@ -1,9 +1,9 @@
 @layer components {
   .accordion {
     & .accordion-item {
-      @apply pt-8 border-t cursor-default;
+      @apply pt-8 border-t;
       & .accordion-header {
-        @apply flex items-center;
+        @apply flex items-center cursor-pointer;
         & > span {
           @apply inline-block w-[15%] title-md font-medium tracking-tighter;
         }

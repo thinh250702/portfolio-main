@@ -11,8 +11,13 @@ import Marquee from "./modules/Marquee.js";
 import PolaroidHero from "./modules/PolaroidHero.js";
 import CursorLabel from "./modules/CursorLabel.js";
 import Carousel from "./modules/Carousel.js";
+import PageTransition from "./modules/PageTransition.js";
 
 $(function () {
+  // const $pageTransition = $("#page-transition");
+  // gsap.to($pageTransition, { yPercent: 100, duration: 1, ease: "power2.out" });
+  new PageTransition("[data-page-transition]");
+
   $("[data-header]").each(function () {
     new Header(this);
   });

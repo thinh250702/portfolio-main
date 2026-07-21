@@ -52,7 +52,7 @@ export default class Accordion {
 
   bindEvents() {
     this.$root.on(
-      "mouseenter.accordion",
+      "click.accordion",
       ".accordion-header",
       (e) => {
         const index = $(e.currentTarget).closest(".accordion-item").index();

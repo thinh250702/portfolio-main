@@ -5,7 +5,7 @@ export default class Marquee {
   constructor(element, options = {}) {
     this.$root = $(element);
     this.options = {
-      speed: 80,
+      speed: 50,
       cloneCount: Number(this.$root.data("marquee-clone")) || 1,
       pauseOnHover: true,
       ...options
