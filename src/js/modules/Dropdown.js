@@ -65,6 +65,6 @@ export default class Dropdown {
   destroy() {
     clearTimeout(this.state.closeTimer);
     this.$root.off(".dropdown");
-    this.tl.kill();
+    this.tl?.kill();
   }
 }

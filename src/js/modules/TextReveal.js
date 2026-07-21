@@ -91,5 +91,6 @@ export default class TextReveal {
       }
     });
     this.state.split?.revert();
+    this.tl?.kill();
   }
 }

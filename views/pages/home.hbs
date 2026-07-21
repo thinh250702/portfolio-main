@@ -26,8 +26,8 @@
     <div class="bg-[url(/uploads/mountain-loop-red.png)] z-10 bg-cover bg-repeat-x bg-bottom">
       <div class="container mx-auto relative">
         <div class="bs-row justify-center">
-          <div class="bs-col-12 sm:bs-col-7 lg:bs-col-5 aspect-526/393 relative" data-reveal data-trigger="load" data-delay="0.3">
-            <img class="absolute bottom-0 w-full" src="/uploads/body-1.png" alt="">
+          <div class="bs-col-12 sm:bs-col-7 lg:bs-col-5 aspect-526/393 relative">
+            <img class="absolute bottom-0 w-full" src="/uploads/body-1.png" alt="" data-reveal data-trigger="load" data-delay="0.3">
           </div>
         </div>
         <div class="bs-row justify-between items-end absolute bottom-8 w-full text-white">
@@ -73,13 +73,22 @@
         <h2 class="font-medium tracking-tighter mb-4 text-white" data-text-reveal data-split="lines">Hey there, I am Thinh, a UI/UX designer polishing ideas until they shine</h2>
         <p class="mb-4 body-lg text-white" data-text-reveal data-split="lines">I've spent 6+ years designing consumer-facing products, from high-stakes commerce flows to complex logistics dashboards. My process starts with research, moves through systems thinking, and ends in interfaces that earn trust under real-world pressure.</p>
         <p class="mb-4 body-lg text-white" data-text-reveal data-split="lines">I don't just follow briefs, I reframe them. Good design, to me, begins before the first pixel and persists long after the last release.</p>
-        <div class="mt-2" data-reveal>
-          <a href="" class="btn btn-light">
-            <span class="hover-text">
-              <span data-label="More About Me">More About Me</span>
+        <div class="mt-2 flex flex-col lg:flex-row items-left lg:items-center" data-reveal="group">
+          <div>
+            <a href="" class="btn btn-light">
+              <span class="hover-text">
+                <span data-label="More About Me">More About Me</span>
+              </span>
+              <i class="icon-arrow-up-right text-sm"></i>
+            </a>
+          </div>
+          <div class="flex items-center mt-4 lg:ml-6 lg:mt-0">
+            <span class="relative flex size-2.5">
+              <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+              <span class="relative inline-flex size-2.5 rounded-full bg-green-500"></span>
             </span>
-            <i class="icon-arrow-up-right text-sm"></i>
-          </a>
+            <p class="text-white uppercase ml-2.5">Availabel for hire</p>
+          </div>
         </div>
       </div>
     </div>

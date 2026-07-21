@@ -15,9 +15,10 @@ import PageTransition from "./modules/PageTransition.js";
 import Reveal from "./modules/Reveal.js";
 import TextReveal from "./modules/TextReveal.js";
 
-$(function () {
-  // const $pageTransition = $("#page-transition");
-  // gsap.to($pageTransition, { yPercent: 100, duration: 1, ease: "power2.out" });
+$(async function () {
+  
+  await document.fonts.ready;
+
   new PageTransition("[data-page-transition]");
 
   $("[data-header]").each(function () {

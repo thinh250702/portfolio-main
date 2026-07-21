@@ -86,10 +86,22 @@
     -ms-overflow-style: none;
     scroll-behavior: smooth;
     cursor: default;
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
   html::-webkit-scrollbar,
   body::-webkit-scrollbar {
     display: none;
+  }
+  input, textarea {
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+  }
+  input::selection, textarea::selection {
+    @apply bg-black text-white
   }
 }
 
@@ -247,7 +259,7 @@
   }
   /* Cursor Label */
   .cursor-label {
-    @apply fixed top-0 left-0 bg-[#cc0000] text-white uppercase font-medium py-2 px-3.5 rounded-full pointer-events-none opacity-0 invisible z-99 will-change-transform
+    @apply fixed top-0 left-0 bg-[#cc0000] text-white uppercase label-md font-medium py-3 px-5 rounded-full pointer-events-none opacity-0 invisible z-99 will-change-transform
   }
   /* Project Metadata */
   .metadata-list {

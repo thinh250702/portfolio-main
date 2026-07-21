@@ -25,14 +25,15 @@ export default class CursorLabel {
   init() {
     this.cacheDOM();
     if (!this.dom.cursor.length) return;
+    gsap.set(this.dom.items, { pointerEvents: "auto" });
     this.createQuickTo();
     this.createTimeline();
     this.bindEvents();
-    
   }
 
   cacheDOM() {
     this.dom.cursor = $(this.options.cursor);
+    this.dom.items = this.$root.find(this.options.target);
   }
 
   createQuickTo() {
@@ -54,7 +55,9 @@ export default class CursorLabel {
 
   bindEvents() {
     this.$root
-    .on("pointerover.cursor", this.options.target, () => {
+    .on("pointerover.cursor", this.options.target, (e) => {
+      this.xTo(e.clientX + this.options.offset);
+      this.yTo(e.clientY + this.options.offset);
       this.tl.play()
     })
     .on("pointermove.cursor", this.options.target, (e) => {

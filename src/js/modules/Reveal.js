@@ -74,5 +74,6 @@ export default class Reveal {
         trigger.kill();
       }
     });
+    this.tl?.kill();
   }
 }
