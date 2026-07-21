@@ -1,5 +1,6 @@
 import $ from "../vendors/jquery.js";
 import { gsap } from "../vendors/gsap.js";
+import EventBus from "../utils/EventBus.js";
 
 export default class CursorLabel {
   constructor(element, options = {}) {
@@ -14,7 +15,11 @@ export default class CursorLabel {
     };
     this.dom = {};
 
-    this.init();
+    EventBus.on("animation:revealComplete.cursor", (_, sender) => {
+      if (sender.data('card-grid') !== undefined){
+        this.init();
+      }
+    });
   }
 
   init() {
@@ -23,6 +28,7 @@ export default class CursorLabel {
     this.createQuickTo();
     this.createTimeline();
     this.bindEvents();
+    
   }
 
   cacheDOM() {
@@ -62,6 +68,7 @@ export default class CursorLabel {
   }
 
   destroy() {
+    EventBus.off(".cursor");
     this.$root.off(".cursor");
     this.tl?.kill();
   }

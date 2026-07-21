@@ -2,7 +2,7 @@
   <div class="bg-linear-to-b from-black to-[#cc0000] to-60% pt-(--header-height)">
     <div class="pt-10 sm:pt-20">
       <div class="container mx-auto relative">
-        <div class="bs-row">
+        <div class="bs-row" data-reveal="group" data-trigger="load">
           <div class="bs-col-12">
             <p class="h4 sm:h3 mb-5 sm:mb-0 text-center font-medium tracking-tight text-white">©2026—Portfolio</p>
           </div>
@@ -13,10 +13,10 @@
         </div>
         <div class="bs-row justify-between absolute bottom-0 w-full">
           <div class="bs-col-5 flex justify-between">
-            <span class="body-lg text-white hidden lg:inline-block">Junior UI/UX Designer</span>
-            <span class="body-lg text-white hidden lg:inline-block">Based in Thịnh Nguyễn</span>
+            <span class="body-lg text-white hidden lg:inline-block" data-reveal data-trigger="load" data-delay="0.3">Junior UI/UX Designer</span>
+            <span class="body-lg text-white hidden lg:inline-block" data-reveal data-trigger="load" data-delay="0.4">Based in Thịnh Nguyễn</span>
           </div>
-          <div class="bs-col flex justify-end items-center text-white">
+          <div class="bs-col flex justify-end items-center text-white" data-reveal data-trigger="load" data-delay="0.5">
             <span class="mr-2 body-md sm:body-lg">Scroll Down</span>
             <i class="icon-arrow-down-right text-xs sm:text-sm"></i>
           </div>
@@ -26,16 +26,16 @@
     <div class="bg-[url(/uploads/mountain-loop-red.png)] z-10 bg-cover bg-repeat-x bg-bottom">
       <div class="container mx-auto relative">
         <div class="bs-row justify-center">
-          <div class="bs-col-12 sm:bs-col-7 lg:bs-col-5 aspect-526/393 relative">
+          <div class="bs-col-12 sm:bs-col-7 lg:bs-col-5 aspect-526/393 relative" data-reveal data-trigger="load" data-delay="0.3">
             <img class="absolute bottom-0 w-full" src="/uploads/body-1.png" alt="">
           </div>
         </div>
         <div class="bs-row justify-between items-end absolute bottom-8 w-full text-white">
           <div class="bs-col-4">
-            <h1 class="tracking-tight h2 md:h1 hidden sm:block">Creative studio for founder</h1>
+            <h1 class="tracking-tight h2 md:h1 hidden sm:block font-medium" data-text-reveal>Creative studio for founder</h1>
           </div>
           <div class="bs-col-4">
-            <p class="tracking-tight h4 md:h3 hidden sm:block">Hey there, I am Thinh, a UI/UX designer polishing ideas until they shine</p>
+            <p class="tracking-tight h4 md:h3 hidden sm:block font-medium" data-text-reveal>Hey there, I am Thinh, a UI/UX designer polishing ideas until they shine</p>
           </div>
         </div>
       </div>
@@ -69,14 +69,11 @@
         {{> components/nft-card}}
       </div>
       <div class="bs-col-12 sm:bs-col flex flex-col justify-center pl-0 sm:pl-6 md:pl-12 bs-order-first sm:bs-order-last">
-        {{> components/eyebrow 
-          label="About Me" 
-          color="text-white"
-        }}
-        <h2 class="font-medium tracking-tighter mb-4 text-white">Hey there, I am Thinh, a UI/UX designer polishing ideas until they shine</h2>
-        <p class="mb-4 body-lg text-white">I've spent 6+ years designing consumer-facing products, from high-stakes commerce flows to complex logistics dashboards. My process starts with research, moves through systems thinking, and ends in interfaces that earn trust under real-world pressure.</p>
-        <p class="mb-4 body-lg text-white">I don't just follow briefs, I reframe them. Good design, to me, begins before the first pixel and persists long after the last release.</p>
-        <div class="mt-2">
+        <span class="eyebrow text-white" data-reveal> About Me</span>
+        <h2 class="font-medium tracking-tighter mb-4 text-white" data-text-reveal data-split="lines">Hey there, I am Thinh, a UI/UX designer polishing ideas until they shine</h2>
+        <p class="mb-4 body-lg text-white" data-text-reveal data-split="lines">I've spent 6+ years designing consumer-facing products, from high-stakes commerce flows to complex logistics dashboards. My process starts with research, moves through systems thinking, and ends in interfaces that earn trust under real-world pressure.</p>
+        <p class="mb-4 body-lg text-white" data-text-reveal data-split="lines">I don't just follow briefs, I reframe them. Good design, to me, begins before the first pixel and persists long after the last release.</p>
+        <div class="mt-2" data-reveal>
           <a href="" class="btn btn-light">
             <span class="hover-text">
               <span data-label="More About Me">More About Me</span>
@@ -110,19 +107,17 @@
   <div class="container mx-auto">
       <div class="bs-row mb-10">
         <div class="bs-col-12 lg:bs-col-2 pt-0 lg:pt-3">
-          {{> components/eyebrow 
-            label="Portfolio"
-          }}
+          <span class="eyebrow text-black" data-reveal>Portfolio</span>
         </div>
         <div class="bs-col-12 lg:bs-col-4 mb-4 lg:mb-0">
-          <h2 class="h1 font-medium tracking-tighter">Explore my featured works</h2>
+          <h2 class="h1 font-medium tracking-tighter" data-text-reveal>Explore my featured works</h2>
         </div>
         <div class="bs-col-12 lg:bs-col-4 lg:bs-offset-2 flex items-end">
-          <p class="body-lg">A curated selection of projects where strategy, creativity, and craftsmanship come together to build meaningful and enduring brand experiences.</p>
+          <p class="body-lg" data-text-reveal data-split="lines">A curated selection of projects where strategy, creativity, and craftsmanship come together to build meaningful and enduring brand experiences.</p>
         </div>
       </div>
       <div class="bs-row mb-10">
-        <ul class="card-grid" data-card-grid>
+        <ul class="card-grid" data-card-grid data-reveal="group">
           <div class="cursor-label">View Project</div>
           {{> components/project-card}}
           {{> components/project-card}}

@@ -1,5 +1,6 @@
 import $ from "../vendors/jquery.js";
 import { gsap } from "../vendors/gsap.js";
+import EventBus from "../utils/EventBus.js";
 
 export default class PageTransition {
   constructor(element, options = {}) {
@@ -53,8 +54,14 @@ export default class PageTransition {
   createRevealTimeline() {
     this.revealTl = gsap.timeline({
       paused: true,
-      onStart: () => this.lockScroll(),
-      onComplete: () => this.unlockScroll(),
+      onStart: () => {
+        this.lockScroll();
+        EventBus.trigger("transition:revealStart");
+      },
+      onComplete: () => {
+        this.unlockScroll();
+        EventBus.trigger("transition:revealComplete");
+      },
     });
     this.revealTl.fromTo(this.dom.logo, { opacity: 1, y: 0 }, { opacity: 0, y: -20, duration: 1, ease: "power2.out" });
     this.revealTl.to(this.dom.columns, { 

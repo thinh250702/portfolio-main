@@ -2,24 +2,14 @@
   <div class="container mx-auto">
     <div class="bs-row mb-10">
       <div class="bs-col-12 md:bs-col-6 md:pt-3">
-        {{#if isLight}}
-          {{> components/eyebrow 
-            label="Skills"
-            color="text-black"
-          }}
-        {{else}}
-          {{> components/eyebrow 
-            label="Skills"
-            color="text-white"
-          }}
-        {{/if}}
+        <span class="eyebrow {{#if isLight}}text-black{{else}}text-white{{/if}}" data-reveal>Portfolio</span>
       </div>
       <div class="bs-col-12 md:bs-col-6 {{#if isLight}}text-black{{else}}text-white{{/if}}">
-        <h2 class="font-medium tracking-tighter  mb-4">What can I do?</h2>
-        <p class="body-lg">Selected case studies showing how I solve complex UX challenges across  consumer products</p>
+        <h2 class="font-medium tracking-tighter  mb-4" data-text-reveal>What can I do?</h2>
+        <p class="body-lg" data-text-reveal data-split="lines">Selected case studies showing how I solve complex UX challenges across  consumer products</p>
       </div>
     </div>
-    <div class="bs-row" data-accordion>
+    <div class="bs-row" data-accordion data-reveal="group">
       <div class="bs-col-12 md:bs-col-6 bs-order-last md:bs-order-first pr-0 md:pr-12">
         <div class="accordion-images">
           <img src="/uploads/skill-1.png" alt="">
@@ -28,7 +18,7 @@
         </div>
       </div>
       <div class="bs-col-12 md:bs-col-6 bs-order-first md:bs-order-last">
-        <ul class="accordion">
+        <ul class="accordion" data-reveal="group">
           <li class="accordion-item {{#if isLight}}border-gray-200{{else}}border-gray-800{{/if}}">
             <div class="accordion-header {{#if isLight}}text-black{{else}}text-white{{/if}}"> 
               <span>[01]</span>

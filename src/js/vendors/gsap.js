@@ -1,12 +1,13 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
 
 // Register plugins once
 gsap.registerPlugin(
-  ScrollTrigger,
+  ScrollTrigger, SplitText
 );
 
 export {
   gsap,
-  ScrollTrigger,
+  ScrollTrigger, SplitText
 };

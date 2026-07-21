@@ -12,6 +12,8 @@ import PolaroidHero from "./modules/PolaroidHero.js";
 import CursorLabel from "./modules/CursorLabel.js";
 import Carousel from "./modules/Carousel.js";
 import PageTransition from "./modules/PageTransition.js";
+import Reveal from "./modules/Reveal.js";
+import TextReveal from "./modules/TextReveal.js";
 
 $(function () {
   // const $pageTransition = $("#page-transition");
@@ -20,6 +22,14 @@ $(function () {
 
   $("[data-header]").each(function () {
     new Header(this);
+  });
+
+  $("[data-reveal]").each(function () {
+    new Reveal(this);
+  });
+
+  $("[data-text-reveal]").each(function () {
+    new TextReveal(this);
   });
   
   $("[data-nft-card-canvas]").each(function () {

@@ -1,5 +1,6 @@
 import $ from "../vendors/jquery.js";
 import { gsap } from "../vendors/gsap.js";
+import EventBus from "../utils/EventBus.js";
 
 export default class PolaroidHero {
   constructor(element, options = {}) {
@@ -37,7 +38,8 @@ export default class PolaroidHero {
     this.mm = gsap.matchMedia();
     this.mm.add(this.options.breakpoint, () => {
       this.createTimeline();
-      this.play();
+      EventBus.on("transition:revealComplete.polaroid", () => this.play());
+      
     });
   }
 
@@ -74,6 +76,7 @@ export default class PolaroidHero {
   }
 
   destroy() {
+    EventBus.off(".polaroid");
     this.mm?.revert();
     this.tl?.kill();
     this.dom.items.off(".polaroid");

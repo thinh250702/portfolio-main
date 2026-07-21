@@ -197,7 +197,7 @@
   #polaroid-hero {
     @apply flex justify-center py-10 lg:py-16 px-6 sm:px-0 w-max sm:w-full overflow-hidden;
     & > .polaroid-item {
-      @apply aspect-583/646 w-35 sm:w-40 md:w-45 lg:w-60 xl:w-70 shrink-0 relative shadow-lg;
+      @apply aspect-312/377 w-35 sm:w-40 md:w-45 lg:w-60 xl:w-70 shrink-0 relative shadow-lg;
       &:not(:first-child) {
         @apply -ml-20 sm:-ml-15 lg:-ml-20;
       }
@@ -216,7 +216,7 @@
       & > img {
         @apply absolute w-full h-full top-0 left-0;
         &.polaroid-img {
-          @apply px-[5.48%] pt-[7.2%] pb-[23.67%] object-cover;
+          @apply px-[2.56%] pt-[6.41%] pb-[22.43%] object-cover;
         }
       }
     }
@@ -247,7 +247,7 @@
   }
   /* Cursor Label */
   .cursor-label {
-    @apply fixed top-0 left-0 bg-black text-white uppercase font-medium py-2 px-3.5 rounded-full pointer-events-none opacity-0 invisible z-99 will-change-transform
+    @apply fixed top-0 left-0 bg-[#cc0000] text-white uppercase font-medium py-2 px-3.5 rounded-full pointer-events-none opacity-0 invisible z-99 will-change-transform
   }
   /* Project Metadata */
   .metadata-list {
@@ -377,7 +377,7 @@
     & > .pt-wrapper {
       @apply flex w-full h-full;
       & > .pt-column {
-        @apply flex-1 bg-red-500 origin-top-left will-change-transform scale-x-105;
+        @apply flex-1 bg-[#cc0000] origin-top-left will-change-transform scale-x-105;
         /* &:nth-child(odd) {
           @apply bg-amber-500
         } */
