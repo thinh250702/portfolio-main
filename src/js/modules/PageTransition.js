@@ -85,8 +85,11 @@ export default class PageTransition {
       if (href.startsWith("mailto:") || href.startsWith("tel:")) return;
       if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
       if (link.hostname !== window.location.hostname) return;
-      if (current.pathname === target.pathname && current.search === target.search && current.hash === target.hash) return;
       if (link.hasAttribute("download")) return;
+      if (current.pathname === target.pathname && current.search === target.search && current.hash === target.hash) {
+        e.preventDefault();
+        return
+      };
 
       e.preventDefault();
 

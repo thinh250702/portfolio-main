@@ -267,7 +267,7 @@
     & > .metadata-item {
       @apply flex justify-between items-center py-4 border-t border-gray-200;
       & > .metadata-title {
-        @apply uppercase text-gray-500;
+        @apply uppercase text-gray-500 label-md;
       }
       & > .metadata-content {
         @apply title-md font-medium
