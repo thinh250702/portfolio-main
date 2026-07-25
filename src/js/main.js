@@ -60,4 +60,11 @@ $(async function () {
   $(".carousel-wrapper").each(function () {
     new Carousel(this);
   });
+
+  $("[data-style]").each(function () {
+    const style = $(this).data("style");
+    if (style) {
+      this.style.cssText += ";" + style;
+    }
+  });
 });

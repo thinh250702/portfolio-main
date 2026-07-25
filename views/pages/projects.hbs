@@ -2,10 +2,10 @@
   <div class="container mx-auto pt-10 md:pt-20">
     <div class="bs-row justify-between" data-trigger="load">
       <div class="bs-col-12 md:bs-col-8 flex flex-col items-center md:items-start justify-end">
-        <h1 class="display-lg tracking-tight text-center md:text-left" data-text-reveal data-trigger="load">Selected Projects</h1>
+        <h1 class="display-lg tracking-tight text-center md:text-left" data-text-reveal data-trigger="load">{{heading}}</h1>
       </div>
       <div class="bs-col-12 md:bs-col-4 xl:bs-col-3 flex flex-col justify-end">
-        <p class="text-center md:text-right text-gray-500 mb-0 md:mb-4 xl:mb-6" data-text-reveal data-split="lines" data-trigger="load">A thoughtful selection of work shaped by simplicity and meaningful outcomes.</p>
+        <p class="text-center md:text-right text-gray-500 mb-0 md:mb-4 xl:mb-6" data-text-reveal data-split="lines" data-trigger="load">{{content}}</p>
       </div>
     </div>
   </div>
@@ -15,10 +15,10 @@
     <div class="bs-row">
       <ul class="card-grid" data-card-grid data-reveal="group" data-trigger="load" data-delay="0.2">
         <div class="cursor-label">View Project</div>
-        {{> components/project-card}}
-        {{> components/project-card}}
-        {{> components/project-card}}
-        {{> components/project-card}}
+        {{#each projects}}
+          {{> components/project-card this}}
+        {{/each}}
+        <!-- {{> components/project-card}} -->
       </ul>
     </div>
   </div>

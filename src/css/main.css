@@ -267,16 +267,16 @@
     & > .metadata-item {
       @apply flex justify-between items-center py-4 border-t border-gray-200;
       & > .metadata-title {
-        @apply uppercase text-gray-500 label-md;
+        @apply uppercase text-gray-500 body-sm;
       }
       & > .metadata-content {
-        @apply title-md font-medium
+        @apply body-lg font-medium text-right
       }
     }
   }
   /* Carousel Item */
   .carousel-item {
-    @apply flex-none basis-auto aspect-4/3 overflow-hidden w-[280px] sm:w-[320px] lg:w-[480px] xl:w-[560px] 2xl:w-[720px] mr-4 sm:mr-5 lg:mr-6 rounded-2xl lg:rounded-3xl;
+    @apply flex-none basis-auto aspect-4/3 overflow-hidden w-[280px] sm:w-[480px] lg:w-[560px] xl:w-[720px] mr-4 sm:mr-5 lg:mr-6 rounded-2xl lg:rounded-3xl;
     & > img {
       @apply w-full h-full object-cover;
     }
@@ -304,65 +304,28 @@
       }
     }
   }
-  /* Swatch List */
-  .swatch-list {
-    @apply grid grid-cols-2 md:grid-cols-3 lg:flex gap-4;
-    & > .swatch-item {
-      @apply flex-1 rounded-2xl lg:rounded-[20px] bg-white border border-gray-200 shadow-md;
-      & > .swatch-thumbnail {
-        @apply px-2 lg:px-3 pt-2 lg:pt-3;
-        & > .swatch-color {
-          @apply bg-red-500 aspect-3/2 w-full rounded-lg lg:rounded-xl;
-        }
-      }
-      & > .swatch-body {
-        @apply px-4 lg:px-5 py-3 lg:py-4;
-        & > .swatch-name {
-          @apply body-md lg:body-lg mb-0.5;
-        }
-        & > .swatch-hex {
-          @apply body-xs lg:body-sm text-gray-400;
-        }
-      }
-    }
-  }
   /* Style Guide Heading */
   .style-guide-header {
-    @apply bg-gray-100 border border-gray-200 p-8 rounded-3xl;
-    & > h3 {
-      @apply font-medium tracking-tight mb-3;
-    }
-    & > p {
-      @apply text-gray-500
-    }
-  }
-  /* Typeface Item */
-  .typeface-item {
-    @apply flex-1 bg-white border border-gray-200 rounded-3xl overflow-hidden;
-    & > .typeface-heading{
-      @apply px-[32px] pt-[24px] pb-[12px];
-      & > h5 {
-        @apply font-medium mb-2;
+    @apply p-8 border rounded-3xl flex flex-col lg:flex-row lg:justify-between lg:items-start;
+    & > .style-guide__main {
+      @apply lg:w-1/2 bs-order-last lg:bs-order-first;
+      & > h3 {
+        @apply font-medium tracking-tight mb-2
       }
       & > p {
-
+        @apply opacity-75
       }
     }
-    & > .typeface-body {
-      @apply px-3 py-3;
-      & > .typeface-content {
-        @apply bg-gray-100 px-[20px] py-[16px] rounded-[16px];
-        & > .typeface-name {
-          @apply text-heading-3;
-        }
-        & > .typeface-sample {
-          @apply text-[112px] leading-none;
-        }
-        & > .typeface-alphabet {
-          @apply text-[24px] mt-10 break-all;
+    & > .style-guide__decor {
+      @apply bs-order-first lg:bs-order-last mb-4;
+      & > span {
+        @apply label-md font-medium;
+        &:first-child {
+          @apply opacity-50;
         }
       }
     }
+    
   }
   /* Component List */
   .component-list {

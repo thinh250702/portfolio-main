@@ -1,0 +1,81 @@
+{
+  "hero": {
+    "topHeading": "Lorem ipsum",
+    "polaroids": [
+      "",
+      ""
+    ],
+    "bottomHeading": "Lorem ipsum dolor sit"
+  },
+  "about": {
+    "eyebrow": "About Me",
+    "heading": "In the game for over 6 years, I'm currently based in Ho Chi Minh city, working as an independent designer since July, 2022.",
+    "left": {
+      "heading": "Experience & Innovation",
+      "content": "I've spent 6+ years designing consumer-facing products, from high-stakes commerce flows to complex logistics dashboards. My process starts with research, moves through systems thinking, and ends in interfaces that earn trust under real-world pressure."
+    },
+    "right": {
+      "heading": "Creative Expertise",
+      "content": "With over a decade of design expertise, we create tailored solutions that engage audiences, build meaningful connections, and elevate brands with creativity and intent."
+    },
+    "button": {
+      "label": "More About Me",
+      "href": "/about"
+    },
+    "available": "Available for Hire"
+  },
+  "journey": {
+    "eyebrow": "My Journey",
+    "heading": "Education & Experiences",
+    "content": "Web design is evolving rapidly, and I strive to stay ahead. Emerging tools and technologies enable me to create visually stunning and seamlessly functional websites.",
+    "experience": {
+      "heading": "Experience",
+      "list": [
+        {
+          "title": "Graphic Design Intern",
+          "subtitle": "Company Name",
+          "content": "Collaborated closely with multidisciplinary teams to design and refine cross-platform design systems, optimize product flows, and create intuitive interaction patterns",
+          "year": "Jun 2023 - May 2024"
+        },
+        {
+          "title": "Graphic Design Intern",
+          "subtitle": "Company Name",
+          "content": "Collaborated closely with multidisciplinary teams to design and refine cross-platform design systems, optimize product flows, and create intuitive interaction patterns",
+          "year": "Jun 2023 - May 2024"
+        }
+      ]
+    },
+    "education": {
+      "heading": "Education",
+      "list": [
+        {
+          "title": "Graphic Design Intern",
+          "subtitle": "Company Name",
+          "content": "Collaborated closely with multidisciplinary teams to design and refine cross-platform design systems, optimize product flows, and create intuitive interaction patterns",
+          "year": "Jun 2023 - May 2024"
+        },
+        {
+          "title": "Graphic Design Intern",
+          "subtitle": "Company Name",
+          "content": "Collaborated closely with multidisciplinary teams to design and refine cross-platform design systems, optimize product flows, and create intuitive interaction patterns",
+          "year": "Jun 2023 - May 2024"
+        }
+      ]
+    }
+  },
+  "tools": {
+    "eyebrow": "",
+    "heading": "",
+    "content": "",
+    "list": [
+      {
+        "name": "Notion",
+        "imgUrl": ""
+      },
+      {
+        "name": "Notion",
+        "imgUrl": ""
+      }
+    ]
+  }
+}

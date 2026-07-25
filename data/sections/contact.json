@@ -1,0 +1,55 @@
+{
+  "eyebrow": "Let's talk",
+  "heading": "Get in touch with me",
+  "content": "We'd love to hear from you! Whether you have a project in mind, need a quote, or just want to say hello, feel free to reach out. Fill out the form below or use our contact details to connect with us.",
+  "socials": [
+    {
+      "title": "Facebook",
+      "username": "@username",
+      "url": ""
+    },
+    {
+      "title": "Instagram",
+      "username": "@username",
+      "url": ""
+    },
+    {
+      "title": "Behance",
+      "username": "@username",
+      "url": ""
+    },
+    {
+      "title": "Linkedin",
+      "username": "@username",
+      "url": ""
+    }
+  ],
+  "email": "thinhnguyen2572@gmail.com",
+  "form": {
+    "name": {
+      "label": "Name",
+      "placeholder": ""
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "yourname@company.com"
+    },
+    "phone": {
+      "label": "Phone Number",
+      "placeholder": "+(84)"
+    },
+    "type": [
+      {
+        "slug": "branding",
+        "value": "Branding"
+      }
+    ],
+    "message": {
+      "label": "Tell us about your project",
+      "placeholder": "Briefly describe your goals, challenges, or what you'd like to create"
+    },
+    "button": {
+      "label": "Send Request"
+    }
+  }
+}

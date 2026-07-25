@@ -1,35 +1,29 @@
-<section id="hero" class="pt-(--header-height) pb-10 bg-linear-to-b from-gray-200 to-white">
+<section id="hero" class="pt-(--header-height) pb-10" data-style="{{style hero.style}}">
   <div class="container mx-auto pt-10 md:pt-20">
     <div class="bs-row justify-between">
       <div class="bs-col-12 lg:bs-col-6">
-        <a href="#" class="badge bg-white border-gray-200 text-black mb-2">Logo Design</a>
-        <h1 class="font-medium tracking-tighter mb-2">Nha Khoa Orion</h1>
-        <p class="mb-6">Delicious new brand & digital experience for Jepro — A French groceries delivery company, one of the leaders of quick-commerce in France. They invited our team to create a brand experience that is accessible, fun and inspiring young audiences across the country to order their groceries and fresh meals online.</p>
-        <a href="#" class="btn btn-dark">
+        <div class="flex gap-2 mb-2">
+          {{#each hero.category}}
+            <a href="{{url}}" class="badge bg-white border-gray-200">{{name}}</a>
+          {{/each}}
+        </div>
+        <h1 class="font-medium tracking-tighter mb-2" data-style="{{style hero.name.style}}">{{hero.name.text}}</h1>
+        <p class="mb-6">{{hero.description}}</p>
+        <a href="{{hero.button.href}}" class="btn btn-dark" data-style="{{style hero.button.style}}">
           <span class="hover-text">
-            <span data-label="View Resume">View Prototype</span>
+            <span data-label="{{hero.button.label}}">{{hero.button.label}}</span>
           </span>
           <i class="icon-arrow-up-right text-xs"></i>
         </a>
       </div>
       <div class="bs-col-12 lg:bs-col-5 xl:bs-col-4 mt-10 lg:mt-0 flex flex-col justify-end">
         <ul class="metadata-list ">
-          <li class="metadata-item">
-            <span class="metadata-title">Industry</span>
-            <span class="metadata-content">Martech / SaaS</span>
-          </li>
-          <li class="metadata-item">
-            <span class="metadata-title">Client</span>
-            <span class="metadata-content">Leadoo MKT</span>
-          </li>
-          <li class="metadata-item">
-            <span class="metadata-title">Client</span>
-            <span class="metadata-content">Leadoo MKT</span>
-          </li>
-          <li class="metadata-item">
-            <span class="metadata-title">Client</span>
-            <span class="metadata-content">Leadoo MKT</span>
-          </li>
+          {{#each hero.metadata}}
+            <li class="metadata-item">
+              <span class="metadata-title">{{key}}</span>
+              <span class="metadata-content">{{value}}</span>
+            </li>
+          {{/each}}
         </ul>
       </div>
     </div>
@@ -38,18 +32,11 @@
 <section id="carousel">
   <div class="carousel-wrapper overflow-hidden relative" data-carousel>
     <ul class="carousel-track flex items-center" data-carousel-track>
-      <li class="carousel-item" data-carousel-item>
-        <img src="/uploads/project-img.png" alt="">
-      </li>
-      <li class="carousel-item" data-carousel-item>
-        <img src="/uploads/project-img.png" alt="">
-      </li>
-      <li class="carousel-item" data-carousel-item>
-        <img src="/uploads/project-img.png" alt="">
-      </li>
-      <li class="carousel-item" data-carousel-item>
-        <img src="/uploads/project-img.png" alt="">
-      </li>
+      {{#each carousel}}
+        <li class="carousel-item" data-carousel-item>
+          <img src="{{this}}" alt="" crossorigin="anonymous">
+        </li>
+      {{/each}}
     </ul>
   </div>
 </section>
@@ -57,23 +44,23 @@
   <div class="container mx-auto">
     <div class="bs-row mb-10">
       <div class="bs-col-12 lg:bs-col">
-        <h2 class="font-medium tracking-tight text-left mb-3 lg:mb-0" data-text-reveal>Project Overview</h2>
+        <h2 class="font-medium tracking-tight text-left mb-3 lg:mb-0" data-style="{{style overview.heading.style}}">{{overview.heading.text}}</h2>
       </div>
       <div class="bs-col-12 lg:bs-col">
-        <div class="article -mb-3">
-          <p class="mb-3">This project was created for a real coffee brand client. However, due to privacy and confidentiality agreements, the original brand identity, logo, and visual assets cannot be publicly disclosed.</p>
-          <p class="mb-3">The goal was to design a promotional landing page that could promote exclusive offers, increase menu discovery, help users quickly locate nearby stores, deliver a warm and memorable coffee brand experience. </p>
-          <p class="mb-3">The final design combines promotional storytelling with intuitive navigation, creating a landing page that supports both marketing objectives and user needs.</p>
+        <div class="-mb-3 *:mb-3">
+          {{#each overview.content}}
+            {{renderBlock this}}
+          {{/each}}
         </div>
-        <!-- <p class="body-lg text-center lg:text-left" data-text-reveal data-split="lines">Lorem ipsum dolor sit amet consectetur. Sed accumsan nunc donec nec aliquet egestas ullamcorper nullam. Sem vulputate arcu scelerisque morbi adipiscing id et mattis non. Nulla nunc gravida ut ut scelerisque et at integer. Id lorem felis gravida vitae orci. Id cursus urna eleifend mauris. Lorem ipsum dolor sit amet consectetur.</p> -->
       </div>
     </div>
+    {{#if overview.logoGen}}
     <div class="bs-row mb-10 justify-center">
       <div class="bs-col-12">
         <div class="chat-wrapper bg-gray-100 border border-gray-200 overflow-hidden rounded-3xl" data-chat>
           <div class="chat-heading flex justify-between p-4 lg:p-6 bg-white">
             <div>
-              <p class="title-md lg:title-lg font-medium">New chat</p>
+              <p class="title-md lg:title-lg font-medium">LogoGen</p>
               <p class="body-sm lg:body-md text-gray-400">How can I help you today?</p>
             </div>
             <button type="button" class="chat-btn chat-btn-outlined" data-chat-ui="reset-btn">
@@ -82,7 +69,7 @@
           </div>
           <div class="chat-content p-4 lg:p-6">
             <div class="flex justify-end mb-4 lg:mb-6">
-              <div class="bg-gray-200 w-10/12 lg:w-1/2 px-4 lg:px-5 py-3 lg:py-4 rounded-2xl lg:rounded-[20px]" data-chat-ui="chat-bubble">Lorem ipsum dolor sit amet consectetur. Sed accumsan nunc donec nec aliquet egestas ullamcorper nullam. Sem vulputate arcu scelerisque morbi adipiscing id et mattis non. Nulla nunc gravida ut ut scelerisque et at integer. Id lorem felis gravida vitae orci. Id cursus urna eleifend mauris. Lorem ipsum dolor sit amet consectetur.</div>
+              <div class="bg-gray-200 w-10/12 lg:w-1/2 px-4 lg:px-5 py-3 lg:py-4 rounded-2xl lg:rounded-[20px]" data-chat-ui="chat-bubble">{{overview.logoGen.prompt}}</div>
             </div>
             <div>
               <div class="flex items-center pb-2 lg:pb-3 gap-2" data-chat-ui="shimmer-text">
@@ -117,7 +104,7 @@
           <div class="chat-input px-4 lg:px-6">
             <div class="bg-white rounded-3xl lg:rounded-4xl shadow-md">
               <div class="chat-input__field px-5 lg:px-6 py-4 lg:py-5">
-                <textarea name="" id="" rows="3" readonly class="w-full resize-none focus:outline-none" placeholder="Mô tả hình ảnh của bạn" data-chat-ui="chat-input">Lorem ipsum dolor sit amet consectetur. Sed accumsan nunc donec nec aliquet egestas ullamcorper nullam. Sem vulputate arcu scelerisque morbi adipiscing id et mattis non. Nulla nunc gravida ut ut scelerisque et at integer. Id lorem felis gravida vitae orci. Id cursus urna eleifend mauris. Lorem ipsum dolor sit amet consectetur.</textarea>
+                <textarea name="" id="" rows="3" readonly class="w-full resize-none focus:outline-none" placeholder="Mô tả hình ảnh của bạn" data-chat-ui="chat-input">{{overview.logoGen.prompt}}</textarea>
               </div>
               <div class="chat-input__actions flex items-center justify-between px-3 pb-3 lg:px-4 lg:pb-4">
                 <div class="flex items-center gap-2">
@@ -145,104 +132,106 @@
                 </div>
               </div>
             </div>
-            <p class="body-xs lg:body-sm text-center my-3 lg:my-4 text-gray-400">Lorem ipsum dolor sit amet consectetur. Sed accumsan nunc donec nec aliquet egestas ullamcorper nullam.</p>
+            <p class="body-xs lg:body-sm text-center my-3 lg:my-4 text-gray-400">{{overview.logoGen.warning}}</p>
           </div>
         </div>
       </div>
       <div class="bs-col lg:bs-col-8">
-        <p class="text-center mt-5">Lorem ipsum dolor sit amet consectetur. Sed accumsan nunc donec nec aliquet egestas ullamcorper nullam.</p>
+        <p class="text-center mt-5">{{overview.logoGen.description}}</p>
       </div>
     </div>
+    {{/if}}
     <div class="bs-row justify-center">
       <div class="bs-col-12">
-        <img src="/uploads/project-img.png" alt="" class=" w-full object-cover">
+        <img src="{{overview.branding.imgUrl}}" alt="" class=" w-full object-cover">
       </div>
       <div class="bs-col lg:bs-col-8">
-        <p class="text-center mt-5">Lorem ipsum dolor sit amet consectetur. Sed accumsan nunc donec nec aliquet egestas ullamcorper nullam.</p>
+        <p class="text-center mt-5">{{overview.branding.description}}</p>
       </div>
     </div>
   </div>
 </section>
-<section id="my-role" class="pt-10">
+<section id="my-role" class="pt-10" data-style="{{style overview.role.style}}">
   <div class="container mx-auto">
     <div class="bs-row">
       <div class="bs-col-12 lg:bs-col bs-order-last lg:bs-order-first mt-10 lg:mt-0 flex flex-col justify-end">
-        <img src="/uploads/project-img.png" alt="" class="aspect-4/3 w-full">
+        <img src="{{overview.role.imgUrl}}" alt="" class="aspect-4/3 w-full">
       </div>
       <div class="bs-col-12 lg:bs-col bs-order-first lg:bs-order-last flex flex-col justify-center gap-4 lg:pl-10">
-        <h3 class="font-medium tracking-tight" data-text-reveal>My Role</h3>
-        <!-- <p class="mb-10" data-text-reveal data-split="lines">Lorem ipsum dolor sit amet consectetur. Sed accumsan nunc donec nec aliquet egestas ullamcorper nullam. Sem vulputate arcu scelerisque morbi adipiscing id et mattis non. Nulla nunc gravida ut ut scelerisque et at integer. Id lorem felis gravida vitae orci. Id cursus urna eleifend mauris. Lorem ipsum dolor sit amet consectetur.</p> -->
-        <div class="article -mb-3">
-          <p class="mb-3">I was responsible for the complete UI/UX design process, transforming initial business requirements into a polished promotional landing page.</p>
-          <ul class="mb-3 list-disc ps-4 marker:text-[#cc0000]">
-            <li>Researching similar coffee and F&B promotional websites</li>
-            <li>Defining the page structure and content hierarchy</li>
-            <li>Creating low-fidelity wireframes</li>
-            <li>Designing the visual direction and UI system</li>
-            <li>Building reusable interface components</li>
-            <li>Designing the final high-fidelity landing page</li>
-            <li>Preparing design assets for development handoff</li>
-          </ul>
+        <h3 class="font-medium tracking-tight" data-style="{{style overview.role.heading.style}}">{{overview.role.heading.text}}</h3>
+        <div class="-mb-3 *:mb-3">
+          {{#each overview.role.content}}
+            {{renderBlock this}}
+          {{/each}}
         </div>
       </div>
     </div>
   </div>
 </section>
-<section id="design-process" class="bg-gray-900 py-20">
+<section id="design-process" class="py-20" data-style="{{style process.style}}">
   <div class="container mx-auto">
     <div class="bs-row justify-center">
       <div class="bs-col-12 lg:bs-col-6 mb-10">
-        <h2 class="text-center text-white font-medium tracking-tight mb-4" data-text-reveal>Design Process</h2>
-        <p class="text-center text-white" data-text-reveal data-split="lines">Lorem ipsum dolor sit amet consectetur. Sed accumsan nunc donec nec aliquet egestas ullamcorper nullam. Sem vulputate arcu scelerisque morbi adipiscing id et mattis non.</p>
+        <h2 class="text-center text-white font-medium tracking-tight mb-4" data-style="{{style process.heading.style}}">{{process.heading.text}}</h2>
+        <p class="text-center text-white">{{process.content}}</p>
       </div>
       <div class="bs-col-12">
-        <img src="/uploads/project-img.png" alt="" class=" w-full object-cover">
+        <img src="{{process.imgUrl}}" alt="" class=" w-full object-cover">
       </div>
     </div>
   </div>
 </section>
-<section id="research" class="pt-20 pb-10">
+<section id="research" class="py-20">
   <div class="container mx-auto">
     <div class="bs-row justify-center">
       <div class="bs-col-12 lg:bs-col-6 mb-10">
-        <h2 class="text-center font-medium tracking-tight mb-4" data-text-reveal>Research</h2>
-        <p class="text-center" data-text-reveal data-split="lines">Lorem ipsum dolor sit amet consectetur. Sed accumsan nunc donec nec aliquet egestas ullamcorper nullam. Sem vulputate arcu scelerisque morbi adipiscing id et mattis non.</p>
+        <h2 class="text-center font-medium tracking-tight mb-4" data-style="{{style research.heading.style}}">{{research.heading.text}}</h2>
+        <p class="text-center">{{research.content}}</p>
       </div>
       <div class="bs-col-12">
-        <img src="/uploads/project-img.png" alt="" class=" w-full object-cover">
+        <img src="{{research.imgUrl}}" alt="" class=" w-full object-cover">
       </div>
     </div>
   </div>
 </section>
-<section id="problem-solution" class="pt-10">
+<section id="problem-solution" class="pt-20" data-style="{{style probSol.style}}">
   <div class="container mx-auto">
     <div class="bs-row justify-center">
       <div class="bs-col-12 lg:bs-col-6 mb-10">
-        <h2 class="text-center font-medium tracking-tight mb-4" data-text-reveal>Problem & Solution</h2>
-        <p class="text-center" data-text-reveal data-split="lines">Lorem ipsum dolor sit amet consectetur. Sed accumsan nunc donec nec aliquet egestas ullamcorper nullam. Sem vulputate arcu scelerisque morbi adipiscing id et mattis non.</p>
+        <h2 class="text-center font-medium tracking-tight mb-4" data-style="{{style probSol.heading.style}}">{{probSol.heading.text}}</h2>
+        <p class="text-center">{{probSol.content}}</p>
       </div>
     </div>
     <div class="bs-row justify-center relative">
-      <div class="bs-col-12 mb-10 lg:mb-0 lg:bs-col-3 lg:absolute lg:left-0">
-        <h3 class="font-medium tracking-tight mb-3" data-text-reveal>Problem</h3>
-        <p data-text-reveal data-split="lines">Lorem ipsum dolor sit amet consectetur. Sed accumsan nunc donec nec aliquet egestas ullamcorper nullam. Sem vulputate arcu scelerisque morbi adipiscing id et mattis non. Nulla nunc gravida ut ut scelerisque et at integer. Id lorem felis gravida vitae orci. Id cursus urna eleifend mauris.</p>
+      <div class="bs-col-12 lg:bs-col bs-order-1 pb-10">
+        <h3 class="font-medium tracking-tight mb-3" data-style="{{style probSol.problem.heading.style}}">{{probSol.problem.heading.text}}</h3>
+        <div class="-mb-3 *:mb-3">
+          {{#each probSol.problem.content}}
+            {{renderBlock this}}
+          {{/each}}
+        </div>
       </div>
-      <div class="bs-col-12 mb-10 lg:mb-0 lg:bs-col-3 lg:absolute lg:right-0">
-        <h3 class="font-medium tracking-tight mb-3" data-text-reveal>Solution</h3>
-        <p data-text-reveal data-split="lines">Lorem ipsum dolor sit amet consectetur. Sed accumsan nunc donec nec aliquet egestas ullamcorper nullam. Sem vulputate arcu scelerisque morbi adipiscing id et mattis non. Nulla nunc gravida ut ut scelerisque et at integer. Id lorem felis gravida vitae orci. Id cursus urna eleifend mauris.</p>
+      <div class="bs-col-12 lg:bs-col-5 bs-order-3 lg:bs-order-2 mx-6 flex flex-col justify-end">
+        <img src="{{probSol.imgUrl}}" alt="" class="w-full">
       </div>
-      <div class="bs-col-12 lg:bs-col-9">
-        <img src="/uploads/imac.png" alt="" class="w-full">
+      <div class="bs-col-12 lg:bs-col bs-order-2 lg:bs-order-3 pb-10">
+        <h3 class="font-medium tracking-tight mb-3" data-style="{{style probSol.solution.heading.style}}">{{probSol.solution.heading.text}}</h3>
+        <div class="-mb-3 *:mb-3">
+          {{#each probSol.solution.content}}
+            {{renderBlock this}}
+          {{/each}}
+        </div>
       </div>
     </div>
   </div>
 </section>
-<section id="user-flow" class="bg-gray-900 pt-20">
+{{#if userflow}}
+<section id="user-flow" class="pt-20">
   <div class="container mx-auto">
     <div class="bs-row justify-center">
       <div class="bs-col-12 lg:bs-col-6 mb-10">
-        <h2 class="text-center text-white font-medium tracking-tight mb-4" data-text-reveal>Design Process</h2>
-        <p class="text-center text-white" data-text-reveal data-split="lines">Lorem ipsum dolor sit amet consectetur. Sed accumsan nunc donec nec aliquet egestas ullamcorper nullam. Sem vulputate arcu scelerisque morbi adipiscing id et mattis non.</p>
+        <h2 class="text-center font-medium tracking-tight mb-4">User Flow</h2>
+        <p class="text-center">Lorem ipsum dolor sit amet consectetur. Sed accumsan nunc donec nec aliquet egestas ullamcorper nullam. Sem vulputate arcu scelerisque morbi adipiscing id et mattis non.</p>
       </div>
       <div class="bs-col-12">
         <img src="/uploads/project-img.png" alt="" class=" w-full object-cover">
@@ -250,12 +239,14 @@
     </div>
   </div>
 </section>
-<section id="sitemap" class="bg-gray-900 py-20">
+{{/if}}
+{{#if sitemap}}
+<section id="sitemap" class="py-20">
   <div class="container mx-auto">
     <div class="bs-row justify-center">
       <div class="bs-col-12 lg:bs-col-6 mb-10">
-        <h2 class="text-center text-white font-medium tracking-tight mb-4" data-text-reveal>Sitemap</h2>
-        <p class="text-center text-white" data-text-reveal data-split="lines">Lorem ipsum dolor sit amet consectetur. Sed accumsan nunc donec nec aliquet egestas ullamcorper nullam. Sem vulputate arcu scelerisque morbi adipiscing id et mattis non.</p>
+        <h2 class="text-center font-medium tracking-tight mb-4">Sitemap</h2>
+        <p class="text-center">Lorem ipsum dolor sit amet consectetur. Sed accumsan nunc donec nec aliquet egestas ullamcorper nullam. Sem vulputate arcu scelerisque morbi adipiscing id et mattis non.</p>
       </div>
       <div class="bs-col-12">
         <img src="/uploads/project-img.png" alt="" class=" w-full object-cover">
@@ -263,15 +254,16 @@
     </div>
   </div>
 </section>
-<section id="wireframes" class="pt-20 pb-10">
+{{/if}}
+<section id="wireframes" class="py-20" data-style="{{style wireframes.style}}">
   <div class="container mx-auto">
     <div class="bs-row justify-center">
       <div class="bs-col-12 lg:bs-col-6 mb-10">
-        <h2 class="text-center font-medium tracking-tight mb-4" data-text-reveal>Wireframes</h2>
-        <p class="text-center" data-text-reveal data-split="lines">Lorem ipsum dolor sit amet consectetur. Sed accumsan nunc donec nec aliquet egestas ullamcorper nullam. Sem vulputate arcu scelerisque morbi adipiscing id et mattis non.</p>
+        <h2 class="text-center font-medium tracking-tight mb-4" data-style="{{style wireframes.heading.style}}">{{wireframes.heading.text}}</h2>
+        <p class="text-center text-white">{{wireframes.content}}</p>
       </div>
       <div class="bs-col-12">
-        <img src="/uploads/project-img.png" alt="" class=" w-full object-cover">
+        <img src="{{wireframes.imgUrl}}" alt="" class=" w-full object-cover">
       </div>
     </div>
   </div>
@@ -280,252 +272,158 @@
   <div class="container mx-auto">
     <div class="bs-row justify-center">
       <div class="bs-col-12 lg:bs-col-6 mb-10">
-        <h2 class="text-center font-medium tracking-tight mb-4" data-text-reveal>Style Guide</h2>
-        <p class="text-center" data-text-reveal data-split="lines">Lorem ipsum dolor sit amet consectetur. Sed accumsan nunc donec nec aliquet egestas ullamcorper nullam. Sem vulputate arcu scelerisque morbi adipiscing id et mattis non.</p>
+        <h2 class="text-center font-medium tracking-tight mb-4" data-style="{{style styleGuide.heading.style}}">{{styleGuide.heading.text}}</h2>
+        <p class="text-center">{{styleGuide.content}}</p>
       </div>
     </div>
     <div class="bs-row mb-10">
       <div class="bs-col-12 mb-10">
-        <div class="style-guide-header">
-          <h3>Colors</h3>
-          <p>A gradient is the gradual blending from one color to another. Incorporating gradients into your designs is a great way to make objects stand out by adding a new dimension and adding realism to objects. They almost create a new color.</p>
+        <div class="style-guide-header" data-style="{{style styleGuide.headerStyle}}">
+          <div class="style-guide__main">
+            <h3>{{styleGuide.colors.heading}}</h3>
+            <p>{{styleGuide.colors.content}}</p>
+          </div>
+          <div class="style-guide__decor">
+            <span>{{styleGuide.heading.text}} /</span>
+            <span>{{styleGuide.colors.heading}}</span>
+          </div>
         </div>
       </div>
       <div class="bs-col-12">
-        <img src="/uploads/project-img.png" alt="" class=" w-full object-cover">
+        <img src="{{styleGuide.colors.imgUrl}}" alt="" class=" w-full object-cover">
       </div>
-      <!-- <div class="bs-col-12">
-        <ul class="swatch-list">
-          <li class="swatch-item">
-            <div class="swatch-thumbnail">
-              <div class="swatch-color"></div>
-            </div>
-            <div class="swatch-body">
-              <p class="swatch-name">Purple</p>
-              <p class="swatch-hex">#FFFCE7</p>
-            </div>
-          </li>
-          <li class="swatch-item">
-            <div class="swatch-thumbnail">
-              <div class="swatch-color"></div>
-            </div>
-            <div class="swatch-body">
-              <p class="swatch-name">Purple</p>
-              <p class="swatch-hex">#FFFCE7</p>
-            </div>
-          </li>
-          <li class="swatch-item">
-            <div class="swatch-thumbnail">
-              <div class="swatch-color"></div>
-            </div>
-            <div class="swatch-body">
-              <p class="swatch-name">Purple</p>
-              <p class="swatch-hex">#FFFCE7</p>
-            </div>
-          </li>
-          <li class="swatch-item">
-            <div class="swatch-thumbnail">
-              <div class="swatch-color"></div>
-            </div>
-            <div class="swatch-body">
-              <p class="swatch-name">Purple</p>
-              <p class="swatch-hex">#FFFCE7</p>
-            </div>
-          </li>
-        </ul>
-      </div> -->
     </div>
     <div class="bs-row mb-10">
       <div class="bs-col-12 mb-10">
-        <div class="style-guide-header">
-          <h3>Typography</h3>
-          <p>A gradient is the gradual blending from one color to another. Incorporating gradients into your designs is a great way to make objects stand out by adding a new dimension and adding realism to objects. They almost create a new color.</p>
+        <div class="style-guide-header" data-style="{{style styleGuide.headerStyle}}">
+          <div class="style-guide__main">
+            <h3>{{styleGuide.typography.heading}}</h3>
+            <p>{{styleGuide.typography.content}}</p>
+          </div>
+          <div class="style-guide__decor">
+            <span>{{styleGuide.heading.text}} /</span>
+            <span>{{styleGuide.typography.heading}}</span>
+          </div>
         </div>
       </div>
       <div class="bs-col-12">
-        <img src="/uploads/project-img.png" alt="" class=" w-full object-cover">
+        <img src="{{styleGuide.typography.imgUrl}}" alt="" class=" w-full object-cover">
       </div>
-      <!-- <div class="bs-row px-0 gap-x-6">
-        <div class="bs-col-12 lg:bs-col pb-3 lg:pb-0">
-          <h4 class="font-medium tracking-tight">Typeface</h4>
-        </div>
-        <div class="bs-col-12 lg:bs-col">
-          <p>These are the main colors that make up the majority of the colors used in the design system. These are the main colors that make up the majority of the colors used in the design system.</p>
-        </div>
-      </div> -->
-      <!-- One Typeface -->
-      <!-- <div class="bs-col-12 mt-8">
-        <div class="typeface-item">
-          <div class="typeface-body">
-            <div class="typeface-content">
-              <p class="typeface-name">Zalando Sans</p>
-              <p class="typeface-sample">Aa</p>
-              <p class="typeface-alphabet">
-                ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789!@#$%^&*()
-              </p>
-            </div>
-          </div>
-        </div>
-      </div> -->
-      <!-- Two Typeface -->
-      <!-- <div class="bs-col-12 grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
-        <div class="typeface-item">
-          <div class="typeface-heading">
-            <h5>Brand Typeface</h5>
-            <p>The brand typeface is used for larger type styles, like Headline and Display, to focus on expression. </p>
-          </div>
-          <div class="typeface-body">
-            <div class="typeface-content">
-              <p class="typeface-name">Zalando Sans</p>
-              <p class="typeface-sample">Aa</p>
-              <p class="typeface-alphabet">
-                ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789!@#$%^&*()
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="typeface-item">
-          <div class="typeface-heading">
-            <h5>Brand Typeface</h5>
-            <p>The brand typeface is used for larger type styles, like Headline and Display, to focus on expression. </p>
-          </div>
-          <div class="typeface-body">
-            <div class="typeface-content">
-              <p class="typeface-name">Zalando Sans</p>
-              <p class="typeface-sample">Aa</p>
-              <p class="typeface-alphabet">
-                ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789!@#$%^&*()
-              </p>
-            </div>
-          </div>
-        </div>
-      </div> -->
     </div>
     <div class="bs-row mb-10">
       <div class="bs-col-12 mb-10">
-        <div class="style-guide-header">
-          <h3>Components</h3>
-          <p>A gradient is the gradual blending from one color to another. Incorporating gradients into your designs is a great way to make objects stand out by adding a new dimension and adding realism to objects. They almost create a new color.</p>
+        <div class="style-guide-header" data-style="{{style styleGuide.headerStyle}}">
+          <div class="style-guide__main">
+            <h3>{{styleGuide.components.heading}}</h3>
+            <p>{{styleGuide.components.content}}</p>
+          </div>
+          <div class="style-guide__decor">
+            <span>{{styleGuide.heading.text}} /</span>
+            <span>{{styleGuide.components.heading}}</span>
+          </div>
         </div>
       </div>
       <ul class="component-list">
+        {{#each styleGuide.components.items}}
         <li class="component-item ">
           <div class="component-thumbnail ">
-            <img src="/uploads/project-img.png" alt=""]>
+            <img src="{{imgUrl}}" alt="">
           </div>
           <div class="component-body ">
-            <h4>Component</h4>
+            <h4>{{name}}</h4>
           </div>
         </li>
-        <li class="component-item ">
-          <div class="component-thumbnail ">
-            <img src="/uploads/project-img.png" alt=""]>
-          </div>
-          <div class="component-body ">
-            <h4>Component</h4>
-          </div>
-        </li>
-        <li class="component-item ">
-          <div class="component-thumbnail ">
-            <img src="/uploads/project-img.png" alt=""]>
-          </div>
-          <div class="component-body ">
-            <h4>Component</h4>
-          </div>
-        </li>
-        <li class="component-item ">
-          <div class="component-thumbnail ">
-            <img src="/uploads/project-img.png" alt=""]>
-          </div>
-          <div class="component-body ">
-            <h4>Component</h4>
-          </div>
-        </li>
+        {{/each}}
       </ul>
     </div>
     <div class="bs-row">
       <div class="bs-col-12 mb-10">
-        <div class="style-guide-header">
-          <h3>Grids</h3>
-          <p>A gradient is the gradual blending from one color to another. Incorporating gradients into your designs is a great way to make objects stand out by adding a new dimension and adding realism to objects. They almost create a new color.</p>
+        <div class="style-guide-header" data-style="{{style styleGuide.headerStyle}}">
+          <div class="style-guide__main">
+            <h3>{{styleGuide.grids.heading}}</h3>
+            <p>{{styleGuide.grids.content}}</p>
+          </div>
+          <div class="style-guide__decor">
+            <span>{{styleGuide.heading.text}} /</span>
+            <span>{{styleGuide.grids.heading}}</span>
+          </div>
         </div>
       </div>
       <div class="bs-row px-0 gap-x-6 pb-10">
         <div class="bs-col-12 md:bs-col">
-          <img src="/uploads/desktop.png" alt="" class="w-full object-cover mb-6 md:mb-0">
+          <img src="{{styleGuide.grids.desktop.imgUrl}}" alt="" class="w-full object-cover mb-6 md:mb-0">
         </div>
         <div class="bs-col-12 md:bs-col flex flex-col justify-center">
           <div class="flex items-center">
             <i class="icon-desktop text-[28px]"></i>
-            <h4 class="font-medium tracking-tight ml-3">Desktop</h4>
+            <h4 class="font-medium tracking-tight ml-3">{{styleGuide.grids.desktop.heading}}</h4>
           </div>
-          <p class="mt-3">As 12-column grid provides felxibility for complex layouts. Consistent column width and gutter spacing help maintain structure and visual balance across wide screens.</p>
+          <p class="mt-3">{{styleGuide.grids.desktop.content}}</p>
         </div>
       </div>
       <div class="bs-row px-0 gap-x-6">
         <div class="bs-col-12 md:bs-col bs-order-last md:bs-order-first flex flex-col justify-center">
           <div class="flex items-center">
             <i class="icon-mobile text-[28px]"></i>
-            <h4 class="font-medium tracking-tight ml-3">Mobile</h4>
+            <h4 class="font-medium tracking-tight ml-3">{{styleGuide.grids.mobile.heading}}</h4>
           </div>
-          <p class="mt-3">As 12-column grid provides felxibility for complex layouts. Consistent column width and gutter spacing help maintain structure and visual balance across wide screens.</p>
+          <p class="mt-3">{{styleGuide.grids.mobile.content}}</p>
         </div>
         <div class="bs-col-12 md:bs-col bs-order-first md:bs-order-last">
-          <img src="/uploads/mobile.png" alt="" class="w-full object-cover mb-6 md:mb-0">
+          <img src="{{styleGuide.grids.mobile.imgUrl}}" alt="" class="w-full object-cover mb-6 md:mb-0">
         </div>
       </div>
     </div>
   </div>
 </section>
-<section id="final-design" class="bg-gray-900 py-20">
+<section id="final-design" class="py-20" data-style="{{style result.style}}">
   <div class="container mx-auto">
     <div class="bs-row justify-center">
       <div class="bs-col-12 lg:bs-col-6 mb-10">
-        <h2 class="text-center text-white font-medium tracking-tight mb-4" data-text-reveal>Final Design</h2>
-        <p class="text-center text-white mb-6" data-text-reveal data-split="lines">Lorem ipsum dolor sit amet consectetur. Sed accumsan nunc donec nec aliquet egestas ullamcorper nullam. Sem vulputate arcu scelerisque morbi adipiscing id et mattis non.</p>
-        <div class="flex justify-center" data-reveal>
-          <a href="#" class="btn btn-light">
+        <h2 class="text-center font-medium tracking-tight mb-4" data-style="{{style result.heading.style}}">{{result.heading.text}}</h2>
+        <p class="text-center text-white mb-6">{{result.content}}</p>
+        <div class="flex justify-center">
+          <a href="#" class="btn" data-style="{{style result.button.style}}">
             <span class="hover-text">
-              <span data-label="View Resume">View Resume</span>
+              <span data-label="{{result.button.label}}">{{result.button.label}}</span>
             </span>
             <i class="icon-arrow-up-right text-xs"></i>
           </a>
         </div>
       </div>
       <div class="bs-col-12">
-        <img src="/uploads/project-img.png" alt="" class=" w-full object-cover">
+        <img src="{{result.imgUrl}}" alt="" class=" w-full object-cover">
       </div>
     </div>
   </div>
 </section>
 <section id="anatomy" class="pt-20">
   <div class="container mx-auto">
+    {{#each anatomy}}
     <div class="bs-row justify-center mb-20">
       <div class="bs-col-12 lg:bs-col-6 mb-10">
-        <h3 class="text-center font-medium tracking-tight mb-4" data-text-reveal>About Screen</h3>
-        <p class="text-center" data-text-reveal data-split="lines">Lorem ipsum dolor sit amet consectetur. Sed accumsan nunc donec nec aliquet egestas ullamcorper nullam. Sem vulputate arcu scelerisque morbi adipiscing id et mattis non.</p>
+        <h3 class="text-center font-medium tracking-tight mb-4" data-style="{{style heading.style}}">{{heading.text}}</h3>
+        <p class="text-center">{{content}}</p>
       </div>
       <div class="bs-col-12">
-        <img src="/uploads/project-img.png" alt="" class=" w-full object-cover">
+        <img src="{{imgUrl}}" alt="" class=" w-full object-cover">
       </div>
     </div>
-    <div class="bs-row justify-center mb-20">
-      <div class="bs-col-12 lg:bs-col-6 mb-10">
-        <h3 class="text-center font-medium tracking-tight mb-4" data-text-reveal>About Screen</h3>
-        <p class="text-center" data-text-reveal data-split="lines">Lorem ipsum dolor sit amet consectetur. Sed accumsan nunc donec nec aliquet egestas ullamcorper nullam. Sem vulputate arcu scelerisque morbi adipiscing id et mattis non.</p>
-      </div>
-      <div class="bs-col-12">
-        <img src="/uploads/project-img.png" alt="" class=" w-full object-cover">
-      </div>
-    </div>
+    {{/each}}
   </div>
 </section>
 <section id="credit" class="pb-20">
   <div class="container mx-auto">
     <div class="bs-row justify-center">
-      <div class="bs-col-12 lg:bs-col-6">
-        <h2 class="text-center font-medium tracking-tight mb-4" data-text-reveal>Credits</h2>
-        <p class="text-center" data-text-reveal data-split="lines">Lorem ipsum dolor sit amet consectetur. Sed accumsan nunc donec nec aliquet egestas ullamcorper nullam. Sem vulputate arcu scelerisque morbi adipiscing id et mattis non.</p>
+      <div class="bs-col-12">
+        <div class="p-8 border rounded-3xl" data-style="{{style credits.style}}">
+          <h2 class="font-medium tracking-tight mb-2" data-style="{{style credits.heading.style}}">{{credits.heading.text}}</h2>
+          <div class="-mb-3 *:mb-3">
+            {{#each credits.content}}
+              {{renderBlock this}}
+            {{/each}}
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -557,8 +455,8 @@
     <div class="bs-row mb-10">
       <ul class="card-grid" data-card-grid data-reveal="group">
         <div class="cursor-label">View Project</div>
-        {{> components/project-card}}
-        {{> components/project-card}}
+        <!-- {{> components/project-card}}
+        {{> components/project-card}} -->
       </ul>
     </div>
     <div class="bs-row justify-center">

@@ -1,0 +1,324 @@
+{
+  "hero": {
+    "category": [
+      {
+        "name": "UI Design",
+        "url": "#"
+      },
+      {
+        "name": "Landing Page",
+        "url": "#"
+      }
+    ],
+    "name": {
+      "text": "GOOD SIPS Coffee",
+      "style": {
+        "textColor": "#b31f01"
+      }
+    },
+    "description": "A promotional landing page designed to strengthen GOOD SIPS Coffee's online presence, introduce seasonal campaigns, and encourage customers to explore the menu, promotions, and nearby stores through an engaging, brand-driven experience.",
+    "button": {
+      "label": "View Figma",
+      "href": "#",
+      "style": {
+        "backgroundColor": "#b31f01",
+        "textColor": "#ffffff"
+      }
+    },
+    "metadata": [
+      {
+        "key": "Industry",
+        "value": "Food & Beverage"
+      },
+      {
+        "key": "Role",
+        "value": "UI/UX Designer"
+      },
+      {
+        "key": "Year",
+        "value": "2026"
+      },
+      {
+        "key": "Tools",
+        "value": "Figma, Photoshop, Chat GPT"
+      }
+    ],
+    "style": {
+      "backgroundColor": "linear-gradient(180deg,rgba(240, 231, 200, 1) 0%, rgba(255, 255, 255, 1) 100%)"
+    }
+  },
+  "carousel": [
+    "https://res.cloudinary.com/dbmobxcxq/image/upload/v1784960942/portfolio-2026/good-sips-coffee/carousel-1_avyhm5.webp",
+    "https://res.cloudinary.com/dbmobxcxq/image/upload/v1784961110/portfolio-2026/good-sips-coffee/carousel-2_lu0e8g.webp",
+    "https://res.cloudinary.com/dbmobxcxq/image/upload/v1784960945/portfolio-2026/good-sips-coffee/carousel-3_feqnyr.webp",
+    "https://res.cloudinary.com/dbmobxcxq/image/upload/v1784960944/portfolio-2026/good-sips-coffee/carousel-4_krqtgx.webp",
+    "https://res.cloudinary.com/dbmobxcxq/image/upload/v1784960956/portfolio-2026/good-sips-coffee/carousel-5_nopzkq.webp"
+  ],
+  "overview": {
+    "heading": {
+      "text": "Project Overview",
+      "style": {
+        "textColor": "#b31f01"
+      }
+    },
+    "content": [
+      {
+        "type": "paragraph",
+        "data": "The goal was to design a promotional landing page that could promote exclusive offers, increase menu discovery, help users quickly locate nearby stores, deliver a warm and memorable coffee brand experience. "
+      },
+      {
+        "type": "paragraph",
+        "data": "The final design combines promotional storytelling with intuitive navigation, creating a landing page that supports both marketing objectives and user needs."
+      },
+      {
+        "type": "paragraph",
+        "data": "This project was created for a real coffee brand client. However, due to privacy and confidentiality agreements, the original brand identity, logo, and visual assets cannot be publicly disclosed."
+      }
+    ],
+    "logoGen": {
+      "prompt": "Design a modern, minimalist logo for a coffee shop. Create a unique combination mark with an abstract geometric symbol on the left and custom typography on the right. The logo should be modern, aesthetic, young and fresh vibe. Use a flat vector style with a cohesive color palette of warm color.",
+      "imgUrl": "",
+      "warning": "LogoGen can make mistakes. Check important info.",
+      "description": "To showcase the design process while respecting client confidentiality, the branding presented in this case study—including the logo, color system, and certain visual elements—has been recreated using AI-generated assets."
+    },
+    "branding": {
+      "imgUrl": "https://res.cloudinary.com/dbmobxcxq/image/upload/v1784976654/portfolio-2026/good-sips-coffee/brand-bento_qnhn99.webp",
+      "description": "GOOD SIPS embraces a bold and modern visual identity that reflects its youthful and energetic brand spirit. Rounded typography, cheerful illustrations, and warm earthy colors work together to create a memorable and inviting coffee experience."
+    },
+    "role": {
+      "imgUrl": "https://res.cloudinary.com/dbmobxcxq/image/upload/v1784980368/portfolio-2026/good-sips-coffee/role_yvnaes.png",
+      "heading": {
+        "text": "My Role",
+        "style": {
+          "textColor": "#b31f01"
+        }
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "data": "I was responsible for the complete UI/UX design process, transforming initial business requirements into a polished promotional landing page."
+        },
+        {
+          "type": "list",
+          "data": [
+            "Researching similar coffee and F&B promotional websites",
+            "Defining the page structure and content hierarchy",
+            "Creating low-fidelity wireframes",
+            "Designing the visual direction and UI system",
+            "Building reusable interface components",
+            "Designing the final high-fidelity landing page",
+            "Preparing design assets for development handoff"
+          ]
+        }
+      ],
+      "style": {
+        "backgroundColor": "linear-gradient(0deg,rgba(240, 231, 200, 1) 0%, rgba(255, 255, 255, 1) 100%)"
+      }
+    }
+  },
+  "process": {
+    "heading": {
+      "text": "Design Process",
+      "style": {
+        "textColor": "#f0e7c8"
+      }
+    },
+    "content": "The project followed a straightforward UI/UX workflow commonly used for marketing landing pages.",
+    "imgUrl": "https://res.cloudinary.com/dbmobxcxq/image/upload/v1784981723/portfolio-2026/good-sips-coffee/design-process_m4g9wr.png",
+    "style": {
+      "backgroundColor": "#b31f01"
+    }
+  },
+  "research": {
+    "heading": {
+      "text": "Moodboard",
+      "style": {
+        "textColor": "#b31f01"
+      }
+    },
+    "content": "The visual direction was inspired by modern café brands that successfully combine warmth, freshness, and promotional storytelling.",
+    "imgUrl": "https://res.cloudinary.com/dbmobxcxq/image/upload/v1784984125/portfolio-2026/good-sips-coffee/moodboard_jo53id.png"
+  },
+  "probSol": {
+    "heading": {
+      "text": "Problem & Solution",
+      "style": {
+        "textColor": "#b31f01"
+      }
+    },
+    "content": "Identifying user and business challenges helped shape design decisions that balance promotional content with a seamless browsing experience.",
+    "imgUrl": "https://res.cloudinary.com/dbmobxcxq/image/upload/v1784984424/portfolio-2026/good-sips-coffee/problem-solution_dt7r2n.png",
+    "problem": {
+      "heading": {
+        "text": "Problem",
+        "style": {
+          "textColor": "#b31f01"
+        }
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "data": "Coffee promotional pages often prioritize marketing visuals over usability, making it difficult for users to quickly find products, current promotions, or nearby stores."
+        },
+        {
+          "type": "paragraph",
+          "data": "The client also wanted to showcase a large amount of content which including featured drinks, promotions, brand story, mobile app, and store locator within a single scrolling experience."
+        }
+      ]
+    },
+    "solution": {
+      "heading": {
+        "text": "Solution",
+        "style": {
+          "textColor": "#b31f01"
+        }
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "data": "The landing page was structured into clear content sections that guide users naturally from discovery to conversion. Key solutions include:"
+        },
+        {
+          "type": "list",
+          "data": [
+            "Large hero banner to capture attention",
+            "Categorized menu sections for easier browsing",
+            "Promotional cards that stand out without overwhelming the layout",
+            "Brand story section to build trust",
+            "Reward app section to encourage downloads",
+            "Store locator near the bottom for users ready to visit"
+          ]
+        }
+      ]
+    },
+    "style": {
+      "backgroundColor": "linear-gradient(178deg,rgba(240, 231, 200, 1) 0%, rgba(255, 255, 255, 1) 100%)"
+    }
+  },
+  "userflow": null,
+  "sitemap": null,
+  "wireframes": {
+    "heading": {
+      "text": "Wireframes",
+      "style": {
+        "textColor": "#f0e7c8"
+      }
+    },
+    "content": "The sitemap defines the overall content structure of the landing page, organizing information into a clear hierarchy that supports intuitive navigation and easy content discovery.",
+    "imgUrl": "https://res.cloudinary.com/dbmobxcxq/image/upload/v1784988519/portfolio-2026/good-sips-coffee/wireframe_k3vzao.png",
+    "style": {
+      "backgroundColor": "#b31f01"
+    }
+  },
+  "styleGuide": {
+    "heading": {
+      "text": "Style Guide",
+      "style": {
+        "textColor": "#b31f01"
+      }
+    },
+    "content": "The style guide establishes a consistent visual language by defining the core design elements, including colors, typography, components, spacing, and layout principles used throughout the interface.",
+    "headerStyle": {
+      "textColor": "#b31f01",
+      "backgroundColor": "#fbeae7",
+      "borderColor": "#f5d5ce"
+    },
+    "colors": {
+      "heading": "Colors",
+      "content": "The color palette blends warm coffee-inspired tones with clean neutrals to create a welcoming and modern brand identity. Bold red draws attention to key actions, while soft cream and neutral shades provide balance, warmth, and readability throughout the interface.",
+      "imgUrl": "https://res.cloudinary.com/dbmobxcxq/image/upload/v1784995980/portfolio-2026/good-sips-coffee/color-palette_lgrjqf.png"
+    },
+    "typography": {
+      "heading": "Typography",
+      "content": "The typography system pairs Darumadrop One for headings with Plus Jakarta Sans for body text, creating a balance between playful personality and modern readability. This combination reinforces the brand's youthful character while ensuring clear communication across the interface.",
+      "imgUrl": "https://res.cloudinary.com/dbmobxcxq/image/upload/v1784995982/portfolio-2026/good-sips-coffee/typography_e9ataj.png"
+    },
+    "components": {
+      "heading": "Components",
+      "content": "Each component follows a consistent design language through standardized spacing, rounded corners, and a cohesive color palette. Reusable elements such as buttons, product cards,... help maintain visual consistency while improving scalability and ensuring a seamless user experience across the landing page.",
+      "items": [
+        {
+          "name": "Button",
+          "imgUrl": "https://res.cloudinary.com/dbmobxcxq/image/upload/v1784995986/portfolio-2026/good-sips-coffee/component-1_yybooq.png"
+        },
+        {
+          "name": "Product Card",
+          "imgUrl": "https://res.cloudinary.com/dbmobxcxq/image/upload/v1784995987/portfolio-2026/good-sips-coffee/component-3_g2afxp.png"
+        },
+        {
+          "name": "Category Card",
+          "imgUrl": "https://res.cloudinary.com/dbmobxcxq/image/upload/v1784995987/portfolio-2026/good-sips-coffee/component-2_xj0tqu.png"
+        }
+      ]
+    },
+    "grids": {
+      "heading": "Grids",
+      "content": "The layout is built on a responsive grid system, using a 12-column grid for desktop and a 4-column grid for mobile. This approach ensures consistent alignment, clear content hierarchy, and seamless scalability, allowing content-heavy sections to adapt naturally across different screen sizes.",
+      "desktop": {
+        "heading": "Desktop",
+        "content": "A responsive 12-column grid was used to create flexible layouts that scale across different screen sizes. Consistent column widths and gutter spacing help maintain alignment, structure, and visual balance throughout the design.",
+        "imgUrl": "https://res.cloudinary.com/dbmobxcxq/image/upload/v1784995993/portfolio-2026/good-sips-coffee/grid-desktop_zbkgd3.png"
+      },
+      "mobile": {
+        "heading": "Mobile",
+        "content": "A 4-column grid system provides a structured foundation for mobile layouts while maximizing limited screen space. Consistent column widths and spacing help maintain visual hierarchy, readability, and effortless content scanning.",
+        "imgUrl": "https://res.cloudinary.com/dbmobxcxq/image/upload/v1784995993/portfolio-2026/good-sips-coffee/grid-mobile_cdcs4d.png"
+      }
+    }
+  },
+  "result": {
+    "heading": {
+      "text": "Final Design",
+      "style": {
+        "textColor": "#f0e7c8"
+      }
+    },
+    "content": "The final interface combines engaging visuals with a structured layout that supports both storytelling and conversion.",
+    "imgUrl": "https://res.cloudinary.com/dbmobxcxq/image/upload/v1784996012/portfolio-2026/good-sips-coffee/final-design_ontgrc.png",
+    "button": {
+      "label": "View Figma",
+      "href": "#",
+      "style": {
+        "backgroundColor": "#ffffff",
+        "textColor": "#b31f01"
+      }
+    },
+    "style": {
+      "backgroundColor": "#b31f01"
+    }
+  },
+  "anatomy": [
+    {
+      "heading": {
+        "text": "Promo Landing Page",
+        "style": {
+          "textColor": "#b31f01"
+        }
+      },
+      "content": "Rather than presenting isolated promotions, the landing page unfolds as a guided journey - from seasonal highlights and product exploration to exclusive offers, app downloads, and store discovery. Consistent branding, reusable components, and clear visual hierarchy help maintain a cohesive experience across the entire page.",
+      "imgUrl": "https://res.cloudinary.com/dbmobxcxq/image/upload/v1784999533/portfolio-2026/good-sips-coffee/anatomy_grsq9j.png"
+    }
+  ],
+  "credits": {
+    "heading": {
+      "text": "Credits",
+      "style": {
+        "textColor": "#b31f01"
+      }
+    },
+    "content": [
+      {
+        "type": "paragraph",
+        "data": "This project incorporates third-party resources, including product photography, mockups, icons, and typefaces, to support the visual presentation. All the product images are generated by ChatGPT. Some banners were used are resources from Highland Coffee, The Coffee House. Coffee shop photography from Brewly template, typography from Google Fonts, and device mockups from Mockup World. The logo and brand identity presented in this case study were recreated using AI to protect the confidentiality of the original client."
+      },
+      {
+        "type": "paragraph",
+        "data": "Disclaimer: This project was originally designed for a real client. To respect confidentiality agreements, the brand name, logo, and certain visual assets have been recreated for portfolio purposes. All third-party resources are used for presentation only and remain the property of their respective owners."
+      }
+    ],
+    "style": {
+      "backgroundColor": "#fbeae7",
+      "borderColor": "#f5d5ce"
+    }
+  }
+}

@@ -39,7 +39,6 @@ export default class PolaroidHero {
     this.mm.add(this.options.breakpoint, () => {
       this.createTimeline();
       EventBus.on("transition:revealComplete.polaroid", () => this.play());
-      
     });
   }
 
