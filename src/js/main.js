@@ -14,6 +14,7 @@ import Carousel from "./modules/Carousel.js";
 import PageTransition from "./modules/PageTransition.js";
 import Reveal from "./modules/Reveal.js";
 import TextReveal from "./modules/TextReveal.js";
+import BrandGen from "./modules/BrandGen.js";
 
 $(async function () {
   
@@ -59,6 +60,10 @@ $(async function () {
 
   $(".carousel-wrapper").each(function () {
     new Carousel(this);
+  });
+
+  $("[data-chat]").each(function () {
+    new BrandGen(this);
   });
 
   $("[data-style]").each(function () {

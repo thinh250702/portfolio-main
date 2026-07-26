@@ -5,7 +5,8 @@ export function renderBlock(block) {
   switch (block.type) {
     case "paragraph":
       return new Handlebars.SafeString(
-        `<p>${Handlebars.escapeExpression(block.data)}</p>`
+        `<p>${block.data}</p>`
+        // `<p>${Handlebars.escapeExpression(block.data)}</p>`
       );
     case "list":
       return new Handlebars.SafeString(`

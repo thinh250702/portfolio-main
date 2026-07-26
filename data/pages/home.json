@@ -29,25 +29,6 @@
     "eyebrow": "Portfolio",
     "heading": "Explore my featured works",
     "content": "We’re a creative studio passionate about blending design, technology",
-    "projects": [
-      {
-        "thumbnail": "",
-        "category": [
-          {
-            "name": "",
-            "url": ""
-          },
-          {
-            "name": "",
-            "url": ""
-          }
-        ],
-        "year": "",
-        "name": "",
-        "slug": "",
-        "description": ""
-      }
-    ],
     "button": {
       "label": "View All Work",
       "href": "/work"

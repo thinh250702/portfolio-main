@@ -1,23 +1,4 @@
 {
   "heading": "Selected Projects",
-  "content": "A thoughtful selection of work shaped by simplicity and meaningful outcomes.",
-  "projects": [
-    {
-      "thumbnail": "https://res.cloudinary.com/dbmobxcxq/image/upload/v1784960655/portfolio-2026/good-sips-coffee/cover_mvomjn.webp",
-      "category": [
-        {
-          "name": "UI Design",
-          "url": "#"
-        },
-        {
-          "name": "Landing Page",
-          "url": "#"
-        }
-      ],
-      "year": "2026",
-      "name": "GOOD SIPS Coffee",
-      "description": "A promotional landing page designed to strengthen GOOD SIPS Coffee's online presence, introduce seasonal campaigns, and encourage customers to explore the menu, promotions, and nearby stores through an engaging, brand-driven experience.",
-      "slug": "good-sips-coffee"
-    }
-  ]
+  "content": "A thoughtful selection of work shaped by simplicity and meaningful outcomes."
 }

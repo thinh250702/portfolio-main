@@ -2,9 +2,10 @@ import createError from 'http-errors';
 
 import projectService from "../services/project.service.js";
 
-const getProject = async(req, res) => {
-  const data = await projectService.getProjectData();
-  res.render('pages/projects', { title: 'Projects', ...data});
+const getProjects = async(req, res) => {
+  const data = await projectService.getWorkPage();
+  const projects = await projectService.getAllProjects();
+  res.render('pages/projects', { title: 'Projects', ...data, projects});
 }
 
 const getProjectDetail = async(req, res, next) => {
@@ -17,6 +18,6 @@ const getProjectDetail = async(req, res, next) => {
 }
 
 export default {
-  getProject,
+  getProjects,
   getProjectDetail
 }

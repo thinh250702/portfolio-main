@@ -60,19 +60,19 @@
         <div class="chat-wrapper bg-gray-100 border border-gray-200 overflow-hidden rounded-3xl" data-chat>
           <div class="chat-heading flex justify-between p-4 lg:p-6 bg-white">
             <div>
-              <p class="title-md lg:title-lg font-medium">LogoGen</p>
-              <p class="body-sm lg:body-md text-gray-400">How can I help you today?</p>
+              <p class="title-md lg:title-lg font-medium">BrandGen AI</p>
+              <p class="body-sm lg:body-md text-gray-400">Press Send Button for animation</p>
             </div>
-            <button type="button" class="chat-btn chat-btn-outlined" data-chat-ui="reset-btn">
+            <button type="button" class="chat-reset-btn chat-btn chat-btn-outlined">
               <i class="icon-refresh"></i>
             </button>
           </div>
           <div class="chat-content p-4 lg:p-6">
             <div class="flex justify-end mb-4 lg:mb-6">
-              <div class="bg-gray-200 w-10/12 lg:w-1/2 px-4 lg:px-5 py-3 lg:py-4 rounded-2xl lg:rounded-[20px]" data-chat-ui="chat-bubble">{{overview.logoGen.prompt}}</div>
+              <div class="chat-bubble bg-gray-200 w-10/12 lg:w-1/2 px-4 lg:px-5 py-3 lg:py-4 rounded-2xl lg:rounded-[20px]">{{overview.logoGen.prompt}}</div>
             </div>
             <div>
-              <div class="flex items-center pb-2 lg:pb-3 gap-2" data-chat-ui="shimmer-text">
+              <div class="chat-shimmer-text flex items-center pb-2 lg:pb-3 gap-2">
                 <dotlottie-wc 
                   src="/uploads/sparkle.lottie" 
                   autoplay 
@@ -81,11 +81,11 @@
                 </dotlottie-wc>
                 <p class="chat-skeleton-text">Creating your image...</p>
               </div>
-              <div class="aspect-4/3 w-10/12 lg:w-4/12 overflow-hidden rounded-2xl lg:rounded-[20px]">
-                <!-- <img src="/uploads/project-img.png" alt="" class="w-full h-full object-cover"> -->
-                <div class="w-full h-full chat-skeleton-image" data-chat-ui="shimmer-img"></div>
+              <div class="aspect-4/3 w-10/12 lg:w-4/12 relative">
+                <img src="{{overview.logoGen.imgUrl}}" alt="" class="chat-result-img absolute w-full h-full object-cover rounded-2xl lg:rounded-[20px]">
+                <div class="chat-skeleton-image absolute w-full h-full rounded-2xl lg:rounded-[20px] origin-top-left"></div>
               </div>
-              <div class="mt-2 lg:mt-3">
+              <div class="chat-result-btn mt-2 lg:mt-3">
                 <button type="button" class="chat-btn chat-btn-ghost">
                   <i class="icon-like"></i>
                 </button>
@@ -104,7 +104,7 @@
           <div class="chat-input px-4 lg:px-6">
             <div class="bg-white rounded-3xl lg:rounded-4xl shadow-md">
               <div class="chat-input__field px-5 lg:px-6 py-4 lg:py-5">
-                <textarea name="" id="" rows="3" readonly class="w-full resize-none focus:outline-none" placeholder="Mô tả hình ảnh của bạn" data-chat-ui="chat-input">{{overview.logoGen.prompt}}</textarea>
+                <textarea name="" id="" rows="3" readonly class="chat-input w-full resize-none focus:outline-none" placeholder="Mô tả hình ảnh của bạn">{{overview.logoGen.prompt}}</textarea>
               </div>
               <div class="chat-input__actions flex items-center justify-between px-3 pb-3 lg:px-4 lg:pb-4">
                 <div class="flex items-center gap-2">
@@ -120,13 +120,13 @@
                   <button type="button" class="chat-btn chat-btn-ghost">
                     <i class="icon-microphone text-[18px]"></i>
                   </button>
-                  <button type="button" class="chat-btn chat-btn-filled" data-chat-ui="send-btn">
+                  <button type="button" class="chat-send-btn chat-btn chat-btn-filled">
                     <i class="icon-arrow-up"></i>
                   </button>
-                  <button type="button" class="chat-btn chat-btn-filled hidden" data-chat-ui="voice-btn">
+                  <button type="button" class="chat-voice-btn chat-btn chat-btn-filled hidden">
                     <i class="icon-voice-line"></i>
                   </button>
-                  <button type="button" class="chat-btn chat-btn-tonal hidden" data-chat-ui="pause-btn">
+                  <button type="button" class="chat-pause-btn chat-btn chat-btn-tonal hidden">
                     <div class="bg-black size-3.5 rounded-sm"></div>
                   </button>
                 </div>

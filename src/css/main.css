@@ -281,6 +281,7 @@
       @apply w-full h-full object-cover;
     }
   }
+  /* BrandGen AI */
   .chat-wrapper {
     & .chat-skeleton-image {
       @apply bg-linear-to-l from-gray-300 via-gray-200 to-gray-300 bg-size-[200%_100%] animate-shimmer;
@@ -335,7 +336,7 @@
       & > .component-thumbnail {
         @apply px-3 pt-3;
         & > img {
-          @apply aspect-3/2 w-full object-cover rounded-xl;
+          @apply aspect-4/3 w-full object-cover rounded-xl;
         }
       }
       & > .component-body {
