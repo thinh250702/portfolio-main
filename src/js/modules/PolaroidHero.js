@@ -54,7 +54,7 @@ export default class PolaroidHero {
 
   createTimeline() {
     this.tl = gsap.timeline({ paused: true });
-    this.tl.fromTo(this.dom.wrapper, { yPercent: 140 }, { yPercent: 0, duration: 1, ease: "back.out" } );
+    this.tl.fromTo(this.dom.wrapper, { yPercent: 160 }, { yPercent: 0, duration: 1, ease: "back.out" } );
     this.tl.from(this.dom.items, { xPercent: 50, rotation: 0, y: 0, marginLeft: (_, target) => {return -$(target).outerWidth();}, duration: .8, ease: "power2.out" }, ">");
     this.tl.eventCallback("onStart", () => {
       gsap.set(this.dom.body, { overflow: "hidden" });

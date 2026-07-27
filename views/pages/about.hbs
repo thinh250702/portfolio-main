@@ -1,4 +1,4 @@
-<section id="hero" class="h-screen bg-linear-to-b from-gray-200 to-white flex justify-center items-center pt-(--header-height)">
+<section id="hero" class="h-screen overflow-hidden bg-linear-to-b from-gray-200 to-white flex justify-center items-center pt-(--header-height)">
   <div class="container">
     <div class="bs-row px-0 justify-center">
       <div class="bs-col-auto px-4">
@@ -74,7 +74,7 @@
         <h2 class="font-medium tracking-tighter mb-4 md:mb-0" data-text-reveal>{{journey.heading}}</h2>
       </div>
       <div class="bs-col-12 md:bs-col flex items-end">
-        <p class="body-lg" data-text-reveal data-split="lines">{{journey.content}}</p>
+        <p class="body-lg text-gray-400" data-text-reveal data-split="lines">{{journey.content}}</p>
       </div>
     </div>
     <div class="bs-row pb-10">
@@ -86,11 +86,15 @@
             <h3 class="title-lg font-medium">{{title}}</h3>
             <span>{{subtitle}}</span>
           </div>
-          <div class="journey-list__body">
-            <p>{{content}}</p>
-          </div>
+          <ul class="journey-list__body">
+            {{#each content}}
+            <li>{{this}}</li>
+            {{/each}}
+          </ul>
           <div class="journey-list__date">
-            <span>{{year}}</span>
+            <div>
+              <span class="badge badge-dark">{{year}}</span>
+            </div>
           </div>
         </li>
         {{/each}}
@@ -105,11 +109,15 @@
             <h3 class="title-lg font-medium">{{title}}</h3>
             <span>{{subtitle}}</span>
           </div>
-          <div class="journey-list__body">
-            <p>{{content}}</p>
-          </div>
+          <ul class="journey-list__body">
+            {{#each content}}
+            <li>{{this}}</li>
+            {{/each}}
+          </ul>
           <div class="journey-list__date">
-            <span>{{year}}</span>
+            <div>
+              <span class="badge badge-dark">{{year}}</span>
+            </div>
           </div>
         </li>
         {{/each}}
@@ -124,7 +132,7 @@
       <div class="bs-col-12 md:bs-col-6 flex flex-col items-center">
         <span class="eyebrow" data-reveal>{{tools.eyebrow}}</span>
         <h2 class="mb-4 text-center font-medium tracking-tighter" data-text-reveal>{{tools.heading}}</h2>
-        <p class="text-center body-lg" data-text-reveal data-split="lines">{{tools.content}}</p>
+        <p class="text-center body-lg text-gray-600" data-text-reveal data-split="lines">{{tools.content}}</p>
       </div>
       <div class="bs-col-12">
         <div class="w-full overflow-hidden relative py-10" data-marquee>

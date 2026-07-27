@@ -4,9 +4,9 @@
       <div class="bs-col-12 md:bs-col-6 md:pt-3">
         <span class="eyebrow {{#if isLight}}text-black{{else}}text-white{{/if}}" data-reveal>{{data.eyebrow}}</span>
       </div>
-      <div class="bs-col-12 md:bs-col-6 {{#if isLight}}text-black{{else}}text-white{{/if}}">
-        <h2 class="font-medium tracking-tighter  mb-4" data-text-reveal>{{data.heading}}</h2>
-        <p class="body-lg" data-text-reveal data-split="lines">{{data.content}}</p>
+      <div class="bs-col-12 md:bs-col-6">
+        <h2 class="font-medium tracking-tighter mb-4 {{#if isLight}}text-black{{else}}text-white{{/if}}" data-text-reveal>{{data.heading}}</h2>
+        <p class="body-lg {{#if isLight}}text-gray-600{{else}}text-gray-400{{/if}}" data-text-reveal data-split="lines">{{data.content}}</p>
       </div>
     </div>
     <div class="bs-row" data-accordion data-reveal="group">
@@ -26,7 +26,7 @@
               <h3>{{title}}</h3>
             </div>
             <div class="accordion-collapse">
-              <p class="text-gray-500">{{content}}</p>
+              <p class="{{#if ../isLight}}text-gray-600{{else}}text-gray-400{{/if}}">{{content}}</p>
               <div>
                 {{#each badges}}
                 <span class="badge {{#if ../../isLight}}badge-light{{else}}badge-dark{{/if}}">{{this}}</span>

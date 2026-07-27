@@ -1,7 +1,7 @@
 {
-  "eyebrow": "Let's talk",
-  "heading": "Get in touch with me",
-  "content": "We'd love to hear from you! Whether you have a project in mind, need a quote, or just want to say hello, feel free to reach out. Fill out the form below or use our contact details to connect with us.",
+  "eyebrow": "Let's Connect",
+  "heading": "Let's Build Something Great Together",
+  "content": "Whether you're launching a new product, refining an existing experience, or exploring a collaboration, I'd love to hear your ideas and see how we can create something meaningful together.",
   "form": {
     "name": {
       "name": "fullName",
@@ -23,28 +23,16 @@
       "name": "projectType[]",
       "items": [
         {
-          "id": "tag-branding",
-          "label": "Branding Design"
-        },
-        {
-          "id": "tag-concept",
-          "label": "Design Concept"
-        },
-        {
-          "id": "tag-app",
-          "label": "App Design"
-        },
-        {
-          "id": "tag-web",
+          "id": "type-web",
           "label": "Web Design"
         },
         {
-          "id": "tag-android",
-          "label": "Android Development"
+          "id": "type-mobile-app",
+          "label": "Mobile App Design"
         },
         {
-          "id": "tag-ios",
-          "label": "iOS Development"
+          "id": "type-front-end",
+          "label": "Front-end Development"
         }
       ]
     },

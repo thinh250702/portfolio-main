@@ -27,35 +27,50 @@
   },
   "about": {
     "eyebrow": "About Me",
-    "heading": "In the game for over 6 years, I'm currently based in Ho Chi Minh city, working as an independent designer since July, 2022.",
+    "heading": "Where technology meets visual creativity, I'm now lived in Ho Chi Minh City, working independently as a UI/UX designer.",
     "left": {
-      "heading": "Experience & Innovation",
-      "content": "I've spent 6+ years designing consumer-facing products, from high-stakes commerce flows to complex logistics dashboards. My process starts with research, moves through systems thinking, and ends in interfaces that earn trust under real-world pressure."
+      "heading": "My Design Philosophy",
+      "content": "Every interface should guide users naturally, making interactions intuitive, accessible, and enjoyable. With a background in Software Engineering, I approach design with both creativity and practicality in mind, creating solutions that are visually refined, technically feasible, and ready for development."
     },
     "right": {
-      "heading": "Creative Expertise",
-      "content": "With over a decade of design expertise, we create tailored solutions that engage audiences, build meaningful connections, and elevate brands with creativity and intent."
+      "heading": "How I Work",
+      "content": "Every project begins with understanding the problem before designing the solution. By learning about user needs and business goals, I create wireframes, user flows, and interfaces that prioritize clarity and usability."
     },
     "available": "Available for Hire"
   },
   "journey": {
     "eyebrow": "My Journey",
-    "heading": "Education & Experiences",
-    "content": "Web design is evolving rapidly, and I strive to stay ahead. Emerging tools and technologies enable me to create visually stunning and seamlessly functional websites.",
+    "heading": "Learning, Growing, and Designing Along the Way",
+    "content": "From studying Software Engineering to working across graphic design and UI/UX, each step has shaped my perspective as a designer. Every experience has strengthened my ability to solve problems, collaborate with teams, and create meaningful digital products.",
     "experience": {
       "heading": "(Experience)",
       "items": [
         {
-          "title": "Graphic Design Intern",
-          "subtitle": "Company Name",
-          "content": "Collaborated closely with multidisciplinary teams to design and refine cross-platform design systems, optimize product flows, and create intuitive interaction patterns",
-          "year": "Jun 2023 - May 2024"
+          "title": "VMAS",
+          "subtitle": "Graphic Design Intern",
+          "content": [
+            "Collaborated with the marketing team to create visual assets for campaigns across multiple digital platforms.",
+            "Worked closely with the creative team to produce engaging designs that aligned with brand identity and project objectives."
+          ],
+          "year": "2024 - 2025"
         },
         {
-          "title": "Graphic Design Intern",
-          "subtitle": "Company Name",
-          "content": "Collaborated closely with multidisciplinary teams to design and refine cross-platform design systems, optimize product flows, and create intuitive interaction patterns",
-          "year": "Jun 2023 - May 2024"
+          "title": "LAJO",
+          "subtitle": "Design Trainee",
+          "content": [
+            "Designed marketing materials for client events, workshops, and promotional campaigns while creating social media content for various platforms.",
+            "Also contributed to the early design phase of an online healthcare platform, helping shape the user experience for a doctor and hospital mobile application."
+          ],
+          "year": "2025"
+        },
+        {
+          "title": "LPTECH",
+          "subtitle": "UI/UX Design",
+          "content": [
+            "Designed responsive landing pages and mobile application interfaces with a focus on usability and visual consistency.",
+            "Collaborated closely with developers throughout the implementation process to ensure the final product accurately reflected the design vision and provided a seamless user experience."
+          ],
+          "year": "2025 - 2026"
         }
       ]
     },
@@ -63,24 +78,21 @@
       "heading": "(Education)",
       "items": [
         {
-          "title": "Graphic Design Intern",
-          "subtitle": "Company Name",
-          "content": "Collaborated closely with multidisciplinary teams to design and refine cross-platform design systems, optimize product flows, and create intuitive interaction patterns",
-          "year": "Jun 2023 - May 2024"
-        },
-        {
-          "title": "Graphic Design Intern",
-          "subtitle": "Company Name",
-          "content": "Collaborated closely with multidisciplinary teams to design and refine cross-platform design systems, optimize product flows, and create intuitive interaction patterns",
-          "year": "Jun 2023 - May 2024"
+          "title": "TDTU",
+          "subtitle": "Software Engineering",
+          "content": [
+            "Built a strong foundation in web and mobile application development while gaining a broad understanding of software engineering principles.",
+            "Throughout my studies, I completed practical projects that strengthened both my technical knowledge and problem-solving skills."
+          ],
+          "year": "2020 - 2024"
         }
       ]
     }
   },
   "tools": {
     "eyebrow": "Tools",
-    "heading": "Essential Tools I Use",
-    "content": "I use a refined set of design, development, and automation tools to build fast, scalable, and beautifully engineered digital experiences.",
+    "heading": "My Creative Toolkit",
+    "content": "From design and prototyping to development and collaboration, these are the essential tools I use to create modern digital experiences from concept to implementation.",
     "items": [
       {
         "name": "HTML5",

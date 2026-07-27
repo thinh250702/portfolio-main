@@ -41,7 +41,7 @@
         @apply bs-col-12 lg:bs-col-4 xl:bs-col-3 text-white;
       }
       & > .journey-list__body {
-        @apply bs-col-12 lg:bs-col-4 text-gray-400;
+        @apply bs-col-12 lg:bs-col-4 text-gray-400 -mb-3 *:mb-3 list-disc pl-4;
       }
       & > .journey-list__date {
         @apply bs-col-12 lg:bs-col-2 lg:bs-offset-2 xl:bs-offset-3 flex lg:justify-end bs-order-first lg:bs-order-last text-gray-500;

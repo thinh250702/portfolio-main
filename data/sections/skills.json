@@ -1,27 +1,27 @@
 {
-  "eyebrow": "Tools",
-  "heading": "Essential Tools I Use",
-  "content": "I use a refined set of design, development, and automation tools to build fast, scalable, and beautifully engineered digital experiences.",
+  "eyebrow": "Skills",
+  "heading": "What I Specialize In",
+  "content": "From research and visual design to front-end development, I create digital experiences that are functional, engaging, and built with attention to every detail.",
   "items": [
     {
       "number": "[01]",
       "title": "UI/UX Design",
-      "content": "We help businesses define who they are and how they're seen. From logos and color palettes to typography and brand guidelines, we create cohesive identities that tell your story and leave a lasting impression.",
-      "badges": ["Logo Design", "Visual Identity", "Motion Design"],
+      "content": "I design intuitive and user-centered interfaces for websites and mobile applications, balancing usability with modern visual aesthetics. Every design decision is guided by user needs, business goals, and a seamless experience.",
+      "badges": ["Wireframing", "User Flow", "Design System", "Prototyping", "Responsive Design", "Figma"],
       "imgUrl": "/uploads/skill-1.png"
     },
     {
       "number": "[02]",
-      "title": "UI/UX Design",
-      "content": "We help businesses define who they are and how they're seen. From logos and color palettes to typography and brand guidelines, we create cohesive identities that tell your story and leave a lasting impression.",
-      "badges": ["Logo Design", "Visual Identity", "Motion Design"],
+      "title": "Graphic Design",
+      "content": "I create impactful visual assets ranging from posters and key visuals to social media campaigns. When appropriate, I incorporate 3D elements to bring depth, creativity, and a distinctive visual identity to each design.",
+      "badges": ["Poster Design", "Key Visual", "Social Media Design", "Typography", "Blender 3D", "Adobe Suite"],
       "imgUrl": "/uploads/skill-2.png"
     },
     {
       "number": "[03]",
-      "title": "UI/UX Design",
-      "content": "We help businesses define who they are and how they're seen. From logos and color palettes to typography and brand guidelines, we create cohesive identities that tell your story and leave a lasting impression.",
-      "badges": ["Logo Design", "Visual Identity", "Motion Design"],
+      "title": "Web Development",
+      "content": "I bring designs to life through front-end development, building responsive and interactive websites with clean, maintainable code. I also create smooth animations and user interactions to enhance the overall experience.",
+      "badges": ["HTML5", "CSS3", "Bootstrap", "Tailwind CSS", "JavaScript", "jQuery", "GSAP", "React", "Node/Express.js"],
       "imgUrl": "/uploads/skill-3.png"
     }
   ]
