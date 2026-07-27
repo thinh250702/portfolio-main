@@ -15,6 +15,7 @@ import PageTransition from "./modules/PageTransition.js";
 import Reveal from "./modules/Reveal.js";
 import TextReveal from "./modules/TextReveal.js";
 import BrandGen from "./modules/BrandGen.js";
+import ZoomTransition from "./modules/ZoomTransition.js";
 
 $(async function () {
   
@@ -64,6 +65,10 @@ $(async function () {
 
   $("[data-chat]").each(function () {
     new BrandGen(this);
+  });
+
+  $("[data-zoom]").each(function () {
+    new ZoomTransition(this);
   });
 
   $("[data-style]").each(function () {

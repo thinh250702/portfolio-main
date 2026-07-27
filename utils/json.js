@@ -4,6 +4,7 @@ import createError from 'http-errors';
 
 export async function loadJson(fileName, notFoundMessage = null) {
   const filePath = path.join(process.cwd(), "data", fileName);
+  
   try {
     const content = await fs.readFile(filePath, "utf8");
     return JSON.parse(content);

@@ -2,71 +2,42 @@
   <div class="w-full h-[20%] md:h-[30%] lg:h-[40%] xl:h-1/2 absolute bottom-0 bg-[url(https://res.cloudinary.com/dbmobxcxq/image/upload/v1784730393/portfolio-2026/nww28lqrmvrqwmlcnfyu_mb37px.webp)] bg-cover bg-repeat-x bg-bottom"></div>
   <div class="container mx-auto">
     <div class="bs-row py-20 justify-between">
-      <div class="bs-col-12 lg:bs-col-4">
-        <h2 class="h1 tracking-tighter font-medium text-white mb-6" data-text-reveal>Let's start a great work right now</h2>
-        <span class="inline-block title-sm sm:h5 font-medium px-5 py-2.5 text-white border border-white rounded-full" data-reveal="">thinhnguyen2572@gmail.com</span>
+      <div class="bs-col-12 lg:bs-col-6">
+        <h2 class="h1 tracking-tighter font-medium text-white mb-6" data-text-reveal>{{settings.footer.title}}</h2>
+        <span class="inline-block title-sm sm:h5 font-medium px-5 py-2.5 text-white border border-white rounded-full" data-reveal="">{{settings.email}}</span>
       </div>
-      <div class="bs-col-12 lg:bs-col-7 flex flex-col md:flex-row" data-reveal="group">
+      <div class="bs-col-12 lg:bs-col-5 flex flex-col md:flex-row" data-reveal="group">
         <div class="flex-1 pt-10 lg:pt-0">
           <p class="label-xs font-medium uppercase mb-4 text-gray-500">(Navigation)</p>
           <div>
             <ul>
+              {{#each settings.navigation}}
               <li class="mb-2">
-                <a class="hover-link hover-link-light" href="/">Home</a>
+                <a class="hover-link hover-link-light font-medium" href="{{url}}">{{title}}</a>
               </li>
-              <li class="mb-2">
-                <a class="hover-link hover-link-light" href="/about">About</a>
-              </li>
-              <li class="mb-2">
-                <a class="hover-link hover-link-light" href="/work">Work</a>
-              </li>
-              <li class="mb-2">
-                <a class="hover-link hover-link-light" href="/contact">Contact</a>
-              </li>
+              {{/each}}
             </ul>
           </div>
         </div>
-        <div class="flex-1 pt-10 lg:pt-0">
+        <!-- <div class="flex-1 pt-10 lg:pt-0">
           <p class="label-xs font-medium uppercase mb-4 text-gray-500">(Selected Work)</p>
           <div>
             <ul>
               <li class="mb-2">
                 <a class="hover-link hover-link-light" href="#">Lorem ipsum</a>
               </li>
-              <li class="mb-2">
-                <a class="hover-link hover-link-light" href="#">Lorem ipsum</a>
-              </li>
-              <li class="mb-2">
-                <a class="hover-link hover-link-light" href="#">Lorem ipsum</a>
-              </li>
-              <li class="mb-2">
-                <a class="hover-link hover-link-light" href="#">Lorem ipsum</a>
-              </li>
-              <li class="mb-2">
-                <a class="hover-link hover-link-light" href="#">Lorem ipsum</a>
-              </li>
-              <li class="mb-2">
-                <a class="hover-link hover-link-light" href="#">Lorem ipsum</a>
-              </li>
             </ul>
           </div>
-        </div>
+        </div> -->
         <div class="flex-1 pt-10 lg:pt-0">
           <p class="label-xs font-medium uppercase mb-4 text-gray-500">(Social Media)</p>
           <div>
             <ul>
+              {{#each settings.socials}}
               <li class="mb-2">
-                <a href="https://www.facebook.com/thinh.nguyentruong.1884" target="_blank" rel="noopener noreferrer" class="hover-link hover-link-light" >Facebook</a>
+                <a class="hover-link hover-link-light" href="{{url}}" target="_blank" rel="noopener noreferrer">{{name}}</a>
               </li>
-              <li class="mb-2">
-                <a href="https://www.instagram.com/rion.ng_" target="_blank" rel="noopener noreferrer" class="hover-link hover-link-light" >Instagram</a>
-              </li>
-              <li class="mb-2">
-                <a href="https://www.behance.net/thinhnguyen93" target="_blank" rel="noopener noreferrer" class="hover-link hover-link-light" >Behance</a>
-              </li>
-              <li class="mb-2">
-                <a href="https://www.linkedin.com/in/thinhnt02/" target="_blank" rel="noopener noreferrer" class="hover-link hover-link-light" >Linkedin</a>
-              </li>
+              {{/each}}
             </ul>
           </div>
         </div>
@@ -74,18 +45,18 @@
     </div>
     <div class="bs-row mx-4 sm:mx-0 px-0 justify-between pt-6 border-t border-white/10" data-reveal="group">
       <div class="bs-col-12 sm:bs-col-auto flex justify-center">
-        <span class="text-white">© 2026. Designed by Thinh Nguyen</span>
+        <span class="text-white">{{settings.footer.license}}</span>
       </div>
       <div class="bs-col-12 sm:bs-col-auto flex justify-center mt-4 sm:mt-0">
         <a href="#" class="nav-link text-white">
           <i class="icon-round-arrow-up text-xl"></i>
           <span class="hover-text">
-            <span data-label="Back to top">Back to top</span>
+            <span data-label="Back to top">{{settings.footer.backToTop}}</span>
           </span>
         </a>
       </div>
     </div>
-    <div class="bs-row py-20" data-reveal="">
+    <div class="bs-row py-20">
       <div class="bs-col">
         <div class="horizontal-logo bg-white w-full hidden sm:block"></div>
         <div class="vertical-logo bg-white w-full sm:hidden"></div>

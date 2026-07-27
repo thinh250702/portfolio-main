@@ -7,6 +7,8 @@ import { fileURLToPath } from 'url';
 import { engine } from 'express-handlebars';
 import dotenv from "dotenv";
 
+import loadGlobals from "./middlewares/globals.middleware.js"
+
 import indexRouter from './routes/index.js';
 import routes from './routes/index.js';
 
@@ -39,6 +41,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(loadGlobals);
 app.use(routes);
 
 // 404 handler (no error)

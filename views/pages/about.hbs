@@ -1,73 +1,55 @@
 <section id="hero" class="h-screen bg-linear-to-b from-gray-200 to-white flex justify-center items-center pt-(--header-height)">
   <div class="container">
     <div class="bs-row px-0 justify-center">
-      <div class="bs-col-auto">
-        <p class="display-lg text-center tracking-tight" data-text-reveal data-trigger="load" data-delay="1.5">Hi! I'm Thinh Nguyen</p>
+      <div class="bs-col-auto px-4">
+        <p class="display-lg text-center" data-text-reveal data-trigger="event" data-event="polaroid:revealComplete">{{hero.topHeading}}</p>
       </div>
       <div class="bs-col-12 flex justify-center">
         <ul id="polaroid-hero" data-polaroid-hero>
+          {{#each hero.polaroids}}
           <li class="polaroid-item">
-            <img class="polaroid-img" src="https://res.cloudinary.com/dbmobxcxq/image/upload/v1784953519/portfolio-2026/polaroids/FilmCam_FNC_20260725_110952373_pp8jgw.jpg" alt="">
-            <img src="https://res.cloudinary.com/dbmobxcxq/image/upload/v1784950703/portfolio-2026/polaroids/polaroid-frame_a0hvzj.png" alt="">
-            <img src="https://res.cloudinary.com/dbmobxcxq/image/upload/v1784955635/portfolio-2026/polaroids/polaroid-doodle-1_cbiqti.png" alt="">
+            <img class="polaroid-img" src="{{img}}" alt="">
+            <img src="/uploads/polaroids/frame.png" alt="">
+            <img src="{{doodle}}" alt="">
           </li>
-          <li class="polaroid-item">
-            <img class="polaroid-img" src="https://res.cloudinary.com/dbmobxcxq/image/upload/v1784953519/portfolio-2026/polaroids/FilmCam_FNC_20260725_111809732_cx4igy.jpg" alt="">
-            <img src="https://res.cloudinary.com/dbmobxcxq/image/upload/v1784950703/portfolio-2026/polaroids/polaroid-frame_a0hvzj.png" alt="">
-            <img src="https://res.cloudinary.com/dbmobxcxq/image/upload/v1784955281/portfolio-2026/polaroids/polaroid-doodle-2_ipb7at.png" alt="">
-          </li>
-          <li class="polaroid-item">
-            <img class="polaroid-img" src="https://res.cloudinary.com/dbmobxcxq/image/upload/v1784950493/portfolio-2026/polaroids/FilmCam_FNC_20260725_101711581_xvkf1j.jpg" alt="">
-            <img src="https://res.cloudinary.com/dbmobxcxq/image/upload/v1784950703/portfolio-2026/polaroids/polaroid-frame_a0hvzj.png" alt="">
-            <img src="https://res.cloudinary.com/dbmobxcxq/image/upload/v1784955281/portfolio-2026/polaroids/polaroid-doodle-3_tbl6qz.png" alt="">
-          </li>
-          <li class="polaroid-item">
-            <img class="polaroid-img" src="https://res.cloudinary.com/dbmobxcxq/image/upload/v1784950449/portfolio-2026/polaroids/FilmCam_FNC_20260725_102931848_d7boqk.jpg" alt="">
-            <img src="https://res.cloudinary.com/dbmobxcxq/image/upload/v1784950703/portfolio-2026/polaroids/polaroid-frame_a0hvzj.png" alt="">
-            <img src="https://res.cloudinary.com/dbmobxcxq/image/upload/v1784955281/portfolio-2026/polaroids/polaroid-doodle-4_lvzfdx.png" alt="">
-          </li>
-          <li class="polaroid-item">
-            <img class="polaroid-img" src="https://res.cloudinary.com/dbmobxcxq/image/upload/v1784950493/portfolio-2026/polaroids/FilmCam_FNC_20260725_101711646_wjn2lt.jpg" alt="">
-            <img src="https://res.cloudinary.com/dbmobxcxq/image/upload/v1784950703/portfolio-2026/polaroids/polaroid-frame_a0hvzj.png" alt="">
-            <img src="https://res.cloudinary.com/dbmobxcxq/image/upload/v1784955281/portfolio-2026/polaroids/polaroid-doodle-5_egu217.png" alt="">
-          </li>
+          {{/each}}
         </ul>
       </div>
-      <div class="bs-col-auto">
-        <p class="display-lg text-center tracking-tight" data-text-reveal data-trigger="load" data-delay="1.8">I'm a Junior UI/UX Designer</p>
+      <div class="bs-col-auto px-4">
+        <p class="display-lg text-center" data-text-reveal data-trigger="event" data-event="polaroid:revealComplete">{{hero.bottomHeading}}</p>
       </div>
     </div>
   </div>
 </section>
-{{> sections/brands isLight=true}}
+{{> sections/brands data=brands isLight=true}}
 <section id="about" class="py-20 relative">
   <div class="w-full h-[20%] lg:h-[35%] xl:h-[40%] absolute bottom-0 bg-[url(https://res.cloudinary.com/dbmobxcxq/image/upload/v1784730393/portfolio-2026/nww28lqrmvrqwmlcnfyu_mb37px.webp)] bg-cover bg-repeat-x bg-bottom"></div>
   <div class="w-full h-[20%] lg:h-[35%] xl:h-[40%] absolute bottom-0 bg-linear-to-t from-gray-900 to-transparent to-50%"></div>
   <div class="container mx-auto">
     <div class="bs-row mb-10">
       <div class="bs-col-12 md:bs-col-5">
-        <span class="eyebrow" data-reveal>About Me</span>
+        <span class="eyebrow" data-reveal>{{about.eyebrow}}</span>
       </div>
       <div class="bs-col">
-        <h1 class="h2 font-medium tracking-tighter" data-text-reveal data-split="lines">In the game for over 6 years, I'm currently based in Ho Chi Minh city, working as an independent designer since July, 2022.</h1>
+        <h1 class="h2 font-medium tracking-tighter" data-text-reveal data-split="lines">{{about.heading}}</h1>
       </div>
     </div>
     <div class="bs-row mb-0 sm:mb-20 xl:mb-0">
       <div class="bs-col-12 sm:bs-col pt-0 xl:pt-[3%] mb-6 sm:mb-0">
-        <h3 class="h4 font-medium tracking-tight" data-text-reveal>Experience & Innovation</h3>
-        <p class="body-sm md:body-md lg:body-lg mt-2" data-text-reveal data-split="lines">I've spent 6+ years designing consumer-facing products, from high-stakes commerce flows to complex logistics dashboards. My process starts with research, moves through systems thinking, and ends in interfaces that earn trust under real-world pressure.</p>
+        <h3 class="h4 font-medium tracking-tight" data-text-reveal>{{about.left.heading}}</h3>
+        <p class="body-sm md:body-md lg:body-lg mt-2" data-text-reveal data-split="lines">{{about.left.content}}</p>
       </div>
       <div class="bs-col-12 sm:bs-col-4 bs-order-3 sm:bs-order-2 mx-0 sm:mx-6 md:mx-8 lg:mx-12">
         {{> components/nft-card}}
       </div>
       <div class="bs-col-12 sm:bs-col bs-order-2 sm:bs-order-3  pt-0 md:pt-[6%] xl:pt-[12%] mb-6 sm:mb-0">
-        <h3 class="h4 font-medium tracking-tight" data-text-reveal>Creative Expertise</h3>
-        <p class="body-sm md:body-md lg:body-lg mt-2" data-text-reveal data-split="lines">With over a decade of design expertise, we create tailored solutions that engage audiences, build meaningful connections, and elevate brands with creativity and intent.</p>
+        <h3 class="h4 font-medium tracking-tight" data-text-reveal>{{about.right.heading}}</h3>
+        <p class="body-sm md:body-md lg:body-lg mt-2" data-text-reveal data-split="lines">{{about.right.content}}</p>
         <div class="mt-6 flex flex-col" data-reveal="group">
           <div>
-            <a href="" class="btn btn-dark">
+            <a href="{{settings.resume.url}}" class="btn btn-dark">
               <span class="hover-text">
-                <span data-label="More About Me">View Resume</span>
+                <span data-label="{{settings.resume.label}}">{{settings.resume.label}}</span>
               </span>
               <i class="icon-arrow-up-right text-sm"></i>
             </a>
@@ -77,7 +59,7 @@
               <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
               <span class="relative inline-flex size-2.5 rounded-full bg-green-500"></span>
             </span>
-            <p class="uppercase ml-2.5">Availabel for hire</p>
+            <p class="uppercase ml-2.5">{{about.available}}</p>
           </div>
         </div>
       </div>
@@ -88,123 +70,77 @@
   <div class="container mx-auto">
     <div class="bs-row pb-10 text-white">
       <div class="bs-col-12 md:bs-col">
-        <span class="eyebrow" data-reveal>About Me</span>
-        <h2 class="font-medium tracking-tighter mb-4 md:mb-0" data-text-reveal>Education & Experiences</h2>
+        <span class="eyebrow" data-reveal>{{journey.eyebrow}}</span>
+        <h2 class="font-medium tracking-tighter mb-4 md:mb-0" data-text-reveal>{{journey.heading}}</h2>
       </div>
       <div class="bs-col-12 md:bs-col flex items-end">
-        <p class="body-lg" data-text-reveal data-split="lines">Web design is evolving rapidly, and I strive to stay ahead. Emerging tools and technologies enable me to create visually stunning and seamlessly functional websites.</p>
+        <p class="body-lg" data-text-reveal data-split="lines">{{journey.content}}</p>
       </div>
     </div>
     <div class="bs-row pb-10">
-      <span class="font-medium text-gray-500" data-text-reveal data-split="lines">[01] EXPERIENCE</span>
+      <span class="font-medium text-gray-500 uppercase" data-text-reveal data-split="lines">{{journey.education.heading}}</span>
       <ul class="journey-list mt-4" data-reveal="group">
+        {{#each journey.education.items}}
         <li class="journey-list__item">
           <div class="journey-list__title">
-            <h3 class="title-lg font-medium">Graphic Design Intern</h3>
-            <span>Company Name</span>
+            <h3 class="title-lg font-medium">{{title}}</h3>
+            <span>{{subtitle}}</span>
           </div>
           <div class="journey-list__body">
-            <p>Collaborated closely with multidisciplinary teams to design and refine cross-platform design systems, optimize product flows, and create intuitive interaction patterns</p>
+            <p>{{content}}</p>
           </div>
           <div class="journey-list__date">
-            <span>Jun 2023 - May 2024</span>
+            <span>{{year}}</span>
           </div>
         </li>
-        <li class="journey-list__item">
-          <div class="journey-list__title">
-            <h3 class="title-lg font-medium">Graphic Design Intern</h3>
-            <span>Company Name</span>
-          </div>
-          <div class="journey-list__body">
-            <p>Collaborated closely with multidisciplinary teams to design and refine cross-platform design systems, optimize product flows, and create intuitive interaction patterns</p>
-          </div>
-          <div class="journey-list__date">
-            <span>Jun 2023 - May 2024</span>
-          </div>
-        </li>
+        {{/each}}
       </ul>
     </div>
     <div class="bs-row">
-      <span class="font-medium text-gray-500" data-text-reveal data-split="lines">[02] EDUCATION</span>
+      <span class="font-medium text-gray-500 uppercase" data-text-reveal data-split="lines">{{journey.experience.heading}}</span>
       <ul class="journey-list mt-4" data-reveal="group">
+        {{#each journey.experience.items}}
         <li class="journey-list__item">
           <div class="journey-list__title">
-            <h3 class="title-lg font-medium">Graphic Design Intern</h3>
-            <span>Company Name</span>
+            <h3 class="title-lg font-medium">{{title}}</h3>
+            <span>{{subtitle}}</span>
           </div>
           <div class="journey-list__body">
-            <p>Collaborated closely with multidisciplinary teams to design and refine cross-platform design systems, optimize product flows, and create intuitive interaction patterns</p>
+            <p>{{content}}</p>
           </div>
           <div class="journey-list__date">
-            <span>Jun 2023 - May 2024</span>
+            <span>{{year}}</span>
           </div>
         </li>
-        <li class="journey-list__item">
-          <div class="journey-list__title">
-            <h3 class="title-lg font-medium">Graphic Design Intern</h3>
-            <span>Company Name</span>
-          </div>
-          <div class="journey-list__body">
-            <p>Collaborated closely with multidisciplinary teams to design and refine cross-platform design systems, optimize product flows, and create intuitive interaction patterns</p>
-          </div>
-          <div class="journey-list__date">
-            <span>Jun 2023 - May 2024</span>
-          </div>
-        </li>
+        {{/each}}
       </ul>
     </div>
   </div>
 </section>
-{{> sections/skills isLight=true}}
+{{> sections/skills data=skills isLight=true}}
 <section id="tools" class="pb-10">
   <div class="container mx-auto">
     <div class="bs-row justify-center">
       <div class="bs-col-12 md:bs-col-6 flex flex-col items-center">
-        <span class="eyebrow" data-reveal>Tools</span>
-        <h2 class="mb-4 text-center font-medium tracking-tighter" data-text-reveal>Essential Tools I Use</h2>
-        <p class="text-center body-lg" data-text-reveal data-split="lines">I use a refined set of design, development, and automation tools to build fast, scalable, and beautifully engineered digital experiences.</p>
+        <span class="eyebrow" data-reveal>{{tools.eyebrow}}</span>
+        <h2 class="mb-4 text-center font-medium tracking-tighter" data-text-reveal>{{tools.heading}}</h2>
+        <p class="text-center body-lg" data-text-reveal data-split="lines">{{tools.content}}</p>
       </div>
       <div class="bs-col-12">
         <div class="w-full overflow-hidden relative py-10" data-marquee>
           <div class="absolute left-0 top-0 bottom-0 w-[15%] sm:w-[10%] lg:w-[5%] z-1 bg-linear-to-r from-white to-transparent"></div>
           <div class="absolute right-0 top-0 bottom-0 w-[15%] sm:w-[10%] lg:w-[5%] z-1 bg-linear-to-l from-white to-transparent"></div>
           <ul class="marquee-track flex w-max animate-marquee" data-marquee-track>
+            {{#each tools.items}}
             <li class="tool-logo">
-              <img src="/uploads/tool-logo.png" alt="">
-              <span>Notion</span>
+              <img src="{{imgUrl}}" alt="">
+              <span class="font-medium">{{name}}</span>
             </li>
-            <li class="tool-logo">
-              <img src="/uploads/tool-logo.png" alt="">
-              <span>Notion</span>
-            </li>
-            <li class="tool-logo">
-              <img src="/uploads/tool-logo.png" alt="">
-              <span>Notion</span>
-            </li>
-            <li class="tool-logo">
-              <img src="/uploads/tool-logo.png" alt="">
-              <span>Notion</span>
-            </li>
-            <li class="tool-logo">
-              <img src="/uploads/tool-logo.png" alt="">
-              <span>Notion</span>
-            </li>
-            <li class="tool-logo">
-              <img src="/uploads/tool-logo.png" alt="">
-              <span>Notion</span>
-            </li>
-            <li class="tool-logo">
-              <img src="/uploads/tool-logo.png" alt="">
-              <span>Notion</span>
-            </li>
-            <li class="tool-logo">
-              <img src="/uploads/tool-logo.png" alt="">
-              <span>Notion</span>
-            </li>
+            {{/each}}
           </ul>
         </div>
       </div>
     </div>
   </div>
 </section>
-{{> sections/quote}}
+{{> sections/quote data=quote}}

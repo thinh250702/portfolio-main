@@ -2,59 +2,39 @@
   <div class="container mx-auto">
     <div class="bs-row mb-10">
       <div class="bs-col-12 md:bs-col-6 md:pt-3">
-        <span class="eyebrow {{#if isLight}}text-black{{else}}text-white{{/if}}" data-reveal>Portfolio</span>
+        <span class="eyebrow {{#if isLight}}text-black{{else}}text-white{{/if}}" data-reveal>{{data.eyebrow}}</span>
       </div>
       <div class="bs-col-12 md:bs-col-6 {{#if isLight}}text-black{{else}}text-white{{/if}}">
-        <h2 class="font-medium tracking-tighter  mb-4" data-text-reveal>What can I do?</h2>
-        <p class="body-lg" data-text-reveal data-split="lines">Selected case studies showing how I solve complex UX challenges across  consumer products</p>
+        <h2 class="font-medium tracking-tighter  mb-4" data-text-reveal>{{data.heading}}</h2>
+        <p class="body-lg" data-text-reveal data-split="lines">{{data.content}}</p>
       </div>
     </div>
     <div class="bs-row" data-accordion data-reveal="group">
       <div class="bs-col-12 md:bs-col-6 bs-order-last md:bs-order-first pr-0 md:pr-12">
         <div class="accordion-images">
-          <img src="/uploads/skill-1.png" alt="">
-          <img src="/uploads/skill-2.png" alt="">
-          <img src="/uploads/skill-3.png" alt="">
+          {{#each data.items}}
+          <img src="{{this.imgUrl}}" alt="">
+          {{/each}}
         </div>
       </div>
       <div class="bs-col-12 md:bs-col-6 bs-order-first md:bs-order-last">
         <ul class="accordion" data-reveal="group">
-          <li class="accordion-item {{#if isLight}}border-gray-200{{else}}border-gray-800{{/if}}">
-            <div class="accordion-header {{#if isLight}}text-black{{else}}text-white{{/if}}"> 
-              <span>[01]</span>
-              <h3>UI/UX Design</h3>
+          {{#each data.items}}
+          <li class="accordion-item {{#if ../isLight}}border-gray-200{{else}}border-gray-800{{/if}}">
+            <div class="accordion-header {{#if ../isLight}}text-black{{else}}text-white{{/if}}"> 
+              <span>{{number}}</span>
+              <h3>{{title}}</h3>
             </div>
             <div class="accordion-collapse">
-              <p class="text-gray-500">We help businesses define who they are and how they're seen. From logos and color palettes to typography and brand guidelines, we create cohesive identities that tell your story and leave a lasting impression.</p>
+              <p class="text-gray-500">{{content}}</p>
               <div>
-                <span class="badge {{#if isLight}}badge-light{{else}}badge-dark{{/if}}">Logo Design</span>
+                {{#each badges}}
+                <span class="badge {{#if ../../isLight}}badge-light{{else}}badge-dark{{/if}}">{{this}}</span>
+                {{/each}}
               </div>
             </div>
           </li>
-          <li class="accordion-item {{#if isLight}}border-gray-200{{else}}border-gray-800{{/if}}">
-            <div class="accordion-header {{#if isLight}}text-black{{else}}text-white{{/if}}"> 
-              <span>[01]</span>
-              <h3>UI/UX Design</h3>
-            </div>
-            <div class="accordion-collapse">
-              <p class="text-gray-500">We help businesses define who they are and how they're seen. From logos and color palettes to typography and brand guidelines, we create cohesive identities that tell your story and leave a lasting impression.</p>
-              <div>
-                <span class="badge {{#if isLight}}badge-light{{else}}badge-dark{{/if}}">Logo Design</span>
-              </div>
-            </div>
-          </li>
-          <li class="accordion-item {{#if isLight}}border-gray-200{{else}}border-gray-800{{/if}}">
-            <div class="accordion-header {{#if isLight}}text-black{{else}}text-white{{/if}}"> 
-              <span>[01]</span>
-              <h3>UI/UX Design</h3>
-            </div>
-            <div class="accordion-collapse">
-              <p class="text-gray-500">We help businesses define who they are and how they're seen. From logos and color palettes to typography and brand guidelines, we create cohesive identities that tell your story and leave a lasting impression.</p>
-              <div>
-                <span class="badge {{#if isLight}}badge-light{{else}}badge-dark{{/if}}">Logo Design</span>
-              </div>
-            </div>
-          </li>
+          {{/each}}
         </ul>
       </div>
     </div>

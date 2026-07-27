@@ -8,6 +8,7 @@ export default class TextReveal {
     this.options = {
       trigger: this.$root.data("trigger") || "scroll",
       type: this.$root.data("split") || "words",
+      event: this.$root.data("event"),
       duration: 0.8,
       delay: Number(this.$root.data("delay")) || 0,
       stagger: 0.08,
@@ -40,6 +41,13 @@ export default class TextReveal {
         );
         break;
 
+      case "event":
+        EventBus.on(
+          `${this.options.event}.reveal`,
+          () => this.tl.play()
+        );
+        break;
+
       case "manual":
         break;
     }
@@ -61,9 +69,9 @@ export default class TextReveal {
       paused: true,
       onComplete: () => {
         this.state.split.revert()
-        if (this.$root.hasClass('display-lg')){
-          gsap.to(this.$root, {skewX: -14, duration: 0.5, ease: "power2.out"})
-        }
+        // if (this.$root.hasClass('display-lg')){
+        //   gsap.to(this.$root, {skewX: -12, duration: 0.5, ease: "power2.out"})
+        // }
       }
     });
     this.tl.from(this.state.split[this.options.type], {
@@ -92,5 +100,6 @@ export default class TextReveal {
     });
     this.state.split?.revert();
     this.tl?.kill();
+    EventBus.off(".reveal");
   }
 }

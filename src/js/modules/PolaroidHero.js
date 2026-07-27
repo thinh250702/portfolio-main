@@ -20,8 +20,15 @@ export default class PolaroidHero {
 
   init() {
     this.cacheDOM();
+    this.setup();
     this.createState();
     this.createMatchMedia();
+  }
+
+  setup() {
+    this.dom.items.each((index, item) => {
+      gsap.set(item, { zIndex: index });
+    })
   }
 
   cacheDOM() {
@@ -40,6 +47,9 @@ export default class PolaroidHero {
       this.createTimeline();
       EventBus.on("transition:revealComplete.polaroid", () => this.play());
     });
+    this.mm.add("(max-width: 639px)", () => {
+      EventBus.trigger("polaroid:revealComplete");
+    });
   }
 
   createTimeline() {
@@ -53,6 +63,7 @@ export default class PolaroidHero {
       gsap.set(this.dom.body, { overflow: "" });
       this.state.isPlayed = true;
       this.createHoverAnimation();
+      EventBus.trigger("polaroid:revealComplete");
     });
   }
 

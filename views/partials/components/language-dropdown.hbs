@@ -6,21 +6,16 @@
     </span>
   </button>
   <ul 
-    class="bg-white absolute p-1 w-max border border-gray-200 rounded-2xl shadow-md z-20 opacity-0 invisible pointer-events-none
-    {{#if header}} mt-3.5 {{else}} mt-2 {{/if}}" 
+    class="bg-white absolute p-1 w-max border border-gray-200 rounded-2xl shadow-md z-20 opacity-0 invisible pointer-events-none {{#if header}} mt-3.5 {{else}} mt-2 {{/if}}" 
     data-dropdown-menu
   >
+    {{#each settings.languages}}
     <li>
       <a href="#" class="flex p-2 gap-2 rounded-xl hover:bg-gray-100">
-        <img src="/uploads/vn-flag.png" alt="" class="aspect-28/20 h-5 rounded-md">
-        <span class="label-md">Tiếng Việt</span>
+        <img src="{{imgUrl}}" alt="" class="aspect-28/20 h-5 rounded-md">
+        <span class="label-md">{{name}}</span>
       </a>
     </li>
-    <li>
-      <a href="#" class="flex p-2 gap-2 rounded-xl hover:bg-gray-100">
-        <img src="/uploads/us-flag.png" alt="" class="aspect-28/20 h-5 rounded-md">
-        <span class="label-md">English</span>
-      </a>
-    </li>
+    {{/each}}
   </ul>
 </div>

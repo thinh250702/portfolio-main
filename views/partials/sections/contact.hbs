@@ -1,89 +1,66 @@
-<section id="contact" class="{{#if isHomepage}}py-20{{else}}pb-20 pt-5{{/if}}">
-  <div class="container mx-auto">
-    <!-- {{#unless isHomepage}}load{{/unless}}-->
+<section id="contact" class="">
+  {{#if isHomepage}}
+  <div class="w-screen h-screen bg-gray-900 pointer-events-none" data-zoom>
+    <div class="size-50 bg-white fixed bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 rounded-full" data-zoom-item></div>
+  </div>
+  {{/if}}
+  <div class="container mx-auto {{#if isHomepage}}py-20{{else}}pb-20 pt-5{{/if}} relative z-1">
     <div class="bs-row">
       <div class="bs-col-12 lg:bs-col-6 lg:pr-12">
         {{#if isHomepage}} 
-          <span class="eyebrow" data-reveal>Portfolio</span>
-          <h2 class="font-medium tracking-tighter mb-4" data-text-reveal>Get in touch with me</h2>
-          <p class="text-gray-500 body-lg mb-8" data-text-reveal data-split="lines">We'd love to hear from you! Whether you have a project in mind, need a quote, or just want to say hello, feel free to reach out. Fill out the form below or use our contact details to connect with us.</p>
+          <span class="eyebrow" data-reveal>{{data.eyebrow}}</span>
+          <h2 class="font-medium tracking-tighter mb-4" data-text-reveal>{{data.heading}}</h2>
+          <p class="text-gray-500 body-lg mb-8" data-text-reveal data-split="lines">{{data.content}}</p>
         {{/if}}
         <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-5 mb-8" data-reveal="group" data-trigger="{{#unless isHomepage}}load{{/unless}}" data-delay="{{#unless isHomepage}}0.4{{/unless}}">
+          {{#each settings.socials}}
           <li class="social-link">
-            <a href="">
-              <i class="icon-facebook"></i>
+            <a href="{{url}}" target="_blank" rel="noopener noreferrer">
+              <i class="{{icon}}"></i>
             </a>
             <div>
-              <a class="hover-link font-medium" href="#">Facebook</a>
-              <p class="social-link-handle">@username</p>
+              <a class="hover-link font-medium" href="{{url}}" target="_blank" rel="noopener noreferrer">{{name}}</a>
+              <p class="social-link-handle">@{{handle}}</p>
             </div>
           </li>
-          <li class="social-link">
-            <a href="">
-              <i class="icon-instagram"></i>
-            </a>
-            <div>
-              <a class="hover-link font-medium" href="#">Facebook</a>
-              <p class="social-link-handle">@username</p>
-            </div>
-          </li>
-          <li class="social-link">
-            <a href="">
-              <i class="icon-behance"></i>
-            </a>
-            <div>
-              <a class="hover-link font-medium" href="#">Facebook</a>
-              <p class="social-link-handle">@username</p>
-            </div>
-          </li>
-          <li class="social-link">
-            <a href="">
-              <i class="icon-linkedIn"></i>
-            </a>
-            <div>
-              <a class="hover-link font-medium" href="#">Facebook</a>
-              <p class="social-link-handle">@username</p>
-            </div>
-          </li>
+          {{/each}}
         </ul>
         <div>
-          <p class="label-lg text-gray-400" data-text-reveal data-trigger="{{#unless isHomepage}}load{{/unless}}" data-delay="{{#unless isHomepage}}0.8{{/unless}}">Email</p>
-          <p class="text-3xl wrap-break-word font-medium tracking-tight" data-text-reveal data-trigger="{{#unless isHomepage}}load{{/unless}}" data-delay="{{#unless isHomepage}}1{{/unless}}">thinhnguyen2572@gmail.com</p>
+          <p class="body-sm text-gray-400 mb-1" data-text-reveal data-trigger="{{#unless isHomepage}}load{{/unless}}" data-delay="{{#unless isHomepage}}0.8{{/unless}}">(EMAIL)</p>
+          <p class="text-3xl wrap-break-word font-medium tracking-tight" data-text-reveal data-trigger="{{#unless isHomepage}}load{{/unless}}" data-delay="{{#unless isHomepage}}1{{/unless}}">{{settings.email}}</p>
         </div>
       </div>
       <div class="bs-col-12 lg:bs-col-6 pt-10 lg:pt-0">
         <form action="" class="grid grid-cols-2 gap-6" data-reveal="group" data-trigger="{{#unless isHomepage}}load{{/unless}}" data-delay="{{#unless isHomepage}}1.2{{/unless}}">
           <div class="col-span-2">
-            <label class="form-label" for="">Name</label>
-            <input type="text" class="form-control" name="" id="" placeholder="Placeholder">
+            <label class="form-label" for="{{data.form.name.name}}">{{data.form.name.label}}</label>
+            <input type="text" class="form-control" name="{{data.form.name.name}}" id="{{data.form.name.name}}" placeholder="{{data.form.name.placeholder}}">
           </div>
           <div class="col-span-2 sm:col-span-1">
-            <label class="form-label" for="">Name</label>
-            <input type="text" class="form-control" name="" id="" placeholder="Placeholder">
+            <label class="form-label" for="{{data.form.email.name}}">{{data.form.email.label}}</label>
+            <input type="email" class="form-control" name="{{data.form.email.name}}" id="{{data.form.email.name}}" placeholder="{{data.form.email.placeholder}}">
           </div>
           <div class="col-span-2 sm:col-span-1">
-            <label class="form-label" for="">Name</label>
-            <input type="text" class="form-control" name="" id="" placeholder="Placeholder">
+            <label class="form-label" for="{{data.form.phone.name}}">{{data.form.phone.label}}</label>
+            <input type="tel" class="form-control" name="{{data.form.phone.name}}" id="{{data.form.phone.name}}" placeholder="{{data.form.phone.placeholder}}">
           </div>
           <div class="col-span-2">
-            <label class="form-label" for="">I'm Interested in...</label>
+            <label class="form-label">{{data.form.projectType.label}}</label>
             <div class="flex flex-wrap gap-3 pt-3">
-              <input type="checkbox" id="tag-html" class="form-check-input">
-              <label for="tag-html" class="form-check-label">HTML</label>
-              <input type="checkbox" id="tag-css" class="form-check-input">
-              <label for="tag-css" class="form-check-label">CSS</label>
-              <input type="checkbox" id="tag-js" class="form-check-input">
-              <label for="tag-js" class="form-check-label">JavaScript</label>
+              {{#each data.form.projectType.items}}
+              <input type="checkbox" id="{{id}}" class="form-check-input">
+              <label for="{{id}}" class="form-check-label">{{label}}</label>
+              {{/each}}
             </div>
           </div>
           <div class="col-span-2">
-            <label class="form-label" for="">Name</label>
-            <textarea class="form-control" rows="8" name="" id="" placeholder="Placeholder"></textarea>
+            <label class="form-label" for="{{data.form.message.name}}">{{data.form.message.label}}</label>
+            <textarea class="form-control" rows="8" name="{{data.form.message.name}}" id="{{data.form.message.name}}" placeholder="{{data.form.message.placeholder}}"></textarea>
           </div>
           <div class="col-span-2">
             <button type="button" class="btn btn-dark cursor-not-allowed" disabled>
               <span class="hover-text">
-                <span data-label="Send Message">Send Message</span>
+                <span data-label="{{data.form.button.label}}">{{data.form.button.label}}</span>
               </span>
               <i class="icon-arrow-up-right text-sm"></i>
             </button>

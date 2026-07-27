@@ -16,6 +16,10 @@
 @import "./components/form.css";
 @import "./components/badge.css";
 
+/* Page-specific */
+@import "./pages/project-details.css";
+@import "./pages/about.css";
+
 @theme {
   --font-sans: "Zalando Sans", sans-serif;
   --font-serif: "LC Sac Display", serif;
@@ -29,7 +33,7 @@
   --text-heading-4: clamp(24px,1.458vw,28px);
   --text-heading-5: clamp(20px,1.25vw,24px);
   --text-heading-6: clamp(18px,1.04vw,20px);
-  --text-display-lg: clamp(4rem,5vw,6rem);
+  --text-display-lg: clamp(3.5rem,5vw,6rem);
 
   --color-gray-50: oklch(98.5% 0 0);
   --color-gray-100: oklch(96.7% 0.001 286.4);
@@ -87,22 +91,22 @@
     scroll-behavior: smooth;
     cursor: default;
 
-    -webkit-user-select: none;
+    /* -webkit-user-select: none;
     -ms-user-select: none;
-    user-select: none;
+    user-select: none; */
   }
   html::-webkit-scrollbar,
   body::-webkit-scrollbar {
     display: none;
   }
-  input, textarea {
+  /* input, textarea {
     -webkit-user-select: text;
     -ms-user-select: text;
     user-select: text;
   }
   input::selection, textarea::selection {
     @apply bg-black text-white
-  }
+  } */
 }
 
 @layer components {
@@ -113,6 +117,7 @@
       }
     }
   }
+  /* Project Card Grid */
   .card-grid {
     @apply grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6 md:gap-y-10;
   }
@@ -155,8 +160,7 @@
   .brand-logo {
     @apply aspect-3/2 h-32.5 relative;
     & > .brand-logo-img {
-      --logo-image: url('');
-      @apply mask-(--logo-image) mask-contain mask-no-repeat mask-center absolute inset-0 opacity-50 hover:opacity-100 transition duration-300;
+      @apply mask-contain mask-no-repeat mask-center absolute w-full h-full opacity-50 hover:opacity-100 transition duration-300;
     }
   }
   /* Tool Logo */
@@ -205,147 +209,9 @@
       @apply text-white opacity-50 hover:opacity-100 before:bg-white
     }
   }
-  /* Polaroid Hero */
-  #polaroid-hero {
-    @apply flex justify-center py-10 lg:py-16 px-6 sm:px-0 w-max sm:w-full overflow-hidden;
-    & > .polaroid-item {
-      @apply aspect-312/377 w-35 sm:w-40 md:w-45 lg:w-60 xl:w-70 shrink-0 relative shadow-lg;
-      &:not(:first-child) {
-        @apply -ml-20 sm:-ml-15 lg:-ml-20;
-      }
-      &:nth-child(odd) {
-        @apply rotate-5 translate-y-3;
-      }
-      &:nth-child(even) {
-        @apply rotate-[-5deg] -translate-y-3;
-      }
-      &:nth-child(2) {
-        @apply -translate-y-4 xl:-translate-y-6;
-      }
-      &:last-child {
-        @apply lg:translate-y-5 xl:translate-y-6;
-      }
-      & > img {
-        @apply absolute w-full h-full top-0 left-0;
-        &.polaroid-img {
-          @apply px-[2.56%] pt-[6.41%] pb-[22.43%] object-cover;
-        }
-      }
-    }
-  }
-  /* Journey Item */
-  .journey-list {
-    &:hover > .journey-list__item > * {
-      @apply opacity-40
-    }
-    & > .journey-list__item {
-      @apply bs-row px-0 py-8 border-t border-gray-700 gap-y-4 ;
-      & > * {
-        @apply transition-all duration-300;
-      }
-      & > .journey-list__title {
-        @apply bs-col-12 lg:bs-col-4 xl:bs-col-3 text-white;
-      }
-      & > .journey-list__body {
-        @apply bs-col-12 lg:bs-col-4 text-gray-400;
-      }
-      & > .journey-list__date {
-        @apply bs-col-12 lg:bs-col-2 lg:bs-offset-2 xl:bs-offset-3 flex lg:justify-end bs-order-first lg:bs-order-last text-gray-500;
-      }
-      &:hover > * {
-        @apply opacity-100
-      }
-    }
-  }
   /* Cursor Label */
   .cursor-label {
     @apply fixed top-0 left-0 bg-[#cc0000] text-white uppercase label-md font-medium py-3 px-5 rounded-full pointer-events-none opacity-0 invisible z-99 will-change-transform
-  }
-  /* Project Metadata */
-  .metadata-list {
-    @apply border-b border-gray-200;
-    & > .metadata-item {
-      @apply flex justify-between items-center py-4 border-t border-gray-200;
-      & > .metadata-title {
-        @apply uppercase text-gray-500 body-sm;
-      }
-      & > .metadata-content {
-        @apply body-lg font-medium text-right
-      }
-    }
-  }
-  /* Carousel Item */
-  .carousel-item {
-    @apply flex-none basis-auto aspect-4/3 overflow-hidden w-[280px] sm:w-[480px] lg:w-[560px] xl:w-[720px] mr-4 sm:mr-5 lg:mr-6 rounded-2xl lg:rounded-3xl;
-    & > img {
-      @apply w-full h-full object-cover;
-    }
-  }
-  /* BrandGen AI */
-  .chat-wrapper {
-    & .chat-skeleton-image {
-      @apply bg-linear-to-l from-gray-300 via-gray-200 to-gray-300 bg-size-[200%_100%] animate-shimmer;
-    }
-    & .chat-skeleton-text {
-      @apply bg-linear-to-l from-gray-400 via-gray-300 to-gray-400 bg-size-[200%_100%] animate-shimmer bg-clip-text text-transparent;
-    }
-    & .chat-btn {
-      @apply inline-flex justify-center items-center size-8 rounded-full hover:cursor-pointer transition-colors duration-200;
-      &.chat-btn-filled {
-        @apply bg-black text-white;
-      }
-      &.chat-btn-tonal {
-        @apply bg-gray-200;
-      }
-      &.chat-btn-ghost {
-        @apply hover:bg-black/5
-      }
-      &.chat-btn-outlined {
-        @apply bg-white border border-gray-200 hover:bg-gray-100
-      }
-    }
-  }
-  /* Style Guide Heading */
-  .style-guide-header {
-    @apply p-8 border rounded-3xl flex flex-col lg:flex-row lg:justify-between lg:items-start;
-    & > .style-guide__main {
-      @apply lg:w-1/2 bs-order-last lg:bs-order-first;
-      & > h3 {
-        @apply font-medium tracking-tight mb-2
-      }
-      & > p {
-        @apply opacity-75
-      }
-    }
-    & > .style-guide__decor {
-      @apply bs-order-first lg:bs-order-last mb-4;
-      & > span {
-        @apply label-md font-medium;
-        &:first-child {
-          @apply opacity-50;
-        }
-      }
-    }
-    
-  }
-  /* Component List */
-  .component-list {
-    @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6;
-    & > .component-item {
-      @apply rounded-[20px] bg-white border border-gray-200 shadow-md;
-      & > .component-thumbnail {
-        @apply px-3 pt-3;
-        & > img {
-          @apply aspect-4/3 w-full object-cover rounded-xl;
-        }
-      }
-      & > .component-body {
-        @apply px-5 py-4;
-        & > h4 {
-          @apply title-lg font-medium;
-        }
-      }
-    }
   }
   /* Page Transition */
   .page-transition {
@@ -354,9 +220,6 @@
       @apply flex w-full h-full;
       & > .pt-column {
         @apply flex-1 bg-[#cc0000] origin-top-left will-change-transform scale-x-105;
-        /* &:nth-child(odd) {
-          @apply bg-amber-500
-        } */
       }
     }
     & > .pt-logo {

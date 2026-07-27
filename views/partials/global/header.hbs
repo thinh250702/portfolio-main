@@ -8,32 +8,19 @@
           </a>
         </div>
         <nav class="hidden xl:flex gap-10 light:text-white transition-colors duration-200">
-          <a href="/" class="nav-link">
-            <span class="hover-text">
-              <span data-label="(HOME)" class="label-lg">(HOME)</span>
-            </span>
-          </a>
-          <a href="/about" class="nav-link">
-            <span class="hover-text">
-              <span data-label="(ABOUT)" class="label-lg">(ABOUT)</span>
-            </span>
-          </a>
-          <a href="/work" class="nav-link">
-            <span class="hover-text">
-              <span data-label="(WORK)" class="label-lg">(WORK)</span>
-            </span>
-          </a>
-          <a href="/contact" class="nav-link">
-            <span class="hover-text">
-              <span data-label="(CONTACT)" class="label-lg">(CONTACT)</span>
-            </span>
-          </a>
+          {{#each settings.navigation}}
+            <a href="{{url}}" class="nav-link">
+              <span class="hover-text">
+                <span data-label="({{title}})" class="label-lg uppercase">({{title}})</span>
+              </span>
+            </a>
+          {{/each}}
         </nav>
         <div class="flex-1 flex justify-end gap-2">
           {{> components/language-dropdown header=true}}
-          <a href="#" class="btn btn-dark light:bg-white light:text-black transition-colors duration-200 hidden xl:inline-flex">
+          <a href="{{settings.resume.url}}" class="btn btn-dark light:bg-white light:text-black transition-colors duration-200 hidden xl:inline-flex">
             <span class="hover-text">
-              <span data-label="View Resume">View Resume</span>
+              <span data-label="{{settings.resume.label}}">{{settings.resume.label}}</span>
             </span>
             <i class="icon-arrow-up-right text-xs"></i>
           </a>
@@ -45,7 +32,7 @@
     </div>
   </div>
 </header>  
-<div class="fixed top-0 left-0 h-screen w-screen z-15 bg-white flex flex-col p-6 invisible opacity-0 pointer-events-none" data-header-menu>
+<div class="fixed top-0 left-0 h-screen w-screen z-15 bg-white flex flex-col p-4 invisible opacity-0 pointer-events-none" data-header-menu>
   <div class="flex justify-between" data-menu-item>
     {{> components/language-dropdown}}
     <button type="button" class="menu-toggle btn bg-gray-200 text-gray-400 btn-icon" data-menu-toggle>

@@ -4,20 +4,23 @@
     "role": "Junior UI/UX Designer",
     "location": "Based in Vietnam",
     "heading": "Creative studio for founder",
-    "content": "Hey there, I am Thinh, a UI/UX designer polishing ideas until they shine"
+    "content": "Hey there, I am Thinh, a UI/UX designer polishing ideas until they shine",
+    "metadata": {
+      "timezone": {
+        "key": "Time Zone"
+      },
+      "location": {
+        "key": "Location",
+        "value": "Ho Chi Minh City, VN"
+      }
+    }
   },
   "about": {
     "eyebrow": "About Me",
     "heading": "Hey there, I am Thinh, a UI/UX designer polishing ideas until they shine",
     "content": [
-      {
-        "type": "paragraph",
-        "data": "I've spent 6+ years designing consumer-facing products, from high-stakes commerce flows to complex logistics dashboards. My process starts with research, moves through systems thinking, and ends in interfaces that earn trust under real-world pressure."
-      },
-      {
-        "type": "paragraph",
-        "data": "I don't just follow briefs, I reframe them. Good design, to me, begins before the first pixel and persists long after the last release."
-      }
+      "I've spent 6+ years designing consumer-facing products, from high-stakes commerce flows to complex logistics dashboards. My process starts with research, moves through systems thinking, and ends in interfaces that earn trust under real-world pressure.",
+      "I don't just follow briefs, I reframe them. Good design, to me, begins before the first pixel and persists long after the last release."
     ],
     "button": {
       "label": "More About Me",
@@ -28,7 +31,7 @@
   "works": {
     "eyebrow": "Portfolio",
     "heading": "Explore my featured works",
-    "content": "We’re a creative studio passionate about blending design, technology",
+    "content": "We're a creative studio passionate about blending design, technology",
     "button": {
       "label": "View All Work",
       "href": "/work"

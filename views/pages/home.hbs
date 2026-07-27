@@ -4,7 +4,7 @@
       <div class="container mx-auto relative">
         <div class="bs-row" data-reveal="group" data-trigger="load">
           <div class="bs-col-12">
-            <p class="h4 sm:h3 mb-5 sm:mb-0 text-center font-medium tracking-tight text-white">©2026—Portfolio</p>
+            <p class="h4 sm:h3 mb-5 sm:mb-0 text-center font-medium tracking-tight text-white">{{hero.title}}</p>
           </div>
           <div class="bs-col-12">
             <div class="horizontal-logo bg-white w-full hidden sm:block"></div>
@@ -13,8 +13,8 @@
         </div>
         <div class="bs-row justify-between absolute bottom-0 w-full">
           <div class="bs-col-5 flex justify-between">
-            <span class="body-lg text-white hidden lg:inline-block" data-reveal data-trigger="load" data-delay="0.3">Junior UI/UX Designer</span>
-            <span class="body-lg text-white hidden lg:inline-block" data-reveal data-trigger="load" data-delay="0.4">Based in Thịnh Nguyễn</span>
+            <span class="body-lg text-white hidden lg:inline-block" data-reveal data-trigger="load" data-delay="0.3">{{hero.role}}</span>
+            <span class="body-lg text-white hidden lg:inline-block" data-reveal data-trigger="load" data-delay="0.4">{{hero.location}}</span>
           </div>
           <div class="bs-col flex justify-end items-center text-white" data-reveal data-trigger="load" data-delay="0.5">
             <span class="mr-2 body-md sm:body-lg">Scroll Down</span>
@@ -32,10 +32,10 @@
         </div>
         <div class="bs-row justify-between items-end absolute bottom-8 w-full text-white">
           <div class="bs-col-4">
-            <h1 class="tracking-tight h2 md:h1 hidden sm:block font-medium" data-text-reveal>Creative studio for founder</h1>
+            <h1 class="tracking-tight h2 md:h1 hidden sm:block font-medium" data-text-reveal>{{hero.heading}}</h1>
           </div>
           <div class="bs-col-4">
-            <p class="tracking-tight h4 md:h3 hidden sm:block font-medium" data-text-reveal>Hey there, I am Thinh, a UI/UX designer polishing ideas until they shine</p>
+            <p class="tracking-tight h4 md:h3 hidden sm:block font-medium" data-text-reveal>{{hero.content}}</p>
           </div>
         </div>
       </div>
@@ -50,18 +50,18 @@
       </div>
       <div class="bs-row sm:absolute sm:top-1/2 sm:-translate-y-1/2 pb-10 sm:pb-0 w-full">
         <div class="bs-col">
-          <p class="body-sm sm:body-sm text-white/60 mb-1">Time Zone</p>
+          <p class="body-sm sm:body-sm text-white/60 mb-1">{{hero.metadata.timezone.key}}</p>
           <p class="body-md sm:body-lg text-white">UTC +7, 11:30 PM</p>
         </div>
         <div class="bs-col">
-          <p class="text-right body-sm sm:body-sm text-white/60 mb-1">Location</p>
-          <p class="text-right body-md sm:body-lg text-white">Ho Chi Minh, VN</p>
+          <p class="text-right body-sm sm:body-sm text-white/60 mb-1">{{hero.metadata.location.key}}</p>
+          <p class="text-right body-md sm:body-lg text-white">{{hero.metadata.location.value}}</p>
         </div>
       </div>
     </div>
   </div>
 </section>
-{{> sections/brands}}
+{{> sections/brands data=brands}}
 <section id="about" class="bg-black py-20">
   <div class="container mx-auto">
     <div class="bs-row">
@@ -69,15 +69,16 @@
         {{> components/nft-card}}
       </div>
       <div class="bs-col-12 sm:bs-col flex flex-col justify-center pl-0 sm:pl-6 md:pl-12 bs-order-first sm:bs-order-last">
-        <span class="eyebrow text-white" data-reveal> About Me</span>
-        <h2 class="font-medium tracking-tighter mb-4 text-white" data-text-reveal data-split="lines">Hey there, I am Thinh, a UI/UX designer polishing ideas until they shine</h2>
-        <p class="mb-4 body-lg text-white" data-text-reveal data-split="lines">I've spent 6+ years designing consumer-facing products, from high-stakes commerce flows to complex logistics dashboards. My process starts with research, moves through systems thinking, and ends in interfaces that earn trust under real-world pressure.</p>
-        <p class="mb-4 body-lg text-white" data-text-reveal data-split="lines">I don't just follow briefs, I reframe them. Good design, to me, begins before the first pixel and persists long after the last release.</p>
+        <span class="eyebrow text-white" data-reveal>{{about.eyebrow}}</span>
+        <h2 class="font-medium tracking-tighter mb-4 text-white" data-text-reveal data-split="lines">{{about.heading}}</h2>
+        {{#each about.content}}
+          <p class="mb-4 body-lg text-white" data-text-reveal data-split="lines">{{this}}</p>
+        {{/each}}
         <div class="mt-2 flex flex-col lg:flex-row items-left lg:items-center" data-reveal="group">
           <div>
-            <a href="/about" class="btn btn-light">
+            <a href="{{about.button.href}}" class="btn btn-light">
               <span class="hover-text">
-                <span data-label="More About Me">More About Me</span>
+                <span data-label="{{about.button.label}}">{{about.button.label}}</span>
               </span>
               <i class="icon-arrow-up-right text-sm"></i>
             </a>
@@ -87,7 +88,7 @@
               <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
               <span class="relative inline-flex size-2.5 rounded-full bg-green-500"></span>
             </span>
-            <p class="text-white uppercase ml-2.5">Availabel for hire</p>
+            <p class="text-white uppercase ml-2.5">{{about.available}}</p>
           </div>
         </div>
       </div>
@@ -116,29 +117,28 @@
   <div class="container mx-auto">
       <div class="bs-row mb-10">
         <div class="bs-col-12 lg:bs-col-2 pt-0 lg:pt-3">
-          <span class="eyebrow text-black" data-reveal>Portfolio</span>
+          <span class="eyebrow text-black" data-reveal>{{works.eyebrow}}</span>
         </div>
         <div class="bs-col-12 lg:bs-col-4 mb-4 lg:mb-0">
-          <h2 class="h1 font-medium tracking-tighter" data-text-reveal>Explore my featured works</h2>
+          <h2 class="h1 font-medium tracking-tighter" data-text-reveal>{{works.heading}}</h2>
         </div>
         <div class="bs-col-12 lg:bs-col-4 lg:bs-offset-2 flex items-end">
-          <p class="body-lg" data-text-reveal data-split="lines">A curated selection of projects where strategy, creativity, and craftsmanship come together to build meaningful and enduring brand experiences.</p>
+          <p class="body-lg" data-text-reveal data-split="lines">{{works.content}}</p>
         </div>
       </div>
       <div class="bs-row mb-10">
         <ul class="card-grid" data-card-grid data-reveal="group">
           <div class="cursor-label">View Project</div>
-          {{> components/project-card}}
-          {{> components/project-card}}
-          {{> components/project-card}}
-          {{> components/project-card}}
+          {{#each projects}}
+            {{> components/project-card this}}
+          {{/each}}
         </ul>
       </div>
       <div class="bs-row justify-center">
         <div class="bs-col-auto">
-          <a href="/work" class="btn btn-dark">
+          <a href="{{works.button.href}}" class="btn btn-dark">
             <span class="hover-text">
-              <span data-label="View All Projects">View All Projects</span>
+              <span data-label="{{works.button.label}}">{{works.button.label}}</span>
             </span>
             <i class="icon-arrow-up-right text-sm"></i>
           </a>
@@ -146,8 +146,8 @@
       </div>
     </div>
 </section>
-{{> sections/skills}}
-{{> sections/contact isHomepage=true}}
+{{> sections/skills data=skills}}
+{{> sections/contact isHomepage=true data=contactForm}}
 <section class="pb-20">
   <div class="w-full overflow-hidden" data-marquee>
     <ul class="flex w-max will-change-transform" data-marquee-track>

@@ -7,10 +7,10 @@
         </div>
         <div class="bs-col-12 sm:bs-col bs-order-first sm:bs-order-last py-20 sm:py-10 flex flex-col justify-center">
           <i class="icon-quote text-[32px] text-white" data-reveal></i>
-          <p class="body-md lg:body-lg my-4 text-white" data-text-reveal data-split="lines">Lorem ipsum dolor sit amet consectetur. Sed accumsan nunc donec nec aliquet egestas ullamcorper nullam. Sem vulputate arcu scelerisque morbi adipiscing id et mattis non. Nulla nunc gravida ut ut scelerisque et at integer. Id lorem felis gravida vitae orci. Id cursus urna eleifend mauris. Scelerisque leo consectetur morbi varius habitasse vitae mauris leo.</p>
+          <p class="body-md lg:body-lg my-4 text-white" data-text-reveal data-split="lines">{{data.quote}}</p>
           <div class="flex items-center gap-2.5 self-end" data-reveal>
-            <img class="aspect-square w-8 object-cover rounded-full" src="/uploads/skill-1.png" alt="">
-            <span class="body-lg sm:body-sm md:body-md lg:body-lg text-white">Thinh Nguyen</span>
+            <img class="aspect-square w-8 object-cover rounded-full" src="{{data.avatar}}" alt="">
+            <span class="body-lg sm:body-sm md:body-md lg:body-lg text-white">{{data.displayName}}</span>
           </div>
         </div>
       </div>

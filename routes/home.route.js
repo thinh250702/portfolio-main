@@ -1,9 +1,8 @@
 import { Router } from "express";
+import homeController from "../controllers/home.controller.js";
 
 const router = Router();
 
-router.get('/', function(req, res, next) {
-  res.render('pages/home', { title: 'Thịnh Nguyễn | ©2026—Portfolio', isHomepage: true });
-});
+router.get('/', homeController.getHome);
 
 export default router;

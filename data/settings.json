@@ -1,0 +1,68 @@
+{
+  "email": "thinhnguyen2572@gmail.com",
+  "socials": [
+    {
+      "name": "Facebook",
+      "handle": "thinh.nguyentruong.1884",
+      "url": "https://www.facebook.com/thinh.nguyentruong.1884",
+      "icon": "icon-facebook"
+    },
+    {
+      "name": "Instagram",
+      "handle": "rion.ng_",
+      "url": "https://www.instagram.com/rion.ng_/",
+      "icon": "icon-instagram"
+    },
+    {
+      "name": "Behance",
+      "handle": "thinhnguyen93",
+      "url": "https://www.behance.net/thinhnguyen93",
+      "icon": "icon-behance"
+    },
+    {
+      "name": "Linkedin",
+      "handle": "thinhnt02",
+      "url": "https://www.linkedin.com/in/thinhnt02/",
+      "icon": "icon-linkedIn"
+    }
+  ],
+  "navigation": [
+    {
+      "title": "Home",
+      "url": "/"
+    },
+    {
+      "title": "About",
+      "url": "/about"
+    },
+    {
+      "title": "Work",
+      "url": "/work"
+    },
+    {
+      "title": "Contact",
+      "url": "/contact"
+    }
+  ],
+  "resume": {
+    "label": "View Resume",
+    "url": "#"
+  },
+  "footer": {
+    "title": "I'm open and available to take on new projects.",
+    "license": "© 2026. Designed by Thinh Nguyen",
+    "backToTop": "Back to top"
+  },
+  "languages": [
+    {
+      "name": "Tiếng Việt",
+      "isoCode": "vi",
+      "imgUrl": "/uploads/vn-flag.png"
+    },
+    {
+      "name": "English",
+      "isoCode": "en",
+      "imgUrl": "/uploads/us-flag.png"
+    }
+  ]
+}

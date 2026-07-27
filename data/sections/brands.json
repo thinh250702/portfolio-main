@@ -1,9 +1,16 @@
 {
   "title": "Clients I've worked with",
-  "logo": [
-    "",
-    "",
-    "",
-    ""
+  "items": [
+    "/uploads/brands/vmas.svg",
+    "/uploads/brands/dtap.svg",
+    "/uploads/brands/pmc.svg",
+    "/uploads/brands/lajo.svg",
+    "/uploads/brands/lptech.svg",
+    "/uploads/brands/nha-khoa-orion.svg",
+    "/uploads/brands/nha-that.svg",
+    "/uploads/brands/thang-long-jsc.svg",
+    "/uploads/brands/viaro-coffee.svg",
+    "/uploads/brands/fidimilk.svg",
+    "/uploads/brands/rtechno.svg"
   ]
 }

@@ -1,11 +1,29 @@
 {
   "hero": {
-    "topHeading": "Lorem ipsum",
+    "topHeading": "Hi! I'm Thinh Nguyen",
+    "bottomHeading": "I'm a Junior UI/UX Designer",
     "polaroids": [
-      "",
-      ""
-    ],
-    "bottomHeading": "Lorem ipsum dolor sit"
+      {
+        "img": "/uploads/polaroids/polaroid-1.png",
+        "doodle": "/uploads/polaroids/doodle-1.png"
+      },
+      {
+        "img": "/uploads/polaroids/polaroid-2.png",
+        "doodle": "/uploads/polaroids/doodle-2.png"
+      },
+      {
+        "img": "/uploads/polaroids/polaroid-3.png",
+        "doodle": "/uploads/polaroids/doodle-3.png"
+      },
+      {
+        "img": "/uploads/polaroids/polaroid-4.png",
+        "doodle": "/uploads/polaroids/doodle-4.png"
+      },
+      {
+        "img": "/uploads/polaroids/polaroid-5.png",
+        "doodle": "/uploads/polaroids/doodle-5.png"
+      }
+    ]
   },
   "about": {
     "eyebrow": "About Me",
@@ -18,10 +36,6 @@
       "heading": "Creative Expertise",
       "content": "With over a decade of design expertise, we create tailored solutions that engage audiences, build meaningful connections, and elevate brands with creativity and intent."
     },
-    "button": {
-      "label": "More About Me",
-      "href": "/about"
-    },
     "available": "Available for Hire"
   },
   "journey": {
@@ -29,8 +43,8 @@
     "heading": "Education & Experiences",
     "content": "Web design is evolving rapidly, and I strive to stay ahead. Emerging tools and technologies enable me to create visually stunning and seamlessly functional websites.",
     "experience": {
-      "heading": "Experience",
-      "list": [
+      "heading": "(Experience)",
+      "items": [
         {
           "title": "Graphic Design Intern",
           "subtitle": "Company Name",
@@ -46,8 +60,8 @@
       ]
     },
     "education": {
-      "heading": "Education",
-      "list": [
+      "heading": "(Education)",
+      "items": [
         {
           "title": "Graphic Design Intern",
           "subtitle": "Company Name",
@@ -64,17 +78,33 @@
     }
   },
   "tools": {
-    "eyebrow": "",
-    "heading": "",
-    "content": "",
-    "list": [
+    "eyebrow": "Tools",
+    "heading": "Essential Tools I Use",
+    "content": "I use a refined set of design, development, and automation tools to build fast, scalable, and beautifully engineered digital experiences.",
+    "items": [
       {
-        "name": "Notion",
-        "imgUrl": ""
+        "name": "HTML5",
+        "imgUrl": "/uploads/tools/html.png"
       },
       {
-        "name": "Notion",
-        "imgUrl": ""
+        "name": "CSS3",
+        "imgUrl": "/uploads/tools/css.png"
+      },
+      {
+        "name": "Photoshop",
+        "imgUrl": "/uploads/tools/photoshop.png"
+      },
+      {
+        "name": "Illustrator",
+        "imgUrl": "/uploads/tools/illustrator.png"
+      },
+      {
+        "name": "Premiere Pro",
+        "imgUrl": "/uploads/tools/premiere-pro.png"
+      },
+      {
+        "name": "After Effect",
+        "imgUrl": "/uploads/tools/after-effect.png"
       }
     ]
   }

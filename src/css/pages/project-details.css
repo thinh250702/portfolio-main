@@ -1,0 +1,88 @@
+@layer components {
+  /* Project Metadata */
+  .metadata-list {
+    @apply border-b border-gray-200;
+    & > .metadata-item {
+      @apply flex justify-between items-center py-4 border-t border-gray-200;
+      & > .metadata-title {
+        @apply uppercase text-gray-500 body-sm;
+      }
+      & > .metadata-content {
+        @apply body-lg font-medium text-right
+      }
+    }
+  }
+  /* Carousel Item */
+  .carousel-item {
+    @apply flex-none basis-auto aspect-4/3 overflow-hidden w-[280px] sm:w-[480px] lg:w-[560px] xl:w-[720px] mr-4 sm:mr-5 lg:mr-6 rounded-2xl lg:rounded-3xl;
+    & > img {
+      @apply w-full h-full object-cover;
+    }
+  }
+  /* BrandGen AI */
+  .chat-wrapper {
+    & .chat-skeleton-image {
+      @apply bg-linear-to-l from-gray-300 via-gray-200 to-gray-300 bg-size-[200%_100%] animate-shimmer;
+    }
+    & .chat-skeleton-text {
+      @apply bg-linear-to-l from-gray-400 via-gray-300 to-gray-400 bg-size-[200%_100%] animate-shimmer bg-clip-text text-transparent;
+    }
+    & .chat-btn {
+      @apply inline-flex justify-center items-center size-8 rounded-full hover:cursor-pointer transition-colors duration-200;
+      &.chat-btn-filled {
+        @apply bg-black text-white;
+      }
+      &.chat-btn-tonal {
+        @apply bg-gray-200;
+      }
+      &.chat-btn-ghost {
+        @apply hover:bg-black/5
+      }
+      &.chat-btn-outlined {
+        @apply bg-white border border-gray-200 hover:bg-gray-100
+      }
+    }
+  }
+  /* Style Guide Header */
+  .style-guide-header {
+    @apply p-8 border rounded-3xl flex flex-col lg:flex-row lg:justify-between lg:items-start;
+    & > .style-guide__main {
+      @apply lg:w-1/2 bs-order-last lg:bs-order-first;
+      & > h3 {
+        @apply font-medium tracking-tight mb-2
+      }
+      & > p {
+        @apply opacity-75
+      }
+    }
+    & > .style-guide__decor {
+      @apply bs-order-first lg:bs-order-last mb-4;
+      & > span {
+        @apply label-md font-medium;
+        &:first-child {
+          @apply opacity-50;
+        }
+      }
+    }
+    
+  }
+  /* Component List */
+  .component-list {
+    @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6;
+    & > .component-item {
+      @apply rounded-[20px] bg-white border border-gray-200 shadow-md;
+      & > .component-thumbnail {
+        @apply px-3 pt-3;
+        & > img {
+          @apply aspect-4/3 w-full object-cover rounded-xl;
+        }
+      }
+      & > .component-body {
+        @apply px-5 py-4;
+        & > h4 {
+          @apply title-lg font-medium;
+        }
+      }
+    }
+  }
+}

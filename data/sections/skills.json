@@ -1,17 +1,28 @@
-[
-  {
-    "title": "UI/UX Design",
-    "content": "We help businesses define who they are and how they’re seen. From logos and color palettes to typography and brand guidelines, we create cohesive identities that tell your story and leave a lasting impression.",
-    "badges": ["Logo Design", "Visual Identity", "Motion Design"]
-  },
-  {
-    "title": "UI/UX Design",
-    "content": "We help businesses define who they are and how they’re seen. From logos and color palettes to typography and brand guidelines, we create cohesive identities that tell your story and leave a lasting impression.",
-    "badges": ["Logo Design", "Visual Identity", "Motion Design"]
-  },
-  {
-    "title": "UI/UX Design",
-    "content": "We help businesses define who they are and how they’re seen. From logos and color palettes to typography and brand guidelines, we create cohesive identities that tell your story and leave a lasting impression.",
-    "badges": ["Logo Design", "Visual Identity", "Motion Design"]
-  }
-]
+{
+  "eyebrow": "Tools",
+  "heading": "Essential Tools I Use",
+  "content": "I use a refined set of design, development, and automation tools to build fast, scalable, and beautifully engineered digital experiences.",
+  "items": [
+    {
+      "number": "[01]",
+      "title": "UI/UX Design",
+      "content": "We help businesses define who they are and how they're seen. From logos and color palettes to typography and brand guidelines, we create cohesive identities that tell your story and leave a lasting impression.",
+      "badges": ["Logo Design", "Visual Identity", "Motion Design"],
+      "imgUrl": "/uploads/skill-1.png"
+    },
+    {
+      "number": "[02]",
+      "title": "UI/UX Design",
+      "content": "We help businesses define who they are and how they're seen. From logos and color palettes to typography and brand guidelines, we create cohesive identities that tell your story and leave a lasting impression.",
+      "badges": ["Logo Design", "Visual Identity", "Motion Design"],
+      "imgUrl": "/uploads/skill-2.png"
+    },
+    {
+      "number": "[03]",
+      "title": "UI/UX Design",
+      "content": "We help businesses define who they are and how they're seen. From logos and color palettes to typography and brand guidelines, we create cohesive identities that tell your story and leave a lasting impression.",
+      "badges": ["Logo Design", "Visual Identity", "Motion Design"],
+      "imgUrl": "/uploads/skill-3.png"
+    }
+  ]
+}
