@@ -51,7 +51,7 @@
       <div class="bs-row sm:absolute sm:top-1/2 sm:-translate-y-1/2 pb-10 sm:pb-0 w-full">
         <div class="bs-col">
           <p class="body-sm sm:body-sm text-white/60 mb-1">{{hero.metadata.timezone.key}}</p>
-          <p class="body-md sm:body-lg text-white">UTC +7, 11:30 PM</p>
+          <p class="body-md sm:body-lg text-white" data-current-time></p>
         </div>
         <div class="bs-col">
           <p class="text-right body-sm sm:body-sm text-white/60 mb-1">{{hero.metadata.location.key}}</p>
@@ -128,7 +128,6 @@
       </div>
       <div class="bs-row mb-10">
         <ul class="card-grid" data-card-grid data-reveal="group">
-          <div class="cursor-label">View Project</div>
           {{#each projects}}
             {{> components/project-card this}}
           {{/each}}

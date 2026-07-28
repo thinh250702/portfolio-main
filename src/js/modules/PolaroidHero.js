@@ -1,5 +1,5 @@
 import $ from "../vendors/jquery.js";
-import { gsap } from "../vendors/gsap.js";
+import { gsap, ScrollSmoother } from "../vendors/gsap.js";
 import EventBus from "../utils/EventBus.js";
 
 export default class PolaroidHero {
@@ -14,7 +14,7 @@ export default class PolaroidHero {
 
     this.dom = {};
     this.state = {};
-
+    this.smoother = ScrollSmoother.get();
     this.init();
   }
 
@@ -57,10 +57,10 @@ export default class PolaroidHero {
     this.tl.fromTo(this.dom.wrapper, { yPercent: 160 }, { yPercent: 0, duration: 1, ease: "back.out" } );
     this.tl.from(this.dom.items, { xPercent: 50, rotation: 0, y: 0, marginLeft: (_, target) => {return -$(target).outerWidth();}, duration: .8, ease: "power2.out" }, ">");
     this.tl.eventCallback("onStart", () => {
-      gsap.set(this.dom.body, { overflow: "hidden" });
+      this.lockScroll();
     });
     this.tl.eventCallback("onComplete", () => {
-      gsap.set(this.dom.body, { overflow: "" });
+      this.unlockScroll();
       this.state.isPlayed = true;
       this.createHoverAnimation();
       EventBus.trigger("polaroid:revealComplete");
@@ -83,6 +83,14 @@ export default class PolaroidHero {
   play() {
     if (this.state.isPlayed) return;
     this.tl.play();
+  }
+
+  lockScroll() {
+    this.smoother.paused(true);
+  }
+
+  unlockScroll() {
+    this.smoother.paused(false);
   }
 
   destroy() {

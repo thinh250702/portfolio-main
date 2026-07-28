@@ -7,7 +7,7 @@ export default class ZoomTransition {
     this.options = {
       scale: 13,
       ease: "power2.out",
-      scrub: 0.5,
+      scrub: 0,
       start: "top 50%",
       end: "bottom 50%",
       ...options
@@ -26,6 +26,7 @@ export default class ZoomTransition {
   }
 
   cacheDOM() {
+    this.dom.pin = this.$root.find("[data-zoom-pin]");
     this.dom.item = this.$root.find("[data-zoom-item]");
   }
 
@@ -42,6 +43,7 @@ export default class ZoomTransition {
       scrub: this.options.scrub,
       invalidateOnRefresh: true,
       animation: this.tl,
+      pin: this.dom.pin,
     });
   }
 

@@ -9,7 +9,7 @@ const getProjects = async(req, res) => {
 const getProjectDetail = async(req, res, next) => {
   try {
     const project = await projectService.getProjectBySlug(req.params.slug)
-    res.render('pages/project-details', { title: `${project.title} — Thịnh Nguyễn | ©2026—Portfolio`, ...project });
+    res.render('pages/project-details', { title: `${project.title} — Thịnh Nguyễn | ©2026—Portfolio`, showToc: true, ...project });
   } catch (err) {
     next(err);
   }

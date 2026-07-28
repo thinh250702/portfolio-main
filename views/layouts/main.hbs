@@ -25,10 +25,25 @@
     </div>
     <div class="pt-logo symbol-logo"></div>
   </div>
+  {{#if showToc}}
+  <div class="toc" data-toc>
+    <div class="toc-bg"></div>
+    <ul class="toc-list">
+    </ul>
+    <button class="toc-toggle btn text-gray-500">
+      <i class="icon-menu"></i>
+    </button>
+  </div>
+  {{/if}}
+  <div class="cursor-label">View Project</div>
   {{> global/header isLight=isHomepage}}
-  <main>
-    {{{body}}}
-  </main>
-  {{> global/footer}}
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <main>
+        {{{body}}}
+      </main>
+      {{> global/footer}}
+    </div>
+  </div>
 </body>
 </html>

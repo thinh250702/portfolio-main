@@ -1,5 +1,5 @@
 import $ from "../vendors/jquery.js";
-import { gsap } from "../vendors/gsap.js";
+import { gsap, ScrollSmoother } from "../vendors/gsap.js";
 import EventBus from "../utils/EventBus.js";
 
 export default class PageTransition {
@@ -15,7 +15,7 @@ export default class PageTransition {
 
     this.dom = {};
     this.nextUrl = null;
-
+    this.smoother = ScrollSmoother.get();
     this.init();
   }
 
@@ -77,6 +77,11 @@ export default class PageTransition {
       const link = e.currentTarget;
       const href = link.href;
 
+      // Ignore links
+      if (link.hasAttribute("data-no-transition")) {
+        return;
+      }
+
       const current = new URL(window.location.href);
       const target = new URL(href);
 
@@ -105,11 +110,11 @@ export default class PageTransition {
   }
 
   lockScroll() {
-    gsap.set(this.dom.body, { overflow: "hidden" });
+    this.smoother.paused(true);
   }
 
   unlockScroll() {
-    gsap.set(this.dom.body, { overflow: "" });
+    this.smoother.paused(false);
   }
 
   destroy() {

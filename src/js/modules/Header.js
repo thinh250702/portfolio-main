@@ -1,5 +1,5 @@
 import $ from "../vendors/jquery.js";
-import { gsap, ScrollTrigger } from "../vendors/gsap.js";
+import { gsap, ScrollTrigger, ScrollSmoother, Observer } from "../vendors/gsap.js";
 
 export default class Header {
   constructor(element, options = {}) {
@@ -15,6 +15,7 @@ export default class Header {
       isHomepage: false,
       isMenuOpen: false,
       tween: null,
+      smoother: null
     };
     this.init();
   }
@@ -23,6 +24,7 @@ export default class Header {
     this.cacheDOM();
     this.createState();
     this.createScrollTrigger();
+    this.createObserver();
     this.createMenuTimeline();
     this.bindEvents();
   }
@@ -38,10 +40,26 @@ export default class Header {
   createState() {
     this.state.height = this.dom.header.outerHeight();
     this.state.isHomepage = this.dom.header.hasClass("is-light");
+    this.state.smoother = ScrollSmoother.get();
+  }
+
+  createObserver() {
+    this.observer = Observer.create({
+      type: "wheel,touch",
+      onDown: () => {
+        if (this.state.isMenuOpen) return;
+        this.hide();
+      },
+
+      onUp: () => {
+        if (this.state.isMenuOpen) return;
+        this.show();
+      }
+    });
   }
 
   createScrollTrigger() {
-    ScrollTrigger.create({
+    this.trigger = ScrollTrigger.create({
       trigger: this.dom.body,
       start: () => `top+=${this.state.height} top`,
       end: "max",
@@ -52,7 +70,6 @@ export default class Header {
       },
       onEnter: () => this.onEnter(),
       onLeaveBack: () => this.onLeaveBack(),
-      onUpdate: self => this.onUpdate(self)
     })
   }
 
@@ -75,7 +92,7 @@ export default class Header {
       "click.header",
       this.onToggleMenu.bind(this)
     );
-}
+  }
 
   onEnter() {
     if (this.state.isHomepage){
@@ -90,12 +107,6 @@ export default class Header {
     this.show();
   }
 
-  onUpdate(self) {
-    if (!this.dom.header.hasClass("is-scrolled")) return;
-    if (self.direction === 1) this.hide();
-    if (self.direction === -1) this.show();
-  }
-
   onToggleMenu() {
     if (this.menuTl.isActive()) return;
 
@@ -108,20 +119,24 @@ export default class Header {
   }
 
   hide() {
+    console.log("Hide header")
     this.killTween();
     this.state.tween = gsap.to(this.dom.header, {
       yPercent: -100,
       duration: this.options.duration,
-      ease: this.options.ease
+      ease: this.options.ease,
+      delay: 0.2
     });
   }
 
   show() {
+    console.log("Show header")
     this.killTween();
     this.state.tween = gsap.to(this.dom.header, {
       yPercent: 0,
       duration: this.options.duration,
-      ease: this.options.ease
+      ease: this.options.ease,
+      delay: 0.2
     });
   }
 
@@ -134,11 +149,11 @@ export default class Header {
   }
 
   lockScroll() {
-    gsap.set(this.dom.body, { overflow: "hidden" });
+    this.state.smoother.paused(true);
   }
 
   unlockScroll() {
-    gsap.set(this.dom.body, { overflow: "" });
+    this.state.smoother.paused(false);
   }
 
   killTween() {
@@ -149,7 +164,13 @@ export default class Header {
 
   destroy() {
     this.killTween();
-    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+
+    this.observer?.kill();
+    this.observer = null;
+
+    this.trigger?.kill();
+    this.trigger = null;
+
     this.menuTl.kill();
     this.dom.menuToggle.off(".header");
   }

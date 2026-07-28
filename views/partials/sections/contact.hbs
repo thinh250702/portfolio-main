@@ -1,7 +1,9 @@
 <section id="contact" class="">
   {{#if isHomepage}}
-  <div class="w-screen h-screen bg-gray-900 pointer-events-none" data-zoom>
-    <div class="size-50 bg-white fixed bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 rounded-full" data-zoom-item></div>
+  <div class="w-screen h-screen bg-gray-900 relative" data-zoom>
+    <div class="absolute w-full h-1/2" data-zoom-pin>
+      <div class="size-50 bg-white rounded-full absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2" data-zoom-item></div>
+    </div>
   </div>
   {{/if}}
   <div class="container mx-auto {{#if isHomepage}}py-20{{else}}pb-20 pt-5{{/if}} relative z-1">

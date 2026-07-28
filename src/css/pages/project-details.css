@@ -85,4 +85,24 @@
       }
     }
   }
+  /* TOC */
+  .toc {
+    @apply fixed bottom-4 right-4 z-1 flex flex-col items-end;
+  }
+  .toc-bg {
+    @apply absolute bg-white border border-gray-200 shadow-lg bottom-0 right-0 w-12 h-12 -z-1 rounded-3xl;
+  }
+  .toc-list {
+    @apply pr-5 pt-4 pl-10 flex flex-col gap-1 items-end
+  }
+  .toc-item {
+    @apply flex items-center gap-2;
+    & > a {
+      @apply inline-block origin-right translate-x-4;
+      /* text-gray-400 */
+    }
+    & > span {
+      @apply inline-block size-2 bg-[#cc0000] rounded-full scale-0
+    }
+  }
 }

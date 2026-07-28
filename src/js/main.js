@@ -16,11 +16,16 @@ import Reveal from "./modules/Reveal.js";
 import TextReveal from "./modules/TextReveal.js";
 import BrandGen from "./modules/BrandGen.js";
 import ZoomTransition from "./modules/ZoomTransition.js";
+import TableOfContents from "./modules/TableOfContents.js";
+import CurrentTime from "./modules/CurrentTime.js";
+import SmoothScroll from "./modules/SmoothScroll.js";
+import ScrollToTop from "./modules/ScrollToTop.js";
 
 $(async function () {
   
   await document.fonts.ready;
 
+  new SmoothScroll();
   new PageTransition("[data-page-transition]");
 
   $("[data-header]").each(function () {
@@ -69,6 +74,18 @@ $(async function () {
 
   $("[data-zoom]").each(function () {
     new ZoomTransition(this);
+  });
+
+  $("[data-toc]").each(function () {
+    new TableOfContents(this);
+  });
+
+  $("[data-current-time]").each(function () {
+    new CurrentTime(this);
+  });
+
+  $("[data-scroll-top]").each(function () {
+    new ScrollToTop(this);
   });
 
   $("[data-style]").each(function () {

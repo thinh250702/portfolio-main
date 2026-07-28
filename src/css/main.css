@@ -88,9 +88,7 @@
   html, body {
     scrollbar-width: none; 
     -ms-overflow-style: none;
-    scroll-behavior: smooth;
     cursor: default;
-
     /* -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none; */
