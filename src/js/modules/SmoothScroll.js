@@ -4,7 +4,7 @@ import { gsap, ScrollTrigger, ScrollSmoother } from "../vendors/gsap.js";
 export default class SmoothScroll {
   constructor(options = {}) {
     this.options = {
-      smooth: 2,
+      smooth: 1.2,
       effects: true,
       normalizeScroll: true,
       ...options

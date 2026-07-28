@@ -1,5 +1,6 @@
 import $ from "../vendors/jquery.js";
 import { gsap, ScrollTrigger, ScrollSmoother, Observer } from "../vendors/gsap.js";
+import EventBus from "../utils/EventBus.js";
 
 export default class Header {
   constructor(element, options = {}) {
@@ -7,6 +8,7 @@ export default class Header {
     this.options = {
       duration: 0.3,
       ease: "power2.inOut",
+      event: this.$root.data("event") || "transition:revealComplete",
       ...options
     };
     this.dom = {};
@@ -24,9 +26,14 @@ export default class Header {
     this.cacheDOM();
     this.createState();
     this.createScrollTrigger();
-    this.createObserver();
+    
     this.createMenuTimeline();
     this.bindEvents();
+    this.setup();
+  }
+
+  setup() {
+    gsap.set(this.$root, { yPercent: -100 });
   }
 
   cacheDOM() {
@@ -92,6 +99,13 @@ export default class Header {
       "click.header",
       this.onToggleMenu.bind(this)
     );
+    EventBus.on(
+      `${this.options.event}.header`,
+      () => {
+        this.createObserver();
+        this.show(true);
+      }
+    );
   }
 
   onEnter() {
@@ -119,7 +133,6 @@ export default class Header {
   }
 
   hide() {
-    console.log("Hide header")
     this.killTween();
     this.state.tween = gsap.to(this.dom.header, {
       yPercent: -100,
@@ -129,14 +142,13 @@ export default class Header {
     });
   }
 
-  show() {
-    console.log("Show header")
+  show(force = false) {
     this.killTween();
     this.state.tween = gsap.to(this.dom.header, {
       yPercent: 0,
       duration: this.options.duration,
       ease: this.options.ease,
-      delay: 0.2
+      delay: force ? 0 : 0.2
     });
   }
 
@@ -173,5 +185,6 @@ export default class Header {
 
     this.menuTl.kill();
     this.dom.menuToggle.off(".header");
+    EventBus.off(".header");
   }
 }

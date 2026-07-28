@@ -1,7 +1,7 @@
-<section id="brands" class="{{#if isLight}}bg-white{{else}}bg-black{{/if}}">
+<section id="brands" class="{{#if isLight}}bg-white{{else}}bg-black{{/if}} -my-px">
   <div class="container mx-auto">
-    <div class="bs-row border
-      {{#if isLight}}[border-image:linear-gradient(to_right,transparent,var(--color-gray-200),transparent)_1]{{else}}[border-image:linear-gradient(to_right,transparent,var(--color-gray-800),transparent)_1]{{/if}}">
+    <div class="bs-row">
+      <hr class="border-none h-px bg-linear-to-r from-transparent {{#if isLight}}via-gray-200{{else}}via-gray-800{{/if}} to-transparent mt-px">
       <div class="bs-col-12 sm:bs-col-2 pt-10 sm:pt-0 flex items-center justify-center sm:justify-start">
         <p class="text-gray-500">{{data.title}}</p>
       </div>
@@ -18,6 +18,7 @@
           </ul>
         </div>
       </div>
+      <hr class="border-none h-px bg-linear-to-r from-transparent {{#if isLight}}via-gray-200{{else}}via-gray-800{{/if}} to-transparent">
     </div>
   </div>
 </section>
