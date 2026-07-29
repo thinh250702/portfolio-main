@@ -102,7 +102,7 @@
       /* text-gray-400 */
     }
     & > span {
-      @apply inline-block size-2 bg-[#cc0000] rounded-full scale-0
+      @apply inline-block size-2 bg-primary rounded-full scale-0
     }
   }
 }

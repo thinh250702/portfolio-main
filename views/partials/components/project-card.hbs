@@ -1,17 +1,17 @@
-<li class="bg-white border border-gray-200 rounded-3xl shadow-md pointer-events-none" data-card-item>
+<li class="bg-white border border-gray-200 rounded-3xl shadow-md hover:shadow-lg transition-shadow duration-300 pointer-events-none" data-card-item>
   <div class="px-3 pt-3">
     <a href="/work/{{slug}}" class="block aspect-4/3 w-full overflow-hidden rounded-xl [&:hover>img]:scale-110">
       <img src="{{thumbnail}}" alt="" class="w-full h-full object-cover transition-transform duration-400">
     </a>
   </div>
   <div class="px-6 pt-6 pb-5">
-    <div class="flex items-center justify-between mb-3">
-      <div class="flex items-center gap-2">
+    <div class="flex justify-between mb-3">
+      <div class="flex flex-wrap items-center gap-2">
         {{#each category}}
           <a href="{{url}}" class="badge badge-light">{{name}}</a>
         {{/each}}
       </div>
-      <span class="label-md font-medium tracking-tight">({{year}})</span>
+      <span class="label-md font-medium tracking-tight leading-7.5">({{year}})</span>
     </div>
     <a href="/work/{{slug}}" class="h3 font-medium tracking-tight" data-text-roll>{{name}}</a>
     <p class="body-md line-clamp-3 text-gray-500 mt-2">{{description}}</p>

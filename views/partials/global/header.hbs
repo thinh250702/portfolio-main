@@ -38,32 +38,19 @@
         </div>
         <nav class="flex-1 flex flex-col justify-center">
           {{#each settings.navigation}}
-          <a href="{{url}}" class="text-7xl xl:text-8xl font-medium leading-none tracking-tighter my-2" data-menu-item data-text-roll>{{title}}</a>
+          <a href="{{url}}" class="text-7xl lg:text-8xl font-medium leading-none tracking-tighter my-2" data-menu-item data-text-roll>{{title}}</a>
           {{/each}}
         </nav>
         <div data-menu-item>
           <span class="uppercase title-md font-medium">Follow Me</span>
           <ul class="flex gap-2.5 mt-2">
+            {{#each settings.socials}}
             <li>
-              <a href="https://www.facebook.com/thinh.nguyentruong.1884" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center rounded-full size-10 bg-gray-100">
-                <i class="icon-facebook text-lg"></i>
+              <a href="{{url}}" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center rounded-full size-10 bg-gray-100">
+                <i class="{{icon}} text-lg"></i>
               </a>
             </li>
-            <li>
-              <a href="https://www.instagram.com/rion.ng_" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center rounded-full size-10 bg-gray-100">
-                <i class="icon-instagram text-lg"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.behance.net/thinhnguyen93" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center rounded-full size-10 bg-gray-100">
-                <i class="icon-behance text-lg"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/thinhnt02/" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center rounded-full size-10 bg-gray-100">
-                <i class="icon-linkedIn text-lg"></i>
-              </a>
-            </li>
+            {{/each}}
           </ul>
         </div>
       </div>

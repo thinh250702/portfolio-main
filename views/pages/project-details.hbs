@@ -45,7 +45,7 @@
         <h2 class="font-medium tracking-tight text-left mb-3 lg:mb-0" data-style="{{style overview.heading.style}}">{{overview.heading.text}}</h2>
       </div>
       <div class="bs-col-12 lg:bs-col">
-        <div class="-mb-3 *:mb-3">
+        <div class="rich-text-block">
           {{#each overview.content}}
             {{renderBlock this}}
           {{/each}}
@@ -157,7 +157,7 @@
       </div>
       <div class="bs-col-12 lg:bs-col bs-order-first lg:bs-order-last flex flex-col justify-center gap-4 lg:pl-10">
         <h3 class="font-medium tracking-tight" data-style="{{style overview.role.heading.style}}">{{overview.role.heading.text}}</h3>
-        <div class="-mb-3 *:mb-3">
+        <div class="rich-text-block">
           {{#each overview.role.content}}
             {{renderBlock this}}
           {{/each}}
@@ -166,12 +166,12 @@
     </div>
   </div>
 </section>
-<section class="py-20" data-style="{{style process.style}}" data-toc-title="{{process.heading.text}}">
+<section data-style="{{style process.style}}" data-toc-title="{{process.heading.text}}">
   <div class="container mx-auto">
     <div class="bs-row justify-center">
       <div class="bs-col-12 lg:bs-col-6 mb-10">
-        <h2 class="text-center text-white font-medium tracking-tight mb-4" data-style="{{style process.heading.style}}">{{process.heading.text}}</h2>
-        <p class="text-center text-white">{{process.content}}</p>
+        <h2 class="text-center font-medium tracking-tight mb-4" data-style="{{style process.heading.style}}">{{process.heading.text}}</h2>
+        <p class="text-center" data-style="{{style process.content.style}}">{{process.content.text}}</p>
       </div>
       <div class="bs-col-12">
         <img src="{{process.imgUrl}}" alt="" class=" w-full object-cover">
@@ -179,12 +179,12 @@
     </div>
   </div>
 </section>
-<section class="py-20" data-toc-title="{{research.heading.text}}">
+<section data-style="{{style research.style}}" data-toc-title="{{research.heading.text}}">
   <div class="container mx-auto">
     <div class="bs-row justify-center">
       <div class="bs-col-12 lg:bs-col-6 mb-10">
         <h2 class="text-center font-medium tracking-tight mb-4" data-style="{{style research.heading.style}}">{{research.heading.text}}</h2>
-        <p class="text-center">{{research.content}}</p>
+        <p class="text-center" data-style="{{style research.content.style}}">{{research.content.text}}</p>
       </div>
       <div class="bs-col-12">
         <img src="{{research.imgUrl}}" alt="" class=" w-full object-cover">
@@ -192,7 +192,7 @@
     </div>
   </div>
 </section>
-<section class="pt-20" data-style="{{style probSol.style}}" data-toc-title="{{probSol.heading.text}}">
+<section data-style="{{style probSol.style}}" data-toc-title="{{probSol.heading.text}}">
   <div class="container mx-auto">
     <div class="bs-row justify-center">
       <div class="bs-col-12 lg:bs-col-6 mb-10">
@@ -203,7 +203,7 @@
     <div class="bs-row justify-center relative">
       <div class="bs-col-12 lg:bs-col bs-order-1 pb-10">
         <h3 class="font-medium tracking-tight mb-3" data-style="{{style probSol.problem.heading.style}}">{{probSol.problem.heading.text}}</h3>
-        <div class="-mb-3 *:mb-3">
+        <div class="rich-text-block">
           {{#each probSol.problem.content}}
             {{renderBlock this}}
           {{/each}}
@@ -214,7 +214,7 @@
       </div>
       <div class="bs-col-12 lg:bs-col bs-order-2 lg:bs-order-3 pb-10">
         <h3 class="font-medium tracking-tight mb-3" data-style="{{style probSol.solution.heading.style}}">{{probSol.solution.heading.text}}</h3>
-        <div class="-mb-3 *:mb-3">
+        <div class="rich-text-block">
           {{#each probSol.solution.content}}
             {{renderBlock this}}
           {{/each}}
@@ -224,7 +224,7 @@
   </div>
 </section>
 {{#if userflow}}
-<section class="pt-20" data-toc-title="User Flow">
+<section data-toc-title="User Flow">
   <div class="container mx-auto">
     <div class="bs-row justify-center">
       <div class="bs-col-12 lg:bs-col-6 mb-10">
@@ -239,7 +239,7 @@
 </section>
 {{/if}}
 {{#if sitemap}}
-<section class="py-20" data-toc-title="Sitemap">
+<section data-toc-title="Sitemap">
   <div class="container mx-auto">
     <div class="bs-row justify-center">
       <div class="bs-col-12 lg:bs-col-6 mb-10">
@@ -253,12 +253,12 @@
   </div>
 </section>
 {{/if}}
-<section class="py-20" data-style="{{style wireframes.style}}" data-toc-title="{{wireframes.heading.text}}">
+<section data-style="{{style wireframes.style}}" data-toc-title="{{wireframes.heading.text}}">
   <div class="container mx-auto">
     <div class="bs-row justify-center">
       <div class="bs-col-12 lg:bs-col-6 mb-10">
         <h2 class="text-center font-medium tracking-tight mb-4" data-style="{{style wireframes.heading.style}}">{{wireframes.heading.text}}</h2>
-        <p class="text-center text-white">{{wireframes.content}}</p>
+        <p class="text-center" data-style="{{style wireframes.content.style}}">{{wireframes.content.text}}</p>
       </div>
       <div class="bs-col-12">
         <img src="{{wireframes.imgUrl}}" alt="" class=" w-full object-cover">
@@ -374,12 +374,12 @@
     </div>
   </div>
 </section>
-<section class="py-20" data-style="{{style result.style}}" data-toc-title="{{result.heading.text}}">
+<section data-style="{{style result.style}}" data-toc-title="{{result.heading.text}}">
   <div class="container mx-auto">
     <div class="bs-row justify-center">
       <div class="bs-col-12 lg:bs-col-6 mb-10">
         <h2 class="text-center font-medium tracking-tight mb-4" data-style="{{style result.heading.style}}">{{result.heading.text}}</h2>
-        <p class="text-center text-white mb-6">{{result.content}}</p>
+        <p class="text-center mb-6" data-style="{{style result.content.style}}">{{result.content.text}}</p>
         <div class="flex justify-center">
           <a href="#" class="btn" data-style="{{style result.button.style}}">
             <span data-text-roll>{{result.button.label}}</span>
@@ -388,7 +388,7 @@
         </div>
       </div>
       <div class="bs-col-12">
-        <img src="{{result.imgUrl}}" alt="" class=" w-full object-cover">
+        <img src="{{result.imgUrl}}" alt="" class="w-full object-cover">
       </div>
     </div>
   </div>
@@ -414,7 +414,7 @@
       <div class="bs-col-12">
         <div class="p-8 border rounded-3xl" data-style="{{style credits.style}}">
           <h2 class="font-medium tracking-tight mb-2" data-style="{{style credits.heading.style}}">{{credits.heading.text}}</h2>
-          <div class="-mb-3 *:mb-3">
+          <div class="rich-text-block">
             {{#each credits.content}}
               {{renderBlock this}}
             {{/each}}

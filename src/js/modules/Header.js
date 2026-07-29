@@ -118,7 +118,7 @@ export default class Header {
     if (this.state.isHomepage) {
       this.dom.header.addClass("is-light");
     }
-    this.show();
+    this.show(true);
   }
 
   onToggleMenu() {

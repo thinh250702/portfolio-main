@@ -1,5 +1,5 @@
 <section id="hero">
-  <div class="bg-linear-to-b from-black to-[#cc0000] to-60% pt-(--header-height)">
+  <div class="bg-linear-to-b from-black to-primary to-60% pt-(--header-height)">
     <div class="pt-10 sm:pt-20">
       <div class="container mx-auto relative">
         <div class="bs-row" data-reveal="group" data-trigger="load">
@@ -32,10 +32,10 @@
         </div>
         <div class="bs-row justify-between items-end absolute bottom-8 w-full text-white">
           <div class="bs-col-4">
-            <h1 class="tracking-tight h2 md:h1 hidden sm:block font-medium" data-text-reveal>{{hero.heading}}</h1>
+            <h1 class="tracking-tight h2 md:h1 hidden sm:block font-medium" data-text-reveal data-trigger="load" data-delay="0.6">{{hero.heading}}</h1>
           </div>
           <div class="bs-col-4">
-            <p class="tracking-tight h4 md:h3 hidden sm:block font-medium" data-text-reveal>{{hero.content}}</p>
+            <p class="tracking-tight h4 md:h3 hidden sm:block font-medium" data-text-reveal data-trigger="load" data-delay="0.7">{{hero.content}}</p>
           </div>
         </div>
       </div>
@@ -93,7 +93,7 @@
     </div>
   </div>
 </section>
-<section class="bg-[#cc0000] py-10">
+<section class="bg-primary py-10">
   <div class="w-full overflow-hidden" data-marquee data-marquee-clone="2">
     <ul class="flex w-max" data-marquee-track>
       <li class="flex items-center gap-8 text-white mr-8">

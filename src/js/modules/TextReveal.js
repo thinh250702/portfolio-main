@@ -58,9 +58,12 @@ export default class TextReveal {
   }
 
   createSplitText() {
+    // this.state.split = SplitText.create(this.dom.text, {
+    //   type: this.options.type,
+    //   mask: this.options.type
+    // });
     this.state.split = SplitText.create(this.dom.text, {
       type: this.options.type,
-      mask: this.options.type
     });
   }
 
@@ -71,8 +74,17 @@ export default class TextReveal {
         this.state.split.revert()
       }
     });
+    // this.tl.from(this.state.split[this.options.type], {
+    //   yPercent: this.options.yPercent,
+    //   duration: this.options.duration,
+    //   delay: this.options.delay,
+    //   stagger: this.options.stagger,
+    //   ease: this.options.ease
+    // });
     this.tl.from(this.state.split[this.options.type], {
-      yPercent: this.options.yPercent,
+      y: 40,
+      opacity: 0,
+      filter: "blur(10px)",
       duration: this.options.duration,
       delay: this.options.delay,
       stagger: this.options.stagger,

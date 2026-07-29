@@ -6,7 +6,7 @@ const getAbout = async(req, res) => {
   const brands = await sectionService.getBrands();
   const skills = await sectionService.getSkills();
   const quote = await sectionService.getQuote();
-  res.render('pages/about', {title: 'About — Thịnh Nguyễn | ©2026—Portfolio', isAbout: true, brands, skills, quote, ...data});
+  res.render('pages/about', {title: 'About', isAbout: true, brands, skills, quote, ...data});
 }
 
 export default {

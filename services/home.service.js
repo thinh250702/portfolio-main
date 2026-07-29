@@ -1,9 +1,9 @@
 import { loadJson } from "../utils/json.js";
 
-const getHomeData = async () => {
+const getHomePage = async () => {
   return await loadJson("pages/home.json");
 }
 
 export default {
-  getHomeData
+  getHomePage
 }

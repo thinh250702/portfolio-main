@@ -47,6 +47,8 @@
   --color-gray-900: oklch(21% 0.006 285.9);
   --color-gray-950: oklch(11.5% 0 0);
 
+  --color-primary: oklch(53.1% 0.218 29.2);
+
   --radial-x: 50%;
   --radial-y: 50%;
 
@@ -178,6 +180,19 @@
       }
     }
   }
+  /* Rich Text Block */
+  .rich-text-block {
+    @apply -mb-3 *:mb-3;
+    b, strong {
+      @apply font-medium
+    }
+    a {
+      @apply underline
+    }
+    ul {
+      @apply list-disc ps-4 -mb-1 *:mb-1
+    }
+  }
   /* Brand Logo */
   .brand-logo {
     @apply aspect-3/2 h-32.5 relative;
@@ -233,7 +248,7 @@
   }
   /* Cursor Label */
   .cursor-label {
-    @apply fixed top-0 left-0 bg-[#cc0000] text-white uppercase label-md font-medium py-3 px-5 rounded-full pointer-events-none opacity-0 invisible z-99 will-change-transform
+    @apply fixed top-0 left-0 bg-primary text-white uppercase label-md font-medium py-3 px-5 rounded-full pointer-events-none opacity-0 invisible z-99 will-change-transform
   }
   /* Page Transition */
   .page-transition {
@@ -241,7 +256,7 @@
     & > .pt-wrapper {
       @apply flex w-full h-full;
       & > .pt-column {
-        @apply flex-1 bg-[#cc0000] origin-top-left will-change-transform scale-x-105;
+        @apply flex-1 bg-primary origin-top-left will-change-transform scale-x-105;
       }
     }
     & > .pt-logo {

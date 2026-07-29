@@ -36,6 +36,7 @@ export default class Accordion {
         children: collapse.children
       };
     })
+    console.log(this.dom.data)
   }
 
   setup() {

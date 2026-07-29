@@ -3,7 +3,7 @@ import projectService from "../services/project.service.js";
 import sectionService from "../services/section.service.js";
 
 const getHome = async(req, res) => {
-  const data = await homeService.getHomeData();
+  const data = await homeService.getHomePage();
   const projects = await projectService.getAllProjects();
   const brands = await sectionService.getBrands();
   const contactForm = await sectionService.getContactForm();

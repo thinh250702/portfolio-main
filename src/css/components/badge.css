@@ -1,12 +1,6 @@
 @layer components {
   .badge {
     @apply inline-block label-xs font-medium uppercase border rounded-full px-3 py-1.5;
-    /* &.badge-dark {
-      @apply bg-gray-800 border-gray-700 text-gray-400;
-    }
-    &.badge-light {
-      @apply bg-gray-100 border-gray-200 text-black;
-    } */
   }
 }
 
