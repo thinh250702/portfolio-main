@@ -2,7 +2,7 @@
   <div class="container">
     <div class="bs-row px-0 justify-center">
       <div class="bs-col-auto px-4">
-        <p class="display-lg text-center" data-text-reveal data-trigger="event" data-event="polaroid:revealComplete">{{hero.topHeading}}</p>
+        <p class="display-lg text-center font-weight-hover" data-text-reveal data-trigger="event" data-event="polaroid:revealComplete">{{hero.topHeading}}</p>
       </div>
       <div class="bs-col-12 flex justify-center">
         <ul id="polaroid-hero" data-polaroid-hero>
@@ -16,14 +16,14 @@
         </ul>
       </div>
       <div class="bs-col-auto px-4">
-        <p class="display-lg text-center" data-text-reveal data-trigger="event" data-event="polaroid:revealComplete">{{hero.bottomHeading}}</p>
+        <p class="display-lg text-center font-weight-hover" data-text-reveal data-trigger="event" data-event="polaroid:revealComplete">{{hero.bottomHeading}}</p>
       </div>
     </div>
   </div>
 </section>
 {{> sections/brands data=brands isLight=true}}
 <section id="about" class="py-20 relative">
-  <div class="w-full h-[20%] lg:h-[35%] xl:h-[40%] absolute bottom-0 bg-[url(https://res.cloudinary.com/dbmobxcxq/image/upload/v1784730393/portfolio-2026/nww28lqrmvrqwmlcnfyu_mb37px.webp)] bg-cover bg-repeat-x bg-bottom"></div>
+  <div class="w-full h-[20%] lg:h-[35%] xl:h-[40%] absolute bottom-0 bg-[url(https://res.cloudinary.com/dbmobxcxq/image/upload/v1784730393/portfolio-2026/nww28lqrmvrqwmlcnfyu_mb37px.webp)] bg-cover md:bg-contain bg-repeat-x bg-bottom"></div>
   <div class="w-full h-[20%] lg:h-[35%] xl:h-[40%] absolute bottom-0 bg-linear-to-t from-gray-900 to-transparent to-50%"></div>
   <div class="container mx-auto">
     <div class="bs-row mb-10">
@@ -48,9 +48,7 @@
         <div class="mt-6 flex flex-col" data-reveal="group">
           <div>
             <a href="{{settings.resume.url}}" class="btn btn-dark">
-              <span class="hover-text">
-                <span data-label="{{settings.resume.label}}">{{settings.resume.label}}</span>
-              </span>
+              <span data-text-roll>{{settings.resume.label}}</span>
               <i class="icon-arrow-up-right text-sm"></i>
             </a>
           </div>

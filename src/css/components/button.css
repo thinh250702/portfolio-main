@@ -1,26 +1,17 @@
 @layer components {
   .btn {
     @apply inline-flex justify-center items-center rounded-full h-12 px-4 gap-2 uppercase;
-    & [data-label] {
-      @apply label-lg font-medium;
-    }
     &:hover {
       @apply cursor-pointer;
     }
-    &:hover [data-label] {
-      @apply -translate-y-full;
-    }
     & > span {
-      @apply mx-1;
+      @apply mx-1 label-lg font-medium;
     }
     &.btn-light {
       @apply bg-white text-black;
     }
     &.btn-dark {
       @apply bg-black text-white;
-    }
-    &.btn-ghost {
-      @apply bg-transparent;
     }
     &.btn-icon {
       @apply w-12 px-0;

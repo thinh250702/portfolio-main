@@ -6,7 +6,7 @@ export default class Header {
   constructor(element, options = {}) {
     this.$root = $(element);
     this.options = {
-      duration: 0.3,
+      duration: 0.5,
       ease: "power2.inOut",
       event: this.$root.data("event") || "transition:revealComplete",
       ...options
@@ -82,7 +82,7 @@ export default class Header {
 
   createMenuTimeline() {
     this.menuTl = gsap.timeline({ paused: true });
-    this.menuTl.fromTo(this.dom.menu, { autoAlpha: 0, yPercent: -100 }, { autoAlpha: 1, yPercent: 0, duration: .4, ease: "power2.out" } );
+    this.menuTl.fromTo(this.dom.menu, { yPercent: -100 }, { yPercent: 0, duration: .5, ease: "power2.out" } );
     this.menuTl.fromTo(this.dom.menuItems, { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: .3, ease: "power2.out", stagger: 0.06, }, ">" );
     this.menuTl.eventCallback("onStart", () => {
       gsap.set(this.dom.menu, { visibility: "visible", pointerEvents: "auto" });

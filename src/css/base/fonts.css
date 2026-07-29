@@ -1,15 +1,7 @@
 @font-face {
   font-family: "Zalando Sans";
-  src: url("/fonts/ZalandoSans-Light.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap
-}
-
-@font-face {
-  font-family: "Zalando Sans";
-  src: url("/fonts/ZalandoSans-Medium.ttf") format("truetype");
-  font-weight: 500;
+  src: url("/fonts/ZalandoSans-VariableFont.ttf") format("truetype");
+  font-weight: 200 900;
   font-style: normal;
   font-display: swap
 }

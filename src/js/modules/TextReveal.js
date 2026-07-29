@@ -69,9 +69,6 @@ export default class TextReveal {
       paused: true,
       onComplete: () => {
         this.state.split.revert()
-        // if (this.$root.hasClass('display-lg')){
-        //   gsap.to(this.$root, {skewX: -12, duration: 0.5, ease: "power2.out"})
-        // }
       }
     });
     this.tl.from(this.state.split[this.options.type], {

@@ -1,9 +1,7 @@
 <div class="relative {{#if header}}hidden xl:block{{/if}}" data-dropdown>
-  <button type="button" class="btn btn-light {{#if header}}btn-ghost light:text-white color-transition{{else}}bg-gray-100{{/if}}">
+  <button type="button" class="btn {{#if header}}light:text-white color-transition{{else}}bg-gray-100{{/if}}">
     <i class="icon-global text-xl"></i>
-    <span class="hover-text">
-      <span data-label="en">en</span>
-    </span>
+    <span>en</span>
   </button>
   <ul 
     class="bg-white absolute p-1 w-max border border-gray-200 rounded-2xl shadow-md z-20 opacity-0 invisible pointer-events-none {{#if header}} mt-3.5 {{else}} mt-2 {{/if}}" 

@@ -64,7 +64,7 @@
   }
 }
 
-@custom-variant light (.is-light &);
+@custom-variant light (&:where(.is-light, .is-light *));
 
 @layer base {
   h1 {
@@ -86,9 +86,11 @@
     @apply text-heading-6/tight
   }
   html, body {
+    @apply font-sans font-light;
     scrollbar-width: none; 
     -ms-overflow-style: none;
     cursor: default;
+    
     /* -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none; */
@@ -115,6 +117,12 @@
       }
     }
   }
+  .font-weight-hover {
+    @apply transition-all duration-300 font-medium;
+    &:hover {
+      @apply font-bold
+    }
+  }
   /* Project Card Grid */
   .card-grid {
     @apply grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6 md:gap-y-10;
@@ -128,6 +136,12 @@
   }
   .symbol-logo {
     @apply bg-black aspect-240/147 mask-[url('/uploads/logo-symbol.svg')] mask-contain mask-no-repeat mask-center
+  }
+  .h-not-found {
+    @apply bg-black aspect-480/164 mask-[url('/uploads/not-found-ngang.svg')] mask-contain mask-no-repeat mask-center
+  }
+  .v-not-found {
+    @apply bg-black aspect-480/216 mask-[url('/uploads/not-found-doc.svg')] mask-contain mask-no-repeat mask-center
   }
   /* Eyebrow Text */
   .eyebrow {
@@ -152,6 +166,16 @@
     }
     & > span::before {
       @apply content-[attr(data-label)] absolute top-full 
+    }
+  }
+  /* Text Roll */
+  [data-text-roll] {
+    & > * {
+      & > * {
+        &::before {
+          @apply content-[attr(data-label)] absolute top-full
+        }
+      }
     }
   }
   /* Brand Logo */

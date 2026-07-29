@@ -8,7 +8,7 @@ const getHome = async(req, res) => {
   const brands = await sectionService.getBrands();
   const contactForm = await sectionService.getContactForm();
   const skills = await sectionService.getSkills();
-  res.render('pages/home', { title: 'Thịnh Nguyễn | ©2026—Portfolio', isHomepage: true, brands, projects, skills, contactForm, ...data });
+  res.render('pages/home', { title: 'Thịnh Nguyễn | ©2026—Portfolio', isHeaderLight: true, brands, projects, skills, contactForm, ...data });
 }
 
 export default {

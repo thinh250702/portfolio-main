@@ -44,23 +44,23 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(loadGlobals);
 app.use(routes);
 
-// 404 handler (no error)
-app.use((req, res) => {
-  res.status(404).render("pages/404");
+// 404 handler
+app.use(function(req, res, next) {
+  next(createError(404));
 });
 
 app.use((err, req, res, next) => {
   const status = err.status || err.statusCode || 500;
-
-  if (status === 404) {
-    return res.status(404).render("pages/404");
-  }
-
   return res.status(status).render("pages/error", {
-    title: `${status} Error`,
+    title: status === 404 ? "Page Not Found" : `${status} Error`,
+    isHeaderLight: true,
     error: {
       status,
-      message: err.message
+      message: err.message,
+      isNotFound: status === 404 ? true : false,
+      displayMessage: status === 404 
+        ? "Oops... It seems the page you're searching for doesn't exist."
+        : "An unexpected error occurred while processing your request. Please try again later."
     }
   });
 })

@@ -1,3 +1,24 @@
-<section>
-  <h1>Something ain't right</h1>
+<section class="bg-linear-to-b from-black to-[#cc0000] to-60% relative">
+  <div class="w-full h-1/2 absolute bottom-0 bg-[url(https://res.cloudinary.com/dbmobxcxq/image/upload/v1784730201/portfolio-2026/mountain-loop-red_vtvrzn.webp)] bg-cover bg-repeat-x bg-bottom"></div>
+  <div class="container mx-auto h-screen relative">
+    <div class="bs-row h-full flex-col items-center justify-center">
+      <div class="bs-col-12 lg:bs-col-9">
+        {{#if error.isNotFound}}
+        <div class="h-not-found w-full bg-white hidden sm:block"></div>
+        <div class="v-not-found w-full bg-white sm:hidden"></div>
+        {{else}}
+        <h1 class="text-center display-lg font-medium text-white">{{error.status}} Error</h1>
+        {{/if}}
+      </div>
+      <div class="bs-col-12 lg:bs-col-6">
+         <p class="h4 lg:h3 text-center font-medium my-8 text-white">{{error.displayMessage}}</p>
+      </div>
+      <div class="bs-col-12 flex justify-center">
+        <a href="/" class="btn btn-light">
+          <span data-text-roll>Go to Homepage</span>
+          <i class="icon-arrow-up-right text-sm"></i>
+        </a>
+      </div>
+    </div>
+  </div>
 </section>

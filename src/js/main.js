@@ -20,6 +20,7 @@ import TableOfContents from "./modules/TableOfContents.js";
 import CurrentTime from "./modules/CurrentTime.js";
 import SmoothScroll from "./modules/SmoothScroll.js";
 import ScrollToTop from "./modules/ScrollToTop.js";
+import TextRoll from "./modules/TextRoll.js";
 
 $(async function () {
   
@@ -87,6 +88,10 @@ $(async function () {
   $("[data-scroll-top]").each(function () {
     new ScrollToTop(this);
   });
+
+  $("[data-text-roll]").each(function () {
+    new TextRoll(this);
+});
 
   $("[data-style]").each(function () {
     const style = $(this).data("style");

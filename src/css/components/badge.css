@@ -1,11 +1,24 @@
 @layer components {
   .badge {
     @apply inline-block label-xs font-medium uppercase border rounded-full px-3 py-1.5;
-    &.badge-dark {
+    /* &.badge-dark {
       @apply bg-gray-800 border-gray-700 text-gray-400;
     }
     &.badge-light {
       @apply bg-gray-100 border-gray-200 text-black;
-    }
+    } */
   }
 }
+
+@utility badge-dark {
+  background-color: var(--color-gray-800);
+  border-color: var(--color-gray-700);
+  color: var(--color-gray-400);
+}
+
+@utility badge-light {
+  background-color: var(--color-gray-100);
+  border-color: var(--color-gray-200);
+  color: var(--color-black);
+}
+

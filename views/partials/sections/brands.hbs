@@ -1,24 +1,24 @@
-<section id="brands" class="{{#if isLight}}bg-white{{else}}bg-black{{/if}} -my-px">
+<section id="brands" class="{{#if isLight}}is-light{{/if}} bg-black light:bg-white -my-px">
   <div class="container mx-auto">
     <div class="bs-row">
-      <hr class="border-none h-px bg-linear-to-r from-transparent {{#if isLight}}via-gray-200{{else}}via-gray-800{{/if}} to-transparent mt-px">
+      <hr class="border-none h-px bg-linear-to-r from-transparent via-gray-800 light:via-gray-200 to-transparent mt-px">
       <div class="bs-col-12 sm:bs-col-2 pt-10 sm:pt-0 flex items-center justify-center sm:justify-start">
         <p class="text-gray-500">{{data.title}}</p>
       </div>
       <div class="bs-col-12 sm:bs-col-10">
         <div class="w-full overflow-hidden relative" data-marquee>
-          <div class="absolute left-0 top-0 bottom-0 w-[15%] sm:w-[10%] lg:w-[5%] z-1 bg-linear-to-r {{#if isLight}}from-white{{else}}from-black{{/if}} to-transparent"></div>
-          <div class="absolute right-0 top-0 bottom-0 w-[15%] sm:w-[10%] lg:w-[5%] z-1 bg-linear-to-l {{#if isLight}}from-white{{else}}from-black{{/if}} to-transparent"></div>
+          <div class="absolute left-0 top-0 bottom-0 w-[15%] sm:w-[10%] lg:w-[5%] z-1 bg-linear-to-r from-black light:from-white to-transparent"></div>
+          <div class="absolute right-0 top-0 bottom-0 w-[15%] sm:w-[10%] lg:w-[5%] z-1 bg-linear-to-l from-black light:from-white to-transparent"></div>
           <ul class="flex w-max" data-marquee-track>
             {{#each data.items}}
             <li class="brand-logo">
-              <div class="brand-logo-img {{#if ../isLight}}bg-black{{else}}bg-white{{/if}}" style="mask-image: url('{{this}}'); -webkit-mask-image: url('{{this}}');"></div>
+              <div class="brand-logo-img bg-white light:bg-black" style="mask-image: url('{{this}}'); -webkit-mask-image: url('{{this}}');"></div>
             </li>
             {{/each}}
           </ul>
         </div>
       </div>
-      <hr class="border-none h-px bg-linear-to-r from-transparent {{#if isLight}}via-gray-200{{else}}via-gray-800{{/if}} to-transparent">
+      <hr class="border-none h-px bg-linear-to-r from-transparent via-gray-800 light:via-gray-200 to-transparent">
     </div>
   </div>
 </section>
