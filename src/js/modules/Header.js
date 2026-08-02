@@ -103,7 +103,7 @@ export default class Header {
       `${this.options.event}.header`,
       () => {
         this.createObserver();
-        this.show(true);
+        this.show();
       }
     );
   }
@@ -118,7 +118,7 @@ export default class Header {
     if (this.state.isHomepage) {
       this.dom.header.addClass("is-light");
     }
-    this.show(true);
+    this.show();
   }
 
   onToggleMenu() {
@@ -148,7 +148,6 @@ export default class Header {
       yPercent: 0,
       duration: this.options.duration,
       ease: this.options.ease,
-      delay: force ? 0 : 0.2
     });
   }
 

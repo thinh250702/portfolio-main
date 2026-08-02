@@ -65,7 +65,7 @@ $(async function () {
     new CursorLabel(this);
   });
 
-  $(".carousel-wrapper").each(function () {
+  $("[data-carousel]").each(function () {
     new Carousel(this);
   });
 

@@ -19,6 +19,9 @@
       @apply w-full h-full object-cover;
     }
   }
+  .carousel-btn {
+    @apply size-10 flex items-center justify-center rounded-full bg-white text-gray-500 cursor-pointer hover:text-black hover:shadow-md transition-all duration-300 absolute top-1/2 -translate-y-1/2;
+  }
   /* BrandGen AI */
   .chat-wrapper {
     & .chat-skeleton-image {

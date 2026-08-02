@@ -120,8 +120,14 @@ export default class TableOfContents {
     });
   }
 
+  
+
   createMenuTimeline() {
-    this.menuTl = gsap.timeline({ paused: true })
+    this.menuTl = gsap.timeline({
+      paused: true,
+      onStart: () => gsap.set(this.dom.list, { pointerEvents: "auto" }),
+      onReverseComplete: () => gsap.set(this.dom.list, { pointerEvents: "none" })
+    })
     .to(this.dom.background, { width: "100%", height: "100%", borderRadius: "16px", duration: this.options.menuDuration, ease: this.options.menuEase })
     .from(this.dom.list.children(), {
       autoAlpha: 0,

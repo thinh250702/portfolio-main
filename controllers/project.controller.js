@@ -8,8 +8,14 @@ const getProjects = async(req, res) => {
 
 const getProjectDetail = async(req, res, next) => {
   try {
-    const project = await projectService.getProjectBySlug(req.params.slug)
-    res.render('pages/project-details', { title: `${project.title}`, showToc: true, ...project });
+    const slug = req.params.slug;
+    const projects = await projectService.getAllProjects();
+    const project = await projectService.getProjectBySlug(slug);
+    const recommendedProjects = projects.filter(
+      item => item.slug !== slug
+    );
+    console.log(recommendedProjects)
+    res.render('pages/project-details', { title: `${project.title}`, showToc: true, recommend: recommendedProjects, ...project });
   } catch (err) {
     next(err);
   }

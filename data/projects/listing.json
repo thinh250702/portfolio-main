@@ -1,6 +1,6 @@
 [
   {
-    "thumbnail": "/uploads/good-sips-coffee/cover.webp",
+    "thumbnail": "/uploads/good-sips-coffee/carousel-2.webp",
     "category": [
       {
         "name": "UI Design",
@@ -15,5 +15,22 @@
     "name": "GOOD SIPS Coffee",
     "description": "A promotional landing page designed to strengthen GOOD SIPS Coffee's online presence, introduce seasonal campaigns, and encourage customers to explore the menu, promotions, and nearby stores through an engaging, brand-driven experience.",
     "slug": "good-sips-coffee"
+  },
+  {
+    "thumbnail": "/uploads/solenza/carousel-1.png",
+    "category": [
+      {
+        "name": "UI Design",
+        "url": "#"
+      },
+      {
+        "name": "Landing Page",
+        "url": "#"
+      }
+    ],
+    "year": "2026",
+    "name": "SOLENZA",
+    "description": "A premium furniture website designed to reflect the brand's sophisticated identity through clean layouts, refined typography, and an intuitive browsing experience that connects inspiration with commerce.",
+    "slug": "solenza"
   }
 ]

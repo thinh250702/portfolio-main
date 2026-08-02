@@ -64,5 +64,13 @@
       "isoCode": "en",
       "imgUrl": "/uploads/us-flag.png"
     }
-  ]
+  ],
+  "relatedProjects": {
+    "eyebrow": "Related Projects",
+    "heading": "Explore more work",
+    "button": {
+      "label": "View All Work",
+      "href": "/work"
+    }
+  }
 }

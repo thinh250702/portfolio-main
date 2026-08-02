@@ -31,11 +31,17 @@
   <div class="carousel-wrapper overflow-hidden relative" data-carousel>
     <ul class="carousel-track flex items-center" data-carousel-track>
       {{#each carousel}}
-        <li class="carousel-item" data-carousel-item>
+        <li class="carousel-item">
           <img src="{{this}}" alt="" crossorigin="anonymous">
         </li>
       {{/each}}
     </ul>
+    <button class="carousel-btn left-4" data-carousel-btn-prev>
+      <i class="icon-arrow-left text-md"></i>
+    </button>
+    <button class="carousel-btn right-4" data-carousel-btn-next>
+      <i class="icon-arrow-right text-md"></i>
+    </button>
   </div>
 </section>
 <section class="py-10" data-toc-title="{{overview.heading.text}}">
@@ -70,16 +76,16 @@
               <div class="chat-bubble bg-gray-200 w-10/12 lg:w-1/2 px-4 lg:px-5 py-3 lg:py-4 rounded-2xl lg:rounded-[20px]">{{overview.logoGen.prompt}}</div>
             </div>
             <div>
-              <div class="chat-shimmer-text flex items-center pb-2 lg:pb-3 gap-2">
-                <dotlottie-wc 
-                  src="/uploads/sparkle.lottie" 
-                  autoplay 
-                  loop 
-                  style="width: 24px; height: 24px;">
-                </dotlottie-wc>
-                <p class="chat-skeleton-text">Creating your image...</p>
-              </div>
               <div class="aspect-4/3 w-10/12 lg:w-4/12 relative">
+                <div class="chat-shimmer-text flex items-center pb-2 lg:pb-3 gap-2 absolute top-4 left-4 z-1">
+                  <dotlottie-wc 
+                    src="/uploads/sparkle.lottie" 
+                    autoplay 
+                    loop 
+                    style="width: 24px; height: 24px;">
+                  </dotlottie-wc>
+                  <p class="chat-skeleton-text">Creating your image...</p>
+                </div>
                 <img src="{{overview.logoGen.imgUrl}}" alt="" class="chat-result-img absolute w-full h-full object-cover rounded-2xl lg:rounded-[20px]">
                 <div class="chat-skeleton-image absolute w-full h-full rounded-2xl lg:rounded-[20px] origin-top-left"></div>
               </div>
@@ -155,7 +161,7 @@
       <div class="bs-col-12 lg:bs-col bs-order-last lg:bs-order-first mt-10 lg:mt-0 flex flex-col justify-end">
         <img src="{{overview.role.imgUrl}}" alt="" class="aspect-4/3 w-full">
       </div>
-      <div class="bs-col-12 lg:bs-col bs-order-first lg:bs-order-last flex flex-col justify-center gap-4 lg:pl-10">
+      <div class="bs-col-12 lg:bs-col bs-order-first lg:bs-order-last flex flex-col justify-center gap-4 lg:pl-10 pb-10">
         <h3 class="font-medium tracking-tight" data-style="{{style overview.role.heading.style}}">{{overview.role.heading.text}}</h3>
         <div class="rich-text-block">
           {{#each overview.role.content}}
@@ -239,15 +245,15 @@
 </section>
 {{/if}}
 {{#if sitemap}}
-<section data-toc-title="Sitemap">
+<section data-style="{{style sitemap.style}}" data-toc-title="{{sitemap.heading.text}}">
   <div class="container mx-auto">
     <div class="bs-row justify-center">
       <div class="bs-col-12 lg:bs-col-6 mb-10">
-        <h2 class="text-center font-medium tracking-tight mb-4">Sitemap</h2>
-        <p class="text-center">Lorem ipsum dolor sit amet consectetur. Sed accumsan nunc donec nec aliquet egestas ullamcorper nullam. Sem vulputate arcu scelerisque morbi adipiscing id et mattis non.</p>
+        <h2 class="text-center font-medium tracking-tight mb-4" data-style="{{style sitemap.heading.style}}">{{sitemap.heading.text}}</h2>
+        <p class="text-center" data-style="{{style sitemap.content.style}}">{{sitemap.content.text}}</p>
       </div>
       <div class="bs-col-12">
-        <img src="/uploads/project-img.png" alt="" class=" w-full object-cover">
+        <img src="{{sitemap.imgUrl}}" alt="" class=" w-full object-cover">
       </div>
     </div>
   </div>
@@ -434,8 +440,8 @@
         </a>
       </div>
       <div class="bs-col flex flex-col items-center">
-        <span class="eyebrow" data-reveal>Related Projects</span>
-        <h2 class="font-medium tracking-tighter" data-text-reveal>Explore more work</h2>
+        <span class="eyebrow" data-reveal>{{settings.relatedProjects.eyebrow}}</span>
+        <h2 class="font-medium tracking-tighter" data-text-reveal>{{settings.relatedProjects.heading}}</h2>
       </div>
       <div class="bs-col-auto">
         <a href="#" class="hidden md:inline-flex items-center gap-2" data-reveal>
@@ -445,17 +451,18 @@
       </div>
     </div>
     <div class="bs-row mb-10">
-      <!-- <ul class="card-grid" data-card-grid data-reveal="group">
-        {{> components/project-card}}
-        {{> components/project-card}}
-      </ul> -->
+      <ul class="card-grid" data-card-grid data-reveal="group">
+        {{#each recommend}}
+          {{> components/project-card this}}
+        {{/each}}
+      </ul>
     </div>
     <div class="bs-row justify-center">
       <div class="bs-col-auto">
-        <button type="button" class="btn btn-dark">
-          <span data-text-roll>View All Works</span>
+        <a href="{{settings.relatedProjects.button.href}}" class="btn btn-dark">
+          <span data-text-roll>{{settings.relatedProjects.button.label}}</span>
           <i class="icon-arrow-up-right text-sm"></i>
-        </button>
+        </a>
       </div>
     </div>
   </div>

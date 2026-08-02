@@ -6,7 +6,7 @@ export default class NftCard {
     this.$root = $(element);
 
     this.options = {
-      maxRotate: 20,
+      maxRotate: 15,
       duration: 0.4,
       ease: "power3.out",
       glareOpacity: 0.6,
@@ -55,17 +55,16 @@ export default class NftCard {
   }
 
   onPointerMove(e) {
-    const rect = this.dom.canvas[0].getBoundingClientRect();
+    // Normalize to -1 ~ 1
+    const percentX = e.clientX / window.innerWidth;
+    const percentY = e.clientY / window.innerHeight;
 
-    const x = (e.clientX - rect.left) / rect.width;
-    const y = (e.clientY - rect.top) / rect.height;
-
-    this.quick.rotateY((x - 0.5) * this.options.maxRotate);
-    this.quick.rotateX(-(y - 0.5) * this.options.maxRotate);
-    this.quick.moveX((x - 0.5) * this.options.maxRotate);
-    this.quick.moveY((y - 0.5) * this.options.maxRotate);
-    this.quick.bgX(x * 100);
-    this.quick.bgY(y * 100);
+    this.quick.rotateY(gsap.utils.interpolate(-10, 10, percentX));
+    this.quick.rotateX(gsap.utils.interpolate(10, -10, percentY));
+    this.quick.moveX(gsap.utils.interpolate(-20, 20, percentX));
+    this.quick.moveY(gsap.utils.interpolate(-20, 20, percentY));
+    this.quick.bgX(percentX * 100);
+    this.quick.bgY(percentY * 100);
     this.quick.glareOpacity(this.options.glareOpacity);
   }
 

@@ -32,9 +32,9 @@ export default class Carousel {
   }
 
   cacheDOM() {
-    this.dom.track = this.$root.find(".carousel-track");
-    this.dom.prev = this.$root.find(".carousel-btn-prev");
-    this.dom.next = this.$root.find(".carousel-btn-next");
+    this.dom.track = this.$root.find("[data-carousel-track]");
+    this.dom.prev = this.$root.find("[data-carousel-btn-prev]");
+    this.dom.next = this.$root.find("[data-carousel-btn-next]");
   }
 
   cloneSlides() {
