@@ -19,8 +19,8 @@
     },
     "description": "A promotional landing page designed to strengthen GOOD SIPS Coffee's online presence, introduce seasonal campaigns, and encourage customers to explore the menu, promotions, and nearby stores through an engaging, brand-driven experience.",
     "button": {
-      "label": "View Figma",
-      "href": "#",
+      "label": "View on Figma",
+      "href": "https://www.figma.com/proto/de0jn0fplpfBcqoQ7smwkc/SOLENZA---Furniture?node-id=6043-18286&p=f&viewport=-644%2C764%2C0.08&t=ITNaeBuvwnsn4ddx-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=6043%3A18286&page-id=6043%3A10545",
       "style": {
         "backgroundColor": "#495544",
         "textColor": "#ffffff"
@@ -73,7 +73,7 @@
       }
     ],
     "logoGen": {
-      "prompt": "Create a minimalist luxury fashion brand logo for a brand named “SOLENZA”. Use a refined, high-end editorial aesthetic with a sophisticated serif typeface. The logo consists of two elements: a distinctive abstract monogram/symbol centered above the brand name, and the word “SOLENZA” in uppercase beneath it.",
+      "prompt": "Create a minimalist luxury furniture brand logo for a brand named “SOLENZA”. Use a refined, high-end editorial aesthetic with a sophisticated serif typeface. The logo consists of two elements: a distinctive abstract monogram/symbol centered above the brand name, and the word “SOLENZA” in uppercase beneath it.",
       "imgUrl": "/uploads/solenza/result.webp",
       "warning": "BrandGen AI can make mistakes. Check important info.",
       "description": "Due to client confidentiality and privacy agreements, the original brand identity cannot be publicly shared. To preserve the integrity of the design process while protecting sensitive information, the logo, brand name, color palette, and certain visual assets presented in this case study have been recreated using AI-generated branding."
@@ -329,8 +329,8 @@
     },
     "imgUrl": "/uploads/solenza/final-design.webp",
     "button": {
-      "label": "View Figma",
-      "href": "#",
+      "label": "View on Figma",
+      "href": "https://www.figma.com/proto/de0jn0fplpfBcqoQ7smwkc/SOLENZA---Furniture?node-id=6043-18286&p=f&viewport=-644%2C764%2C0.08&t=ITNaeBuvwnsn4ddx-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=6043%3A18286&page-id=6043%3A10545",
       "style": {
         "backgroundColor": "#ffffff",
         "textColor": "#495544"

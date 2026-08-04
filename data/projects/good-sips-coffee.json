@@ -19,8 +19,8 @@
     },
     "description": "A promotional landing page designed to strengthen GOOD SIPS Coffee's online presence, introduce seasonal campaigns, and encourage customers to explore the menu, promotions, and nearby stores through an engaging, brand-driven experience.",
     "button": {
-      "label": "View Figma",
-      "href": "#",
+      "label": "View on Figma",
+      "href": "https://www.figma.com/proto/fYaFbyD6OPxA4QYKCTzSfi/GOOD-SIPS-COFFEE?node-id=6001-4915&viewport=713%2C274%2C0.14&t=Cr5qtrlLVzxRz1S2-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=6001%3A4915&page-id=1%3A4",
       "style": {
         "backgroundColor": "#b31f01",
         "textColor": "#ffffff"
@@ -303,8 +303,8 @@
     },
     "imgUrl": "/uploads/good-sips-coffee/final-design.webp",
     "button": {
-      "label": "View Figma",
-      "href": "#",
+      "label": "View on Figma",
+      "href": "https://www.figma.com/proto/fYaFbyD6OPxA4QYKCTzSfi/GOOD-SIPS-COFFEE?node-id=6001-4915&viewport=713%2C274%2C0.14&t=Cr5qtrlLVzxRz1S2-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=6001%3A4915&page-id=1%3A4",
       "style": {
         "backgroundColor": "#ffffff",
         "textColor": "#b31f01"

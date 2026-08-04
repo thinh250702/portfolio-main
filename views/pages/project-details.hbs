@@ -9,7 +9,7 @@
         </div>
         <h1 class="font-medium tracking-tighter mb-2" data-style="{{style hero.name.style}}">{{hero.name.text}}</h1>
         <p class="mb-6">{{hero.description}}</p>
-        <a href="{{hero.button.href}}" class="btn" data-style="{{style hero.button.style}}">
+        <a href="{{hero.button.href}}" target="_blank" rel="noopener noreferrer" class="btn" data-style="{{style hero.button.style}}">
           <span data-text-roll>{{hero.button.label}}</span>
           <i class="icon-arrow-up-right text-xs"></i>
         </a>
@@ -387,7 +387,7 @@
         <h2 class="text-center font-medium tracking-tight mb-4" data-style="{{style result.heading.style}}">{{result.heading.text}}</h2>
         <p class="text-center mb-6" data-style="{{style result.content.style}}">{{result.content.text}}</p>
         <div class="flex justify-center">
-          <a href="#" class="btn" data-style="{{style result.button.style}}">
+          <a href="{{result.button.href}}" target="_blank" rel="noopener noreferrer" class="btn" data-style="{{style result.button.style}}">
             <span data-text-roll>{{result.button.label}}</span>
             <i class="icon-arrow-up-right text-xs"></i>
           </a>
