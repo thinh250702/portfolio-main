@@ -14,7 +14,7 @@
   }
   /* Carousel Item */
   .carousel-item {
-    @apply flex-none basis-auto aspect-4/3 overflow-hidden w-[280px] sm:w-[480px] lg:w-[560px] xl:w-[720px] mr-4 sm:mr-5 lg:mr-6 rounded-2xl lg:rounded-3xl;
+    @apply flex-none basis-auto aspect-4/3 overflow-hidden w-70 sm:w-120 lg:w-140 xl:w-180 mr-4 sm:mr-5 lg:mr-6 rounded-2xl lg:rounded-3xl;
     & > img {
       @apply w-full h-full object-cover;
     }
@@ -71,17 +71,15 @@
   }
   /* Component List */
   .component-list {
-    @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6;
+    @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8;
     & > .component-item {
-      @apply rounded-[20px] bg-white border border-gray-200 shadow-md;
       & > .component-thumbnail {
-        @apply px-3 pt-3;
         & > img {
-          @apply aspect-4/3 w-full object-cover rounded-xl;
+          @apply aspect-4/3 w-full object-cover rounded-2xl border border-gray-100;
         }
       }
       & > .component-body {
-        @apply px-5 py-4;
+        @apply pt-4;
         & > h4 {
           @apply title-lg font-medium;
         }
@@ -102,7 +100,6 @@
     @apply flex items-center gap-2;
     & > a {
       @apply inline-block origin-right translate-x-4;
-      /* text-gray-400 */
     }
     & > span {
       @apply inline-block size-2 bg-primary rounded-full scale-0

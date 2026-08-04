@@ -4,25 +4,25 @@
   "content": "From research and visual design to front-end development, I create digital experiences that are functional, engaging, and built with attention to every detail.",
   "items": [
     {
-      "number": "[01]",
+      "number": "(01)",
       "title": "UI/UX Design",
       "content": "I design intuitive and user-centered interfaces for websites and mobile applications, balancing usability with modern visual aesthetics. Every design decision is guided by user needs, business goals, and a seamless experience.",
       "badges": ["Wireframing", "User Flow", "Design System", "Prototyping", "Responsive Design", "Figma"],
-      "imgUrl": "/uploads/skill-1.png"
+      "imgUrl": "/uploads/skills-uiux.webp"
     },
     {
-      "number": "[02]",
+      "number": "(02)",
       "title": "Graphic Design",
       "content": "I create impactful visual assets ranging from posters and key visuals to social media campaigns. When appropriate, I incorporate 3D elements to bring depth, creativity, and a distinctive visual identity to each design.",
       "badges": ["Poster Design", "Key Visual", "Social Media Design", "Typography", "Blender 3D", "Adobe Suite"],
-      "imgUrl": "/uploads/skill-2.png"
+      "imgUrl": "/uploads/skills-graphic.webp"
     },
     {
-      "number": "[03]",
+      "number": "(03)",
       "title": "Web Development",
       "content": "I bring designs to life through front-end development, building responsive and interactive websites with clean, maintainable code. I also create smooth animations and user interactions to enhance the overall experience.",
       "badges": ["HTML5", "CSS3", "Bootstrap", "Tailwind CSS", "JavaScript", "jQuery", "GSAP", "React", "Node/Express.js"],
-      "imgUrl": "/uploads/skill-3.png"
+      "imgUrl": "/uploads/skills-web.webp"
     }
   ]
 }

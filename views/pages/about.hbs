@@ -9,7 +9,7 @@
           {{#each hero.polaroids}}
           <li class="polaroid-item">
             <img class="polaroid-img" src="{{img}}" alt="">
-            <img src="/uploads/polaroids/frame.png" alt="">
+            <img src="/uploads/polaroids/frame.webp" alt="">
             <img src="{{doodle}}" alt="">
           </li>
           {{/each}}
@@ -23,7 +23,7 @@
 </section>
 {{> sections/brands data=brands isLight=true}}
 <section id="about" class="py-20 relative" data-nft-card-canvas>
-  <div class="w-full h-[20%] lg:h-[35%] xl:h-[40%] absolute bottom-0 bg-[url(https://res.cloudinary.com/dbmobxcxq/image/upload/v1784730393/portfolio-2026/nww28lqrmvrqwmlcnfyu_mb37px.webp)] bg-cover md:bg-contain bg-repeat-x bg-bottom"></div>
+  <div class="w-full h-[20%] lg:h-[35%] xl:h-[40%] absolute bottom-0 bg-[url(/uploads/mountain-loop-black.webp)] bg-cover md:bg-contain bg-repeat-x bg-bottom"></div>
   <div class="w-full h-[20%] lg:h-[35%] xl:h-[40%] absolute bottom-0 bg-linear-to-t from-gray-900 to-transparent to-50%"></div>
   <div class="container mx-auto">
     <div class="bs-row mb-10">
@@ -47,7 +47,7 @@
         <p class="body-sm md:body-md lg:body-lg mt-2" data-text-reveal data-split="lines">{{about.right.content}}</p>
         <div class="mt-6 flex flex-col" data-reveal="group">
           <div>
-            <a href="{{settings.resume.url}}" class="btn btn-dark">
+            <a href="{{settings.resume.url}}" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
               <span data-text-roll>{{settings.resume.label}}</span>
               <i class="icon-arrow-up-right text-sm"></i>
             </a>

@@ -1,27 +1,28 @@
 {
+  "title": "About — ©2026 Thịnh Nguyễn",
   "hero": {
     "topHeading": "Hi! I'm Thinh Nguyen",
     "bottomHeading": "I'm a Junior UI/UX Designer",
     "polaroids": [
       {
-        "img": "/uploads/polaroids/polaroid-1.png",
-        "doodle": "/uploads/polaroids/doodle-1.png"
+        "img": "/uploads/polaroids/polaroid-1.webp",
+        "doodle": "/uploads/polaroids/doodle-1.webp"
       },
       {
-        "img": "/uploads/polaroids/polaroid-2.png",
-        "doodle": "/uploads/polaroids/doodle-2.png"
+        "img": "/uploads/polaroids/polaroid-2.webp",
+        "doodle": "/uploads/polaroids/doodle-2.webp"
       },
       {
-        "img": "/uploads/polaroids/polaroid-3.png",
-        "doodle": "/uploads/polaroids/doodle-3.png"
+        "img": "/uploads/polaroids/polaroid-3.webp",
+        "doodle": "/uploads/polaroids/doodle-3.webp"
       },
       {
-        "img": "/uploads/polaroids/polaroid-4.png",
-        "doodle": "/uploads/polaroids/doodle-4.png"
+        "img": "/uploads/polaroids/polaroid-4.webp",
+        "doodle": "/uploads/polaroids/doodle-4.webp"
       },
       {
-        "img": "/uploads/polaroids/polaroid-5.png",
-        "doodle": "/uploads/polaroids/doodle-5.png"
+        "img": "/uploads/polaroids/polaroid-5.webp",
+        "doodle": "/uploads/polaroids/doodle-5.webp"
       }
     ]
   },
@@ -95,28 +96,64 @@
     "content": "From design and prototyping to development and collaboration, these are the essential tools I use to create modern digital experiences from concept to implementation.",
     "items": [
       {
-        "name": "HTML5",
-        "imgUrl": "/uploads/tools/html.png"
-      },
-      {
-        "name": "CSS3",
-        "imgUrl": "/uploads/tools/css.png"
+        "name": "Figma",
+        "imgUrl": "/uploads/tools/figma.webp"
       },
       {
         "name": "Photoshop",
-        "imgUrl": "/uploads/tools/photoshop.png"
+        "imgUrl": "/uploads/tools/photoshop.webp"
       },
       {
         "name": "Illustrator",
-        "imgUrl": "/uploads/tools/illustrator.png"
+        "imgUrl": "/uploads/tools/illustrator.webp"
       },
       {
         "name": "Premiere Pro",
-        "imgUrl": "/uploads/tools/premiere-pro.png"
+        "imgUrl": "/uploads/tools/premiere-pro.webp"
       },
       {
         "name": "After Effect",
-        "imgUrl": "/uploads/tools/after-effect.png"
+        "imgUrl": "/uploads/tools/after-effect.webp"
+      },
+      {
+        "name": "Blender",
+        "imgUrl": "/uploads/tools/blender.webp"
+      },
+      {
+        "name": "HTML5",
+        "imgUrl": "/uploads/tools/html.webp"
+      },
+      {
+        "name": "CSS3",
+        "imgUrl": "/uploads/tools/css.webp"
+      },
+      {
+        "name": "JavaScript",
+        "imgUrl": "/uploads/tools/javascript.webp"
+      },
+      {
+        "name": "Bootstrap",
+        "imgUrl": "/uploads/tools/bootstrap.webp"
+      },
+      {
+        "name": "Tailwind CSS",
+        "imgUrl": "/uploads/tools/tailwind.webp"
+      },
+      {
+        "name": "jQuery",
+        "imgUrl": "/uploads/tools/jquery.webp"
+      },
+      {
+        "name": "GSAP",
+        "imgUrl": "/uploads/tools/gsap.webp"
+      },
+      {
+        "name": "Node.js",
+        "imgUrl": "/uploads/tools/nodejs.webp"
+      },
+      {
+        "name": "Python",
+        "imgUrl": "/uploads/tools/python.webp"
       }
     ]
   }

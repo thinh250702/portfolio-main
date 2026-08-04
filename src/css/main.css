@@ -21,7 +21,7 @@
 @import "./pages/about.css";
 
 @theme {
-  --font-sans: "Zalando Sans", sans-serif;
+  --font-sans: "Geist", sans-serif;
   --font-serif: "LC Sac Display", serif;
 
   --leading-normal: 1.45;
@@ -92,23 +92,11 @@
     scrollbar-width: none; 
     -ms-overflow-style: none;
     cursor: default;
-    
-    /* -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none; */
   }
   html::-webkit-scrollbar,
   body::-webkit-scrollbar {
     display: none;
   }
-  /* input, textarea {
-    -webkit-user-select: text;
-    -ms-user-select: text;
-    user-select: text;
-  }
-  input::selection, textarea::selection {
-    @apply bg-black text-white
-  } */
 }
 
 @layer components {
@@ -190,7 +178,7 @@
       @apply underline
     }
     ul {
-      @apply list-disc ps-4 -mb-1 *:mb-1
+      @apply list-disc ps-4 -mb-0.5 *:mb-0.5
     }
   }
   /* Brand Logo */

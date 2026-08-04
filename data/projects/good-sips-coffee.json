@@ -1,5 +1,5 @@
 {
-  "title": "GOOD SIPS Coffee",
+  "title": "GOOD SIPS Coffee — ©2026 Thịnh Nguyễn",
   "hero": {
     "category": [
       {
@@ -301,7 +301,7 @@
         "textColor": "#fff"
       }
     },
-    "imgUrl": "/uploads/good-sips-coffee/final-design.png",
+    "imgUrl": "/uploads/good-sips-coffee/final-design.webp",
     "button": {
       "label": "View Figma",
       "href": "#",

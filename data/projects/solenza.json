@@ -1,5 +1,5 @@
 {
-  "title": "SOLENZA",
+  "title": "SOLENZA — ©2026 Thịnh Nguyễn",
   "hero": {
     "category": [
       {
@@ -29,7 +29,7 @@
     "metadata": [
       {
         "key": "Industry",
-        "value": "Food & Beverage"
+        "value": "Furniture/Interior"
       },
       {
         "key": "Role",
@@ -49,11 +49,11 @@
     }
   },
   "carousel": [
-    "/uploads/solenza/carousel-1.png",
-    "/uploads/solenza/carousel-2.png",
-    "/uploads/solenza/carousel-3.png",
-    "/uploads/solenza/carousel-4.png",
-    "/uploads/solenza/carousel-5.png"
+    "/uploads/solenza/carousel-1.webp",
+    "/uploads/solenza/carousel-2.webp",
+    "/uploads/solenza/carousel-3.webp",
+    "/uploads/solenza/carousel-4.webp",
+    "/uploads/solenza/carousel-5.webp"
   ],
   "overview": {
     "heading": {
@@ -73,13 +73,13 @@
       }
     ],
     "logoGen": {
-      "prompt": "Design a modern, minimalist logo for a coffee shop. Create a unique combination mark with an abstract geometric symbol on the left and custom typography on the right. The logo should be modern, aesthetic, young and fresh vibe. Use a flat vector style with a cohesive color palette of warm color.",
-      "imgUrl": "/uploads/solenza/result.png",
+      "prompt": "Create a minimalist luxury fashion brand logo for a brand named “SOLENZA”. Use a refined, high-end editorial aesthetic with a sophisticated serif typeface. The logo consists of two elements: a distinctive abstract monogram/symbol centered above the brand name, and the word “SOLENZA” in uppercase beneath it.",
+      "imgUrl": "/uploads/solenza/result.webp",
       "warning": "BrandGen AI can make mistakes. Check important info.",
-      "description": "Create a minimalist luxury fashion brand logo for a brand named “SOLENZA”. Use a refined, high-end editorial aesthetic with a sophisticated serif typeface. The logo consists of two elements: a distinctive abstract monogram/symbol centered above the brand name, and the word “SOLENZA” in uppercase beneath it."
+      "description": "Due to client confidentiality and privacy agreements, the original brand identity cannot be publicly shared. To preserve the integrity of the design process while protecting sensitive information, the logo, brand name, color palette, and certain visual assets presented in this case study have been recreated using AI-generated branding."
     },
     "branding": {
-      "imgUrl": "/uploads/solenza/brand-bento.png",
+      "imgUrl": "/uploads/solenza/brand-bento.webp",
       "description": "SOLENZA's visual identity combines warm neutral colors with refined typography to create a sense of elegance and tranquility. The clean and minimal design language reinforces the brand's premium positioning while celebrating modern living spaces."
     },
     "role": {
@@ -125,7 +125,7 @@
         "textColor": "#fff"
       }
     },
-    "imgUrl": "/uploads/solenza/process.png",
+    "imgUrl": "/uploads/solenza/process.webp",
     "style": {
       "backgroundColor": "#495544",
       "paddingBlock": "80px"
@@ -144,7 +144,7 @@
         "textColor": "#000"
       }
     },
-    "imgUrl": "/uploads/solenza/moodboard.png",
+    "imgUrl": "/uploads/solenza/moodboard.webp",
     "style": {
       "paddingBlock": "80px"
     }
@@ -157,7 +157,7 @@
       }
     },
     "content": "Identifying user and business challenges helped shape design decisions that balance promotional content with a seamless browsing experience.",
-    "imgUrl": "/uploads/solenza/challenge-approach.png",
+    "imgUrl": "/uploads/solenza/challenge-approach.webp",
     "problem": {
       "heading": {
         "text": "Problem",
@@ -220,7 +220,7 @@
         "textColor": "#fff"
       }
     },
-    "imgUrl": "/uploads/solenza/sitemap.png",
+    "imgUrl": "/uploads/solenza/sitemap.webp",
     "style": {
       "backgroundColor": "#495544",
       "paddingTop": "80px"
@@ -239,7 +239,7 @@
         "textColor": "#fff"
       }
     },
-    "imgUrl": "/uploads/solenza/wireframes.png",
+    "imgUrl": "/uploads/solenza/wireframes.webp",
     "style": {
       "backgroundColor": "#495544",
       "paddingBlock": "80px",
@@ -262,12 +262,12 @@
     "colors": {
       "heading": "Colors",
       "content": "The color palette draws inspiration from natural materials and contemporary interiors, combining earthy greens with warm neutral tones to create a calm, sophisticated atmosphere. This balanced palette reinforces SOLENZA's premium identity while enhancing visual hierarchy, readability, and a welcoming browsing experience.",
-      "imgUrl": "/uploads/solenza/colors.png"
+      "imgUrl": "/uploads/solenza/colors.webp"
     },
     "typography": {
       "heading": "Typography",
       "content": "A gradient is the gradual blending from one color to another. Incorporating gradients into your designs is a great way to make objects stand out by adding a new dimension and adding realism to objects. They almost create a new color.",
-      "imgUrl": "/uploads/solenza/typography.png"
+      "imgUrl": "/uploads/solenza/typography.webp"
     },
     "components": {
       "heading": "Components",
@@ -275,27 +275,27 @@
       "items": [
         {
           "name": "Button",
-          "imgUrl": "/uploads/solenza/component-button.png"
+          "imgUrl": "/uploads/solenza/component-button.webp"
         },
         {
           "name": "Product Card",
-          "imgUrl": "/uploads/solenza/component-product-card.png"
+          "imgUrl": "/uploads/solenza/component-product-card.webp"
         },
         {
           "name": "Category Card",
-          "imgUrl": "/uploads/solenza/component-input.png"
+          "imgUrl": "/uploads/solenza/component-input.webp"
         },
         {
           "name": "Button",
-          "imgUrl": "/uploads/solenza/component-timeline.png"
+          "imgUrl": "/uploads/solenza/component-timeline.webp"
         },
         {
           "name": "Product Card",
-          "imgUrl": "/uploads/solenza/component-indicator.png"
+          "imgUrl": "/uploads/solenza/component-indicator.webp"
         },
         {
           "name": "Category Card",
-          "imgUrl": "/uploads/solenza/component-accordion.png"
+          "imgUrl": "/uploads/solenza/component-accordion.webp"
         }
       ]
     },
@@ -305,12 +305,12 @@
       "desktop": {
         "heading": "Desktop",
         "content": "A responsive 12-column grid was used to create flexible layouts that scale across different screen sizes. Consistent column widths and gutter spacing help maintain alignment, structure, and visual balance throughout the design.",
-        "imgUrl": "/uploads/solenza/grid-desktop.png"
+        "imgUrl": "/uploads/solenza/grid-desktop.webp"
       },
       "mobile": {
         "heading": "Mobile",
         "content": "A 4-column grid system provides a structured foundation for mobile layouts while maximizing limited screen space. Consistent column widths and spacing help maintain visual hierarchy, readability, and effortless content scanning.",
-        "imgUrl": "/uploads/solenza/grid-mobile.png"
+        "imgUrl": "/uploads/solenza/grid-mobile.webp"
       }
     }
   },
@@ -327,7 +327,7 @@
         "textColor": "#fff"
       }
     },
-    "imgUrl": "/uploads/solenza/final-design.png",
+    "imgUrl": "/uploads/solenza/final-design.webp",
     "button": {
       "label": "View Figma",
       "href": "#",
@@ -350,7 +350,7 @@
         }
       },
       "content": "The homepage creates a strong first impression by combining immersive visuals, clear content hierarchy, and intuitive navigation to guide users from inspiration to product discovery.",
-      "imgUrl": "/uploads/solenza/anatomy-homepage.png"
+      "imgUrl": "/uploads/solenza/anatomy-homepage.webp"
     },
     {
       "heading": {
@@ -360,7 +360,7 @@
         }
       },
       "content": "The Product Detail page is designed to provide everything users need to confidently evaluate a product before making an inquiry. It combines a visual product gallery, clear specifications, and editorial-style content to showcase both the product's features and its design inspiration.",
-      "imgUrl": "/uploads/solenza/anatomy-products.png"
+      "imgUrl": "/uploads/solenza/anatomy-products.webp"
     },
     {
       "heading": {
@@ -370,7 +370,7 @@
         }
       },
       "content": null,
-      "imgUrl": "/uploads/solenza/anatomy-others.png"
+      "imgUrl": "/uploads/solenza/anatomy-others.webp"
     }
   ],
   "credits": {

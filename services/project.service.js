@@ -12,8 +12,16 @@ const getProjectBySlug = async (slug) => {
   return await loadJson(`projects/${slug}.json`);
 }
 
+const getRecommendedProjects = async (slug, limit = 2) => {
+  const projects = await loadJson("projects/listing.json");
+  return projects
+    .filter(project => project.slug !== slug)
+    .slice(0, limit);
+}
+
 export default {
   getWorkPage,
   getAllProjects,
-  getProjectBySlug
+  getProjectBySlug,
+  getRecommendedProjects
 }
