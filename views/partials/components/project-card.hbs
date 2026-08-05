@@ -1,6 +1,6 @@
 <li class="pointer-events-none" data-card-item>
   <div>
-    <a href="/work/{{slug}}" class="block aspect-4/3 w-full overflow-hidden rounded-2xl [&:hover>img]:scale-105">
+    <a href="/works/{{slug}}" data-project-click="{{name}}" class="project-click block aspect-4/3 w-full overflow-hidden rounded-2xl [&:hover>img]:scale-105">
       <img src="{{thumbnail}}" alt="" class="w-full h-full object-cover transition-all duration-400">
     </a>
   </div>
@@ -13,7 +13,7 @@
       </div>
       <span class="label-md font-medium tracking-tight leading-7.5">({{year}})</span>
     </div>
-    <a href="/work/{{slug}}" class="h3 font-medium tracking-tight" data-text-roll>{{name}}</a>
+    <a href="/works/{{slug}}" data-project-click="{{name}}" class="project-click h3 font-medium tracking-tight" data-text-roll>{{name}}</a>
     <p class="body-md line-clamp-3 text-gray-500 mt-2">{{description}}</p>
   </div>
 </li>

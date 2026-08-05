@@ -13,7 +13,7 @@
             <ul>
               {{#each settings.navigation}}
               <li class="mb-2">
-                <a class="hover-link hover-link-light" href="{{url}}">{{title}}</a>
+                <a class="menu-click hover-link hover-link-light" href="{{url}}" data-menu-click="{{title}}">{{title}}</a>
               </li>
               {{/each}}
             </ul>
@@ -25,7 +25,7 @@
             <ul>
               {{#each settings.socials}}
               <li class="mb-2">
-                <a class="hover-link hover-link-light" href="{{url}}" target="_blank" rel="noopener noreferrer">{{name}}</a>
+                <a class="social-click hover-link hover-link-light" href="{{url}}" target="_blank" rel="noopener noreferrer" data-social-click="{{name}}">{{name}}</a>
               </li>
               {{/each}}
             </ul>

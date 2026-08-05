@@ -33,7 +33,7 @@
   --text-heading-4: clamp(24px,1.458vw,28px);
   --text-heading-5: clamp(20px,1.25vw,24px);
   --text-heading-6: clamp(18px,1.04vw,20px);
-  --text-display-lg: clamp(3.5rem,5vw,6rem);
+  --text-display-lg: clamp(3.5rem,5vw,5.5rem);
 
   --color-gray-50: oklch(98.5% 0 0);
   --color-gray-100: oklch(96.7% 0.001 286.4);

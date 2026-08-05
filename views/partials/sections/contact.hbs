@@ -1,4 +1,4 @@
-<section id="contact" class="">
+<section id="contact">
   {{#if isHomepage}}
   <div class="w-screen h-screen bg-gray-900 relative -mt-px" data-zoom>
     <div class="absolute w-full h-1/2" data-zoom-pin>
@@ -6,7 +6,7 @@
     </div>
   </div>
   {{/if}}
-  <div class="container mx-auto {{#if isHomepage}}py-20{{else}}pb-20 pt-5{{/if}} relative z-1">
+  <div class="container mx-auto pb-20 {{#unless isHomepage}} pt-5{{/unless}} relative z-1">
     <div class="bs-row">
       <div class="bs-col-12 lg:bs-col-6 lg:pr-12">
         {{#if isHomepage}} 
@@ -17,11 +17,11 @@
         <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-5 mb-8" data-reveal="group" data-trigger="{{#unless isHomepage}}load{{/unless}}" data-delay="{{#unless isHomepage}}0.4{{/unless}}">
           {{#each settings.socials}}
           <li class="social-link">
-            <a href="{{url}}" target="_blank" rel="noopener noreferrer">
+            <a class="social-click" href="{{url}}" target="_blank" rel="noopener noreferrer" data-social-click="{{name}}">
               <i class="{{icon}}"></i>
             </a>
             <div>
-              <a class="hover-link font-medium" href="{{url}}" target="_blank" rel="noopener noreferrer">{{name}}</a>
+              <a class="social-click hover-link font-medium" href="{{url}}" target="_blank" rel="noopener noreferrer" data-social-click="{{name}}">{{name}}</a>
               <p class="social-link-handle">@{{handle}}</p>
             </div>
           </li>
@@ -57,7 +57,7 @@
           </div>
           <div class="col-span-2">
             <label class="form-label" for="{{data.form.message.name}}">{{data.form.message.label}}</label>
-            <textarea class="form-control" rows="8" name="{{data.form.message.name}}" id="{{data.form.message.name}}" placeholder="{{data.form.message.placeholder}}"></textarea>
+            <textarea class="form-control" rows="5" name="{{data.form.message.name}}" id="{{data.form.message.name}}" placeholder="{{data.form.message.placeholder}}"></textarea>
           </div>
           <div class="col-span-2">
             <button type="button" class="btn btn-dark cursor-not-allowed" disabled>
