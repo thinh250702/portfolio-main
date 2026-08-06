@@ -21,6 +21,7 @@ export default class PageTransition {
 
   init() {
     this.cacheDOM();
+    this.setupColumns();
     this.createRevealTimeline();
     this.revealTl.restart();
     this.createStartTimeline();
@@ -30,8 +31,35 @@ export default class PageTransition {
   cacheDOM() {
     this.dom.body = $("body");
     this.dom.wrapper = this.$root.find(".pt-wrapper");
-    this.dom.columns = this.$root.find(".pt-column");
     this.dom.logo = this.$root.find(".pt-logo");
+  }
+
+  setupColumns() {
+    this.mm = gsap.matchMedia();
+
+    this.mm.add("(max-width: 639px)", () => {
+      this.renderColumns(6);
+    });
+
+    this.mm.add("(min-width: 40rem)", () => {
+      this.renderColumns(12);
+    });
+  }
+
+  renderColumns(count) {
+    this.dom.wrapper.empty();
+
+    const fragment = document.createDocumentFragment();
+
+    for (let i = 0; i < count; i++) {
+      const column = document.createElement("div");
+      column.className = "pt-column";
+      fragment.appendChild(column);
+    }
+
+    this.dom.wrapper[0].appendChild(fragment);
+
+    this.dom.columns = this.dom.wrapper.children();
   }
   
   createStartTimeline() {
@@ -120,6 +148,8 @@ export default class PageTransition {
   destroy() {
     this.startTl?.kill();
     this.revealTl?.kill();
+
+    this.mm?.revert();
 
     $(document).off(".pageTransition");
 

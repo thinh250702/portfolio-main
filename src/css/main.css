@@ -216,7 +216,7 @@
   .hover-link {
     @apply title-md relative;
     &::before {
-      @apply content-[''] absolute w-0 h-0.5 bg-black -bottom-1 transition-all duration-300
+      @apply content-[''] absolute w-0 h-px bg-black -bottom-1 transition-all duration-300
     }
     &:hover::before {
       @apply w-full
