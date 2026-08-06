@@ -9,12 +9,12 @@
         </div>
         <nav class="hidden xl:flex gap-12 light:text-white transition-colors duration-200">
           {{#each settings.navigation}}
-            <a href="{{url}}" class="label-lg uppercase" data-text-roll>({{title}})</a>
+            <a href="{{url}}" data-menu-click="{{title}}" class="menu-click label-lg uppercase" data-text-roll>({{title}})</a>
           {{/each}}
         </nav>
         <div class="flex-1 flex justify-end gap-2">
           {{> components/language-dropdown header=true}}
-          <a href="{{settings.resume.url}}" target="_blank" rel="noopener noreferrer" class="btn btn-dark light:bg-white light:text-black transition-colors duration-200 hidden xl:inline-flex">
+          <a href="{{settings.resume.url}}" target="_blank" rel="noopener noreferrer" class="resume-click btn btn-dark light:bg-white light:text-black transition-colors duration-200 hidden xl:inline-flex">
             <span data-text-roll>{{settings.resume.label}}</span>
             <i class="icon-arrow-up-right text-xs"></i>
           </a>
@@ -38,7 +38,7 @@
         </div>
         <nav class="flex-1 flex flex-col justify-center">
           {{#each settings.navigation}}
-          <a href="{{url}}" class="text-7xl lg:text-8xl font-medium leading-none tracking-tighter my-2" data-menu-item data-text-roll>{{title}}</a>
+          <a href="{{url}}" data-menu-click="{{title}}" class="menu-click text-7xl lg:text-8xl font-medium leading-none tracking-tighter my-2" data-menu-item data-text-roll>{{title}}</a>
           {{/each}}
         </nav>
         <div data-menu-item>
@@ -46,7 +46,7 @@
           <ul class="flex gap-2.5 mt-2">
             {{#each settings.socials}}
             <li>
-              <a href="{{url}}" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center rounded-full size-10 bg-gray-100">
+              <a href="{{url}}" target="_blank" rel="noopener noreferrer" class="social-click inline-flex justify-center items-center rounded-full size-10 bg-gray-100" data-social-click="{{name}}">
                 <i class="{{icon}} text-lg"></i>
               </a>
             </li>

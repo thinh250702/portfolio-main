@@ -9,7 +9,7 @@ const router = Router();
 
 router.use("/", homeRoutes);
 router.use("/about", aboutRoutes);
-router.use("/work", projectRoutes);
+router.use("/works", projectRoutes);
 router.use("/contact", contactRoutes);
 
 export default router;

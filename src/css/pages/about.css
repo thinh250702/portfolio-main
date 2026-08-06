@@ -1,9 +1,9 @@
 @layer components {
   /* Polaroid Hero */
   #polaroid-hero {
-    @apply flex justify-center py-10 lg:py-16 px-6 sm:px-0 w-max sm:w-full overflow-hidden;
+    @apply flex justify-center py-8 lg:py-12 px-4 sm:px-0 w-max sm:w-full overflow-hidden sm:overflow-visible;
     & > .polaroid-item {
-      @apply aspect-312/377 w-35 sm:w-40 md:w-45 lg:w-60 xl:w-70 shrink-0 relative shadow-sm transition-shadow;
+      @apply aspect-312/377 w-35 sm:w-40 md:w-45 lg:w-60 xl:w-65 shrink-0 relative shadow-sm transition-shadow;
       &:hover {
         @apply shadow-lg
       }

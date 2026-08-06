@@ -51,8 +51,8 @@ export default class Header {
   }
 
   createObserver() {
-    this.observer = Observer.create({
-      type: "wheel,touch",
+    this.wheelObserver = Observer.create({
+      type: "wheel",
       onDown: () => {
         if (this.state.isMenuOpen) return;
         this.hide();
@@ -61,6 +61,19 @@ export default class Header {
       onUp: () => {
         if (this.state.isMenuOpen) return;
         this.show();
+      }
+    });
+
+    this.touchObserver = Observer.create({
+      type: "touch",
+      onDown: () => {
+        if (this.state.isMenuOpen) return;
+        this.show();
+      },
+
+      onUp: () => {
+        if (this.state.isMenuOpen) return;
+        this.hide();
       }
     });
   }
@@ -176,8 +189,11 @@ export default class Header {
   destroy() {
     this.killTween();
 
-    this.observer?.kill();
-    this.observer = null;
+    this.wheelObserver?.kill();
+    this.wheelObserver = null;
+
+    this.touchObserver?.kill();
+    this.touchObserver = null;
 
     this.trigger?.kill();
     this.trigger = null;

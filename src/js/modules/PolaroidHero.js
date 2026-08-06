@@ -71,7 +71,7 @@ export default class PolaroidHero {
     this.dom.items.each((index, item) => {
       $(item).on("mouseenter.polaroid", () => {
         gsap.set(item, { zIndex: this.dom.items.length + 1 });
-        gsap.to(item, { scale: 1.08, duration: .35, ease: "power2.out" });
+        gsap.to(item, { scale: 1.06, duration: .35, ease: "power2.out" });
       });
       $(item).on("mouseleave.polaroid", () => {
         gsap.to(item, { scale: 1, duration: .35, ease: "power2.out" });
