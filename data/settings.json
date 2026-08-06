@@ -67,10 +67,10 @@
   ],
   "relatedProjects": {
     "eyebrow": "Related Projects",
-    "heading": "Explore more work",
+    "heading": "Explore more works",
     "button": {
-      "label": "View All Work",
-      "href": "/work"
+      "label": "View All Works",
+      "href": "/works"
     }
   }
 }

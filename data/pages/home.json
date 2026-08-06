@@ -34,8 +34,8 @@
     "heading": "Explore my featured works",
     "content": "Take a quick look at my selected projects which highlight process, creativity, and passion for crafting meaningful digital experiences.",
     "button": {
-      "label": "View All Work",
-      "href": "/work"
+      "label": "View All Works",
+      "href": "/works"
     }
   }
 }
