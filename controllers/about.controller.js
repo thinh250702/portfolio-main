@@ -6,7 +6,10 @@ const getAbout = async(req, res) => {
   const brands = await sectionService.getBrands();
   const skills = await sectionService.getSkills();
   const quote = await sectionService.getQuote();
-  res.render('pages/about', {title: data.title, isAbout: true, brands, skills, quote, ...data});
+
+  res.locals.isAbout = true
+
+  res.render('pages/about', {title: data.title, brands, skills, quote, ...data});
 }
 
 export default {
