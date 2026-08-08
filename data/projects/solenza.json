@@ -17,7 +17,7 @@
         "textColor": "#495544"
       }
     },
-    "description": "A promotional landing page designed to strengthen GOOD SIPS Coffee's online presence, introduce seasonal campaigns, and encourage customers to explore the menu, promotions, and nearby stores through an engaging, brand-driven experience.",
+    "description": "A premium furniture website designed to reflect the brand's sophisticated identity through clean layouts, refined typography, and an intuitive browsing experience that connects inspiration with commerce.",
     "button": {
       "label": "View on Figma",
       "href": "https://www.figma.com/proto/de0jn0fplpfBcqoQ7smwkc/SOLENZA---Furniture?node-id=6043-18286&p=f&viewport=-644%2C764%2C0.08&t=ITNaeBuvwnsn4ddx-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=6043%3A18286&page-id=6043%3A10545",
@@ -160,7 +160,7 @@
     "imgUrl": "/uploads/solenza/challenge-approach.webp",
     "problem": {
       "heading": {
-        "text": "Problem",
+        "text": "Challenge",
         "style": {
           "textColor": "#495544"
         }
@@ -178,7 +178,7 @@
     },
     "solution": {
       "heading": {
-        "text": "Solution",
+        "text": "Approach",
         "style": {
           "textColor": "#495544"
         }

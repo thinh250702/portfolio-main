@@ -8,7 +8,10 @@ const getHome = async(req, res) => {
   const brands = await sectionService.getBrands();
   const contactForm = await sectionService.getContactForm();
   const skills = await sectionService.getSkills();
-  res.render('pages/home', { title: data.title, isHeaderLight: true, brands, projects, skills, contactForm, ...data });
+
+  res.locals.isHeaderLight = true
+
+  res.render('pages/home', { title: data.title, brands, projects, skills, contactForm, ...data });
 }
 
 export default {
