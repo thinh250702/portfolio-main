@@ -57,7 +57,6 @@ app.use((err, req, res, next) => {
     error: {
       status,
       message: err.message,
-      isNotFound: status === 404 ? true : false,
       displayMessage: status === 404 
         ? "Oops... It seems the page you're searching for doesn't exist."
         : "An unexpected error occurred while processing your request. Please try again later."

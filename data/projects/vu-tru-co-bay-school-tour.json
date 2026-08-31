@@ -1,0 +1,344 @@
+{
+  "title": "Vũ Trụ Cò Bay School Tour Landing Page — ©2026 Thịnh Nguyễn",
+  "hero": {
+    "category": [
+      {
+        "name": "UI Design",
+        "url": "#"
+      },
+      {
+        "name": "Landing Page",
+        "url": "#"
+      }
+    ],
+    "name": {
+      "text": "Vũ Trụ Cò Bay School Tour Landing Page",
+      "style": {
+        "textColor": "#573D0A"
+      }
+    },
+    "description": "A vibrant event website for “Vũ Trụ Cò Bay” School Tour, designed to showcase Phương Mỹ Chi's cultural music journey, provide event information, support ticket registration, and promote exclusive merchandise.",
+    "button": {
+      "label": "View on Figma",
+      "href": "https://www.figma.com/proto/tM5jKpdMVizHWXZc5FHO7v/VTCB-School-Tour---Website-UI-Design?node-id=476-711&p=f&viewport=284%2C199%2C0.16&t=Scuzs1Ksrr52jU0J-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=476%3A711&page-id=476%3A340",
+      "style": {
+        "backgroundColor": "#573D0A",
+        "textColor": "#EAE39D"
+      }
+    },
+    "metadata": [
+      {
+        "key": "Client",
+        "value": "PMC Entertainment"
+      },
+      {
+        "key": "Role",
+        "value": "UI/UX Designer"
+      },
+      {
+        "key": "Year",
+        "value": "2024"
+      },
+      {
+        "key": "Tools",
+        "value": "Figma, Photoshop, Illustrator"
+      }
+    ],
+    "style": {
+      "backgroundColor": "linear-gradient(180deg,rgba(234, 227, 157, 1) 0%, rgba(255, 255, 255, 1) 100%)"
+    }
+  },
+  "carousel": [
+    "/uploads/vu-tru-co-bay-school-tour/carousel-1.png",
+    "/uploads/vu-tru-co-bay-school-tour/carousel-2.png",
+    "/uploads/vu-tru-co-bay-school-tour/carousel-3.png",
+    "/uploads/vu-tru-co-bay-school-tour/carousel-4.png"
+  ],
+  "overview": {
+    "heading": {
+      "text": "Project Overview",
+      "style": {
+        "textColor": "#573D0A"
+      }
+    },
+    "content": [
+      {
+        "type": "paragraph",
+        "data": "The goal was to design a landing page to introduce the music concert and provide a dedicated platform for audiences to learn about the event and register for tickets. I worked on the project with my teammate Duy Anh, transforming the visual materials provided by the concert's creative team into a cohesive digital experience. Our role was to adapt the existing visual direction, imagery, and branding into a responsive website while keeping the original artistic identity and cultural spirit of the concert."
+      }
+    ],
+    "logoGen": null,
+    "branding": {
+      "img": {
+        "url": "/uploads/vu-tru-co-bay-school-tour/branding.png",
+        "style": null
+      },
+      "description": "A warm, nostalgic palette inspired by Vietnamese cultural imagery, combining Olive Bark and Dark Goldenrod to create a rich, heritage-inspired visual identity that reflects the concert's traditional yet youthful spirit."
+    },
+    "role": {
+      "img": {
+        "url": "/uploads/vu-tru-co-bay-school-tour/my-team.png",
+        "style": null
+      },
+      "heading": {
+        "text": "My Team",
+        "style": {
+          "textColor": "#573D0A"
+        }
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "data": "I worked on this project alongside my teammate <b>Duy Anh</b>, a Graphic Designer. With a <b>60/40 contribution</b>, we divided the project based on our strengths while maintaining a consistent visual direction throughout the website."
+        },
+        {
+          "type": "paragraph",
+          "data": "Duy Anh took the lead on the <b>visual foundation</b>, defining the color system and crafting the overall visual design of the Homepage. His work established the main aesthetic, typography treatment, imagery, and visual language that shaped the rest of the experience."
+        },
+        {
+          "type": "paragraph",
+          "data": "I contributed the remaining <b>40%</b>, taking the established visual direction and applying it to the <b>Ticket Registration</b> and <b>Merchandise</b> pages. I focused on extending the design system across these pages while adapting the layouts and interactions to support their specific user goals."
+        }
+      ],
+      "style": {
+        "backgroundColor": "linear-gradient(0deg,rgba(234, 227, 157, 1) 0%, rgba(255, 255, 255, 1) 100%)"
+      }
+    }
+  },
+  "process": {
+    "heading": {
+      "text": "Design Process",
+      "style": {
+        "textColor": "#EAE39D"
+      }
+    },
+    "content": {
+      "text": "A structured process that turns initial research and ideas into a refined, user-focused digital experience.",
+      "style": {
+        "textColor": "#fff"
+      }
+    },
+    "img": {
+      "url": "/uploads/vu-tru-co-bay-school-tour/process.png",
+      "style": null
+    },
+    "style": {
+      "backgroundColor": "linear-gradient(45deg,rgba(44, 34, 6, 1) 0%,rgba(76, 58, 10, 1) 100%)",
+      "paddingBlock": "80px"
+    }
+  },
+  "research": null,
+  "probSol": {
+    "heading": {
+      "text": "Challenge & Approach",
+      "style": {
+        "textColor": "#573D0A"
+      }
+    },
+    "content": "Translating a rich cultural visual identity into a clear, engaging website while balancing storytelling, usability, and key actions.",
+    "img": {
+      "url": "/uploads/vu-tru-co-bay-school-tour/challenge-approach.png",
+      "style": null
+    },
+    "problem": {
+      "heading": {
+        "text": "Challenge",
+        "style": {
+          "textColor": "#573D0A"
+        }
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "data": "The main challenge was to <b>translate the concert's existing visual identity into a functional website</b> without losing its distinctive cultural and artistic character. The provided visual materials were highly expressive, so we needed to balance them with clear information hierarchy and easy navigation, especially for important actions like ticket registration and merchandise."
+        }
+      ]
+    },
+    "solution": {
+      "heading": {
+        "text": "Approach",
+        "style": {
+          "textColor": "#573D0A"
+        }
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "data": "We built the website around the existing <b>illustrations, imagery, color palette, and typography</b>, using them as the foundation for a consistent visual language. Large imagery and warm earthy colors create an immersive atmosphere, while structured layouts, clear CTAs, and focused content sections make key information easy to find. Each page was designed with a specific purpose—from introducing the School Tour to guiding users through <b>event details, ticket registration, and merchandise.</b>"
+        }
+      ]
+    },
+    "style": {
+      "backgroundColor": "linear-gradient(180deg,rgba(234, 227, 157, 1) 0%, rgba(255, 255, 255, 1) 100%)",
+      "paddingTop": "80px"
+    }
+  },
+  "userflow": null,
+  "sitemap": null,
+  "wireframes": {
+    "heading": {
+      "text": "Wireframes",
+      "style": {
+        "textColor": "#EAE39D"
+      }
+    },
+    "content": {
+      "text": "A low-fidelity foundation used to define the page structure, content hierarchy, and key user flows before moving into the final visual design.",
+      "style": {
+        "textColor": "#fff"
+      }
+    },
+    "img": {
+      "url": "/uploads/vu-tru-co-bay-school-tour/wireframe.png",
+      "style": {
+        "borderRadius": "24px"
+      }
+    },
+    "style": {
+      "backgroundColor": "linear-gradient(45deg,rgba(44, 34, 6, 1) 0%,rgba(76, 58, 10, 1) 100%)",
+      "paddingBlock": "80px"
+    }
+  },
+  "styleGuide": {
+    "heading": {
+      "text": "Style Guide",
+      "style": {
+        "textColor": "#573D0A"
+      }
+    },
+    "content": "The style guide establishes a consistent visual language by defining the core design elements, including colors, typography, components, spacing, and layout principles used throughout the interface.",
+    "headerStyle": {
+      "textColor": "#573D0A",
+      "backgroundColor": "#F2EAD9",
+      "borderColor": "#E4D6B4"
+    },
+    "colors": {
+      "heading": "Colors",
+      "content": "A warm, earthy color palette inspired by the concert's cultural and nostalgic atmosphere. Deep browns and olive tones create a grounded foundation, while <b>Dark Goldenrod</b> and <b>Vanilla Custard</b> add warmth and contrast for highlights, typography, and interactive elements.",
+      "img": {
+        "url": "/uploads/vu-tru-co-bay-school-tour/colors.png",
+        "style": null
+      }
+    },
+    "typography": {
+      "heading": "Typography",
+      "content": "The typography pairs <b>Fraunces</b> as the display typeface with <b>Lexend</b> for body text, creating a balance between the concert's nostalgic, cultural character and a clean, modern reading experience. Fraunces adds an expressive and artistic feel to headings, while Lexend keeps supporting content clear and accessible.",
+      "img": {
+        "url": "/uploads/vu-tru-co-bay-school-tour/typography.png",
+        "style": null
+      }
+    },
+    "components": null,
+    "grids": {
+      "heading": "Grids",
+      "content": "The layout is built on a responsive grid system, using a 12-column grid for desktop and a 4-column grid for mobile. This approach ensures consistent alignment, clear content hierarchy, and seamless scalability, allowing content-heavy sections to adapt naturally across different screen sizes.",
+      "desktop": {
+        "heading": "Desktop",
+        "content": "A responsive 12-column grid was used to create flexible layouts that scale across different screen sizes. Consistent column widths and gutter spacing help maintain alignment, structure, and visual balance throughout the design.",
+        "img": {
+          "url": "/uploads/vu-tru-co-bay-school-tour/grid-desktop.png",
+          "style": null
+        }
+      },
+      "mobile": {
+        "heading": "Mobile",
+        "content": "A 4-column grid system provides a structured foundation for mobile layouts while maximizing limited screen space. Consistent column widths and spacing help maintain visual hierarchy, readability, and effortless content scanning.",
+        "img": {
+          "url": "/uploads/vu-tru-co-bay-school-tour/grid-mobile.png",
+          "style": null
+        }
+      }
+    }
+  },
+  "result": {
+    "heading": {
+      "text": "Final Design",
+      "style": {
+        "textColor": "#EAE39D"
+      }
+    },
+    "content": {
+      "text": "The final design translates the concert’s visual identity into an immersive and cohesive website, combining cultural imagery, warm colors, expressive typography, and clear user-focused layouts.",
+      "style": {
+        "textColor": "#fff"
+      }
+    },
+    "img": {
+      "url": "/uploads/vu-tru-co-bay-school-tour/carousel-4.png",
+      "style": {
+        "borderRadius": "24px"
+      }
+    },
+    "button": {
+      "label": "View on Figma",
+      "href": "https://www.figma.com/proto/tM5jKpdMVizHWXZc5FHO7v/VTCB-School-Tour---Website-UI-Design?node-id=476-711&p=f&viewport=284%2C199%2C0.16&t=Scuzs1Ksrr52jU0J-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=476%3A711&page-id=476%3A340",
+      "style": {
+        "backgroundColor": "#B28F3E",
+        "textColor": "#EAE39D"
+      }
+    },
+    "style": {
+      "backgroundColor": "linear-gradient(45deg,rgba(44, 34, 6, 1) 0%,rgba(76, 58, 10, 1) 100%)",
+      "paddingBlock": "80px"
+    }
+  },
+  "anatomy": [
+    {
+      "heading": {
+        "text": "Homepage",
+        "style": {
+          "textColor": "#573D0A"
+        }
+      },
+      "content": "The design focuses on introducing the “Vũ Trụ Cò Bay - School Tour” concept, connecting Phương Mỹ Chi's music with Vietnamese cultural storytelling. The visual direction uses a nostalgic, theatrical atmosphere with traditional imagery, warm earthy tones, and handcrafted typography.",
+      "img": {
+        "url": "/uploads/vu-tru-co-bay-school-tour/anatomy-homepage.png",
+        "style": null
+      }
+    },
+    {
+      "heading": {
+        "text": "Ticket Registration Page",
+        "style": {
+          "textColor": "#573D0A"
+        }
+      },
+      "content": "The Ticket Registration page is designed to guide users from discovering the available tour locations to completing their ticket registration. The page creates a sense of anticipation through a countdown timer, clearly presents upcoming locations, and finishes with a focused registration form that makes the reservation process straightforward and accessible.",
+      "img": {
+        "url": "/uploads/vu-tru-co-bay-school-tour/anatomy-ticket.png",
+        "style": null
+      }
+    },
+    {
+      "heading": {
+        "text": "Merchandise Page",
+        "style": {
+          "textColor": "#573D0A"
+        }
+      },
+      "content": "A dedicated merchandise page that presents the “Vũ Trụ Cò Bay” collection through a strong visual layout, highlighting the products and encouraging visitors to purchase.",
+      "img": {
+        "url": "/uploads/vu-tru-co-bay-school-tour/anatomy-merch.png",
+        "style": null
+      }
+    }
+  ],
+  "credits": {
+    "heading": {
+      "text": "Credits",
+      "style": {
+        "textColor": "#573D0A"
+      }
+    },
+    "content": [
+      {
+        "type": "paragraph",
+        "data": "The visual assets and creative materials used in this project were provided by the <b>creative team behind Vũ Trụ Cò Bay School Tour</b>. Typography was sourced from <b>Google Fonts</b>, while the presentation mockup was sourced from <b>Mockup World.</b>"
+      }
+    ],
+    "style": {
+      "backgroundColor": "#F2EAD9",
+      "borderColor": "#E4D6B4"
+    }
+  }
+}

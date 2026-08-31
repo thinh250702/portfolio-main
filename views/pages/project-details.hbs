@@ -1,7 +1,7 @@
 <section class="pt-(--header-height) pb-10" data-style="{{style hero.style}}">
   <div class="container mx-auto pt-10 md:pt-20">
     <div class="bs-row justify-between">
-      <div class="bs-col-12 lg:bs-col-6">
+      <div class="bs-col-12 lg:bs-col-6" data-reveal="group" data-trigger="load" data-delay="0.2">
         <div class="flex gap-2 mb-2">
           {{#each hero.category}}
             <a href="{{url}}" class="badge bg-white border-gray-200">{{name}}</a>
@@ -15,7 +15,7 @@
         </a>
       </div>
       <div class="bs-col-12 lg:bs-col-5 xl:bs-col-4 mt-10 lg:mt-0 flex flex-col justify-end">
-        <ul class="metadata-list ">
+        <ul class="metadata-list" data-reveal="group" data-trigger="load" data-delay="0.2">
           {{#each hero.metadata}}
             <li class="metadata-item">
               <span class="metadata-title">{{key}}</span>
@@ -29,7 +29,7 @@
 </section>
 <section >
   <div class="carousel-wrapper overflow-hidden relative" data-carousel>
-    <ul class="carousel-track flex items-center" data-carousel-track>
+    <ul class="carousel-track flex items-center" data-carousel-track data-reveal data-trigger="load" data-delay="0.5">
       {{#each carousel}}
         <li class="carousel-item">
           <img src="{{this}}" alt="" crossorigin="anonymous">
@@ -48,10 +48,10 @@
   <div class="container mx-auto">
     <div class="bs-row mb-10">
       <div class="bs-col-12 lg:bs-col">
-        <h2 class="font-medium tracking-tight text-left mb-3 lg:mb-0" data-style="{{style overview.heading.style}}">{{overview.heading.text}}</h2>
+        <h2 class="font-medium tracking-tight text-left mb-3 lg:mb-0" data-style="{{style overview.heading.style}}" data-reveal>{{overview.heading.text}}</h2>
       </div>
       <div class="bs-col-12 lg:bs-col">
-        <div class="rich-text-block">
+        <div class="rich-text-block" data-reveal="group">
           {{#each overview.content}}
             {{renderBlock this}}
           {{/each}}
@@ -86,7 +86,7 @@
                   </dotlottie-wc>
                   <p class="chat-skeleton-text">Creating your image...</p>
                 </div>
-                <img src="{{overview.logoGen.imgUrl}}" alt="" class="chat-result-img absolute w-full h-full object-cover rounded-2xl lg:rounded-[20px]">
+                <img src="{{overview.logoGen.img.url}}" data-style="{{style overview.logoGen.img.style}}" alt="" class="chat-result-img absolute w-full h-full object-cover rounded-2xl lg:rounded-[20px]">
                 <div class="chat-skeleton-image absolute w-full h-full rounded-2xl lg:rounded-[20px] origin-top-left"></div>
               </div>
               <div class="chat-result-btn mt-2 lg:mt-3">
@@ -141,25 +141,25 @@
         </div>
       </div>
       <div class="bs-col lg:bs-col-8">
-        <p class="text-center mt-5">{{overview.logoGen.description}}</p>
+        <p class="text-center mt-5" data-text-reveal data-split="lines">{{overview.logoGen.description}}</p>
       </div>
     </div>
     {{/if}}
     <div class="bs-row justify-center">
       <div class="bs-col-12">
-        <img src="{{overview.branding.imgUrl}}" alt="" class=" w-full object-cover">
+        <img src="{{overview.branding.img.url}}" alt="" class="w-full object-cover" data-style="{{style overview.branding.img.style}}" data-reveal>
       </div>
       <div class="bs-col lg:bs-col-8">
-        <p class="text-center mt-5">{{overview.branding.description}}</p>
+        <p class="text-center mt-5" data-text-reveal data-split="lines">{{overview.branding.description}}</p>
       </div>
     </div>
   </div>
 </section>
 <section class="pt-10" data-style="{{style overview.role.style}}" data-toc-title="{{overview.role.heading.text}}">
   <div class="container mx-auto">
-    <div class="bs-row">
+    <div class="bs-row" data-reveal="group">
       <div class="bs-col-12 lg:bs-col bs-order-last lg:bs-order-first mt-10 lg:mt-0 flex flex-col justify-end">
-        <img src="{{overview.role.imgUrl}}" alt="" class="aspect-4/3 w-full">
+        <img src="{{overview.role.img.url}}" data-style="{{style overview.role.img.style}}" alt="" class="aspect-4/3 w-full">
       </div>
       <div class="bs-col-12 lg:bs-col bs-order-first lg:bs-order-last flex flex-col justify-center gap-4 lg:pl-10 lg:pb-10">
         <h3 class="font-medium tracking-tight" data-style="{{style overview.role.heading.style}}">{{overview.role.heading.text}}</h3>
@@ -175,38 +175,40 @@
 <section data-style="{{style process.style}}" data-toc-title="{{process.heading.text}}">
   <div class="container mx-auto">
     <div class="bs-row justify-center">
-      <div class="bs-col-12 lg:bs-col-6 mb-10">
+      <div class="bs-col-12 lg:bs-col-6 mb-10" data-reveal="group">
         <h2 class="text-center font-medium tracking-tight mb-4" data-style="{{style process.heading.style}}">{{process.heading.text}}</h2>
         <p class="text-center" data-style="{{style process.content.style}}">{{process.content.text}}</p>
       </div>
       <div class="bs-col-12">
-        <img src="{{process.imgUrl}}" alt="" class=" w-full object-cover">
+        <img src="{{process.img.url}}" data-style="{{style process.img.style}}" alt="" class=" w-full object-cover" data-reveal>
       </div>
     </div>
   </div>
 </section>
+{{#if research}}
 <section data-style="{{style research.style}}" data-toc-title="{{research.heading.text}}">
   <div class="container mx-auto">
     <div class="bs-row justify-center">
-      <div class="bs-col-12 lg:bs-col-6 mb-10">
+      <div class="bs-col-12 lg:bs-col-6 mb-10" data-reveal="group">
         <h2 class="text-center font-medium tracking-tight mb-4" data-style="{{style research.heading.style}}">{{research.heading.text}}</h2>
         <p class="text-center" data-style="{{style research.content.style}}">{{research.content.text}}</p>
       </div>
       <div class="bs-col-12">
-        <img src="{{research.imgUrl}}" alt="" class=" w-full object-cover">
+        <img src="{{research.img.url}}" data-style="{{style research.img.style}}" alt="" class=" w-full object-cover" data-reveal>
       </div>
     </div>
   </div>
 </section>
+{{/if}}
 <section data-style="{{style probSol.style}}" data-toc-title="{{probSol.heading.text}}">
   <div class="container mx-auto">
     <div class="bs-row justify-center">
-      <div class="bs-col-12 lg:bs-col-6 mb-10">
+      <div class="bs-col-12 lg:bs-col-6 mb-10" data-reveal="group">
         <h2 class="text-center font-medium tracking-tight mb-4" data-style="{{style probSol.heading.style}}">{{probSol.heading.text}}</h2>
         <p class="text-center">{{probSol.content}}</p>
       </div>
     </div>
-    <div class="bs-row justify-center relative">
+    <div class="bs-row justify-center relative" data-reveal="group">
       <div class="bs-col-12 lg:bs-col bs-order-1 pb-10">
         <h3 class="font-medium tracking-tight mb-3" data-style="{{style probSol.problem.heading.style}}">{{probSol.problem.heading.text}}</h3>
         <div class="rich-text-block">
@@ -216,7 +218,7 @@
         </div>
       </div>
       <div class="bs-col-12 lg:bs-col-5 bs-order-3 lg:bs-order-2 mx-6 flex flex-col justify-end">
-        <img src="{{probSol.imgUrl}}" alt="" class="w-full">
+        <img src="{{probSol.img.url}}" data-style="{{style probSol.img.style}}" alt="" class="w-full">
       </div>
       <div class="bs-col-12 lg:bs-col bs-order-2 lg:bs-order-3 pb-10">
         <h3 class="font-medium tracking-tight mb-3" data-style="{{style probSol.solution.heading.style}}">{{probSol.solution.heading.text}}</h3>
@@ -233,12 +235,12 @@
 <section data-toc-title="User Flow">
   <div class="container mx-auto">
     <div class="bs-row justify-center">
-      <div class="bs-col-12 lg:bs-col-6 mb-10">
+      <div class="bs-col-12 lg:bs-col-6 mb-10" data-reveal="group">
         <h2 class="text-center font-medium tracking-tight mb-4">User Flow</h2>
         <p class="text-center">Lorem ipsum dolor sit amet consectetur. Sed accumsan nunc donec nec aliquet egestas ullamcorper nullam. Sem vulputate arcu scelerisque morbi adipiscing id et mattis non.</p>
       </div>
       <div class="bs-col-12">
-        <img src="/uploads/project-img.png" alt="" class=" w-full object-cover">
+        <img src="/uploads/project-img.png" alt="" class=" w-full object-cover" data-reveal>
       </div>
     </div>
   </div>
@@ -248,12 +250,12 @@
 <section data-style="{{style sitemap.style}}" data-toc-title="{{sitemap.heading.text}}">
   <div class="container mx-auto">
     <div class="bs-row justify-center">
-      <div class="bs-col-12 lg:bs-col-6 mb-10">
+      <div class="bs-col-12 lg:bs-col-6 mb-10" data-reveal="group">
         <h2 class="text-center font-medium tracking-tight mb-4" data-style="{{style sitemap.heading.style}}">{{sitemap.heading.text}}</h2>
         <p class="text-center" data-style="{{style sitemap.content.style}}">{{sitemap.content.text}}</p>
       </div>
       <div class="bs-col-12">
-        <img src="{{sitemap.imgUrl}}" alt="" class=" w-full object-cover">
+        <img src="{{sitemap.img.url}}" alt="" class=" w-full object-cover" data-style="{{style sitemap.img.style}}" data-reveal>
       </div>
     </div>
   </div>
@@ -262,12 +264,12 @@
 <section data-style="{{style wireframes.style}}" data-toc-title="{{wireframes.heading.text}}">
   <div class="container mx-auto">
     <div class="bs-row justify-center">
-      <div class="bs-col-12 lg:bs-col-6 mb-10">
+      <div class="bs-col-12 lg:bs-col-6 mb-10" data-reveal="group">
         <h2 class="text-center font-medium tracking-tight mb-4" data-style="{{style wireframes.heading.style}}">{{wireframes.heading.text}}</h2>
         <p class="text-center" data-style="{{style wireframes.content.style}}">{{wireframes.content.text}}</p>
       </div>
       <div class="bs-col-12">
-        <img src="{{wireframes.imgUrl}}" alt="" class=" w-full object-cover">
+        <img src="{{wireframes.img.url}}" alt="" class="w-full object-cover" data-style="{{style wireframes.img.style}}" data-reveal>
       </div>
     </div>
   </div>
@@ -275,17 +277,17 @@
 <section class="py-20" data-toc-title="{{styleGuide.heading.text}}">
   <div class="container mx-auto">
     <div class="bs-row justify-center">
-      <div class="bs-col-12 lg:bs-col-6 mb-10">
+      <div class="bs-col-12 lg:bs-col-6 mb-10" data-reveal="group">
         <h2 class="text-center font-medium tracking-tight mb-4" data-style="{{style styleGuide.heading.style}}">{{styleGuide.heading.text}}</h2>
         <p class="text-center">{{styleGuide.content}}</p>
       </div>
     </div>
-    <div class="bs-row mb-10">
+    <div class="bs-row mb-10" data-reveal="group">
       <div class="bs-col-12 mb-10">
         <div class="style-guide-header" data-style="{{style styleGuide.headerStyle}}">
           <div class="style-guide__main">
             <h3>{{styleGuide.colors.heading}}</h3>
-            <p>{{styleGuide.colors.content}}</p>
+            <p>{{{styleGuide.colors.content}}}</p>
           </div>
           <div class="style-guide__decor">
             <span>{{styleGuide.heading.text}} /</span>
@@ -294,15 +296,15 @@
         </div>
       </div>
       <div class="bs-col-12">
-        <img src="{{styleGuide.colors.imgUrl}}" alt="" class=" w-full object-cover">
+        <img src="{{styleGuide.colors.img.url}}" data-style="{{style styleGuide.colors.img.style}}" alt="" class=" w-full object-cover">
       </div>
     </div>
-    <div class="bs-row mb-10">
+    <div class="bs-row mb-10" data-reveal="group">
       <div class="bs-col-12 mb-10">
         <div class="style-guide-header" data-style="{{style styleGuide.headerStyle}}">
           <div class="style-guide__main">
             <h3>{{styleGuide.typography.heading}}</h3>
-            <p>{{styleGuide.typography.content}}</p>
+            <p>{{{styleGuide.typography.content}}}</p>
           </div>
           <div class="style-guide__decor">
             <span>{{styleGuide.heading.text}} /</span>
@@ -311,11 +313,12 @@
         </div>
       </div>
       <div class="bs-col-12">
-        <img src="{{styleGuide.typography.imgUrl}}" alt="" class=" w-full object-cover">
+        <img src="{{styleGuide.typography.img.url}}" data-style="{{style styleGuide.typography.img.style}}" alt="" class=" w-full object-cover">
       </div>
     </div>
+    {{#if styleGuide.components}}
     <div class="bs-row mb-10">
-      <div class="bs-col-12 mb-10">
+      <div class="bs-col-12 mb-10" data-reveal>
         <div class="style-guide-header" data-style="{{style styleGuide.headerStyle}}">
           <div class="style-guide__main">
             <h3>{{styleGuide.components.heading}}</h3>
@@ -327,11 +330,11 @@
           </div>
         </div>
       </div>
-      <ul class="component-list">
+      <ul class="component-list" data-reveal="group">
         {{#each styleGuide.components.items}}
         <li class="component-item ">
           <div class="component-thumbnail ">
-            <img src="{{imgUrl}}" alt="">
+            <img src="{{img.url}}" alt="">
           </div>
           <div class="component-body ">
             <h4>{{name}}</h4>
@@ -340,8 +343,9 @@
         {{/each}}
       </ul>
     </div>
+    {{/if}}
     <div class="bs-row">
-      <div class="bs-col-12 mb-10">
+      <div class="bs-col-12 mb-10" data-reveal>
         <div class="style-guide-header" data-style="{{style styleGuide.headerStyle}}">
           <div class="style-guide__main">
             <h3>{{styleGuide.grids.heading}}</h3>
@@ -353,9 +357,9 @@
           </div>
         </div>
       </div>
-      <div class="bs-row px-0 gap-x-6 pb-10">
+      <div class="bs-row px-0 gap-x-6 pb-10" data-reveal="group">
         <div class="bs-col-12 md:bs-col">
-          <img src="{{styleGuide.grids.desktop.imgUrl}}" alt="" class="w-full object-cover mb-6 md:mb-0">
+          <img src="{{styleGuide.grids.desktop.img.url}}" data-style="{{style styleGuide.grids.desktop.img.style}}" alt="" class="w-full object-cover mb-6 md:mb-0">
         </div>
         <div class="bs-col-12 md:bs-col flex flex-col justify-center">
           <div class="flex items-center">
@@ -365,7 +369,7 @@
           <p class="mt-3">{{styleGuide.grids.desktop.content}}</p>
         </div>
       </div>
-      <div class="bs-row px-0 gap-x-6">
+      <div class="bs-row px-0 gap-x-6" data-reveal="group">
         <div class="bs-col-12 md:bs-col bs-order-last md:bs-order-first flex flex-col justify-center">
           <div class="flex items-center">
             <i class="icon-mobile text-[28px]"></i>
@@ -374,7 +378,7 @@
           <p class="mt-3">{{styleGuide.grids.mobile.content}}</p>
         </div>
         <div class="bs-col-12 md:bs-col bs-order-first md:bs-order-last">
-          <img src="{{styleGuide.grids.mobile.imgUrl}}" alt="" class="w-full object-cover mb-6 md:mb-0">
+          <img src="{{styleGuide.grids.mobile.img.url}}" data-style="{{style styleGuide.grids.mobile.img.style}}" alt="" class="w-full object-cover mb-6 md:mb-0">
         </div>
       </div>
     </div>
@@ -383,7 +387,7 @@
 <section data-style="{{style result.style}}" data-toc-title="{{result.heading.text}}">
   <div class="container mx-auto">
     <div class="bs-row justify-center">
-      <div class="bs-col-12 lg:bs-col-6 mb-10">
+      <div class="bs-col-12 lg:bs-col-6 mb-10" data-reveal="group">
         <h2 class="text-center font-medium tracking-tight mb-4" data-style="{{style result.heading.style}}">{{result.heading.text}}</h2>
         <p class="text-center mb-6" data-style="{{style result.content.style}}">{{result.content.text}}</p>
         <div class="flex justify-center">
@@ -394,7 +398,7 @@
         </div>
       </div>
       <div class="bs-col-12">
-        <img src="{{result.imgUrl}}" alt="" class="w-full object-cover">
+        <img src="{{result.img.url}}" alt="" class="w-full object-cover" data-style="{{style result.img.style}}" data-reveal>
       </div>
     </div>
   </div>
@@ -403,12 +407,12 @@
   <div class="container mx-auto">
     {{#each anatomy}}
     <div class="bs-row justify-center mb-20">
-      <div class="bs-col-12 lg:bs-col-6 mb-10">
+      <div class="bs-col-12 lg:bs-col-6 mb-10" data-reveal="group">
         <h3 class="text-center font-medium tracking-tight mb-4" data-style="{{style heading.style}}">{{heading.text}}</h3>
         <p class="text-center">{{content}}</p>
       </div>
       <div class="bs-col-12">
-        <img src="{{imgUrl}}" alt="" class=" w-full object-cover">
+        <img src="{{img.url}}" alt="" class="w-full object-cover" data-style="{{style img.style}}" data-reveal>
       </div>
     </div>
     {{/each}}
@@ -418,7 +422,7 @@
   <div class="container mx-auto">
     <div class="bs-row justify-center">
       <div class="bs-col-12">
-        <div class="p-8 border rounded-3xl" data-style="{{style credits.style}}">
+        <div class="p-8 border rounded-3xl" data-style="{{style credits.style}}" data-reveal>
           <h2 class="font-medium tracking-tight mb-2" data-style="{{style credits.heading.style}}">{{credits.heading.text}}</h2>
           <div class="rich-text-block">
             {{#each credits.content}}
