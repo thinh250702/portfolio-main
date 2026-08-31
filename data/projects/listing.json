@@ -32,5 +32,22 @@
     "name": "SOLENZA",
     "description": "A premium furniture website designed to reflect the brand's sophisticated identity through clean layouts, refined typography, and an intuitive browsing experience that connects inspiration with commerce.",
     "slug": "solenza"
+  },
+  {
+    "thumbnail": "/uploads/vu-tru-co-bay-school-tour/carousel-1.png",
+    "category": [
+      {
+        "name": "UI Design",
+        "url": "#"
+      },
+      {
+        "name": "Landing Page",
+        "url": "#"
+      }
+    ],
+    "year": "2024",
+    "name": "Vũ Trụ Cò Bay School Tour Landing Page",
+    "description": "A vibrant event website for “Vũ Trụ Cò Bay” School Tour, designed to showcase Phương Mỹ Chi’s cultural music journey, provide event information, support ticket registration, and promote exclusive merchandise.",
+    "slug": "vu-tru-co-bay-school-tour"
   }
 ]

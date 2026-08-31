@@ -78,16 +78,25 @@
     ],
     "logoGen": {
       "prompt": "Design a modern, minimalist logo for a coffee shop. Create a unique combination mark with an abstract geometric symbol on the left and custom typography on the right. The logo should be modern, aesthetic, young and fresh vibe. Use a flat vector style with a cohesive color palette of warm color.",
-      "imgUrl": "/uploads/good-sips-coffee/result-img.webp",
+      "img": {
+        "url": "/uploads/good-sips-coffee/result-img.webp",
+        "style": null
+      },
       "warning": "BrandGen AI can make mistakes. Check important info.",
       "description": "To showcase the design process while respecting client confidentiality, the branding presented in this case study—including the logo, color system, and certain visual elements—has been recreated using AI-generated assets."
     },
     "branding": {
-      "imgUrl": "/uploads/good-sips-coffee/branding.webp",
+      "img": {
+        "url": "/uploads/good-sips-coffee/branding.webp",
+        "style": null
+      },
       "description": "GOOD SIPS embraces a bold and modern visual identity that reflects its youthful and energetic brand spirit. Rounded typography, cheerful illustrations, and warm earthy colors work together to create a memorable and inviting coffee experience."
     },
     "role": {
-      "imgUrl": "/uploads/good-sips-coffee/role.webp",
+      "img": {
+        "url": "/uploads/good-sips-coffee/role.webp",
+        "style": null
+      },
       "heading": {
         "text": "My Role",
         "style": {
@@ -130,7 +139,10 @@
         "textColor": "#fff"
       }
     },
-    "imgUrl": "/uploads/good-sips-coffee/process.webp",
+    "img": {
+      "url": "/uploads/good-sips-coffee/process.webp",
+      "style": null
+    },
     "style": {
       "backgroundColor": "#b31f01",
       "paddingBlock": "80px"
@@ -149,7 +161,10 @@
         "textColor": "#000"
       }
     },
-    "imgUrl": "/uploads/good-sips-coffee/moodboard.webp",
+    "img": {
+      "url": "/uploads/good-sips-coffee/moodboard.webp",
+      "style": null
+    },
     "style": {
       "paddingBlock": "80px"
     }
@@ -162,7 +177,10 @@
       }
     },
     "content": "Identifying user and business challenges helped shape design decisions that balance promotional content with a seamless browsing experience.",
-    "imgUrl": "/uploads/good-sips-coffee/problem-solution.webp",
+    "img": {
+      "url": "/uploads/good-sips-coffee/problem-solution.webp",
+      "style": null
+    },
     "problem": {
       "heading": {
         "text": "Problem",
@@ -226,7 +244,10 @@
         "textColor": "#fff"
       }
     },
-    "imgUrl": "/uploads/good-sips-coffee/wireframes.webp",
+    "img": {
+      "url": "/uploads/good-sips-coffee/wireframes.webp",
+      "style": null
+    },
     "style": {
       "backgroundColor": "#b31f01",
       "paddingBlock": "80px"
@@ -248,12 +269,18 @@
     "colors": {
       "heading": "Colors",
       "content": "The color palette blends warm coffee-inspired tones with clean neutrals to create a welcoming and modern brand identity. Bold red draws attention to key actions, while soft cream and neutral shades provide balance, warmth, and readability throughout the interface.",
-      "imgUrl": "/uploads/good-sips-coffee/colors.webp"
+      "img": {
+        "url": "/uploads/good-sips-coffee/colors.webp",
+        "style": null
+      }
     },
     "typography": {
       "heading": "Typography",
       "content": "The typography system pairs Darumadrop One for headings with Plus Jakarta Sans for body text, creating a balance between playful personality and modern readability. This combination reinforces the brand's youthful character while ensuring clear communication across the interface.",
-      "imgUrl": "/uploads/good-sips-coffee/typography.webp"
+      "img": {
+        "url": "/uploads/good-sips-coffee/typography.webp",
+        "style": null
+      }
     },
     "components": {
       "heading": "Components",
@@ -261,15 +288,24 @@
       "items": [
         {
           "name": "Button",
-          "imgUrl": "/uploads/good-sips-coffee/component-1.webp"
+          "img": {
+            "url": "/uploads/good-sips-coffee/component-1.webp",
+            "style": null
+          }
         },
         {
           "name": "Product Card",
-          "imgUrl": "/uploads/good-sips-coffee/component-3.webp"
+          "img": {
+            "url": "/uploads/good-sips-coffee/component-3.webp",
+            "style": null
+          }
         },
         {
           "name": "Category Card",
-          "imgUrl": "/uploads/good-sips-coffee/component-2.webp"
+          "img": {
+            "url": "/uploads/good-sips-coffee/component-2.webp",
+            "style": null
+          }
         }
       ]
     },
@@ -279,12 +315,18 @@
       "desktop": {
         "heading": "Desktop",
         "content": "A responsive 12-column grid was used to create flexible layouts that scale across different screen sizes. Consistent column widths and gutter spacing help maintain alignment, structure, and visual balance throughout the design.",
-        "imgUrl": "/uploads/good-sips-coffee/grid-desktop.webp"
+        "img": {
+          "url": "/uploads/good-sips-coffee/grid-desktop.webp",
+          "style": null
+        }
       },
       "mobile": {
         "heading": "Mobile",
         "content": "A 4-column grid system provides a structured foundation for mobile layouts while maximizing limited screen space. Consistent column widths and spacing help maintain visual hierarchy, readability, and effortless content scanning.",
-        "imgUrl": "/uploads/good-sips-coffee/grid-mobile.webp"
+        "img": {
+          "url": "/uploads/good-sips-coffee/grid-mobile.webp",
+          "style": null
+        }
       }
     }
   },
@@ -301,7 +343,10 @@
         "textColor": "#fff"
       }
     },
-    "imgUrl": "/uploads/good-sips-coffee/final-design.webp",
+    "img": {
+      "url": "/uploads/good-sips-coffee/final-design.webp",
+      "style": null
+    },
     "button": {
       "label": "View on Figma",
       "href": "https://www.figma.com/proto/fYaFbyD6OPxA4QYKCTzSfi/GOOD-SIPS-COFFEE?node-id=6001-4915&viewport=713%2C274%2C0.14&t=Cr5qtrlLVzxRz1S2-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=6001%3A4915&page-id=1%3A4",
@@ -324,7 +369,10 @@
         }
       },
       "content": "Rather than presenting isolated promotions, the landing page unfolds as a guided journey - from seasonal highlights and product exploration to exclusive offers, app downloads, and store discovery. Consistent branding, reusable components, and clear visual hierarchy help maintain a cohesive experience across the entire page.",
-      "imgUrl": "/uploads/good-sips-coffee/anatomy.webp"
+      "img": {
+        "url": "/uploads/good-sips-coffee/anatomy.webp",
+        "style": null
+      }
     }
   ],
   "credits": {
