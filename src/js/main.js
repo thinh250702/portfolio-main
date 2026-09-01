@@ -21,6 +21,7 @@ import CurrentTime from "./modules/CurrentTime.js";
 import SmoothScroll from "./modules/SmoothScroll.js";
 import ScrollToTop from "./modules/ScrollToTop.js";
 import TextRoll from "./modules/TextRoll.js";
+import DemoScroller from "./modules/DemoScroller.js";
 
 $(async function () {
   
