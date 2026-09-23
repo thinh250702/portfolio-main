@@ -1,9 +1,8 @@
 @layer components {
   /* Project Metadata */
   .metadata-list {
-    @apply border-b border-black/10;
     & > .metadata-item {
-      @apply flex justify-between items-center py-4 border-t border-black/10;
+      @apply flex justify-between items-center py-4 border-t border-black/10 last:border-b;
       & > .metadata-title {
         @apply uppercase text-black/60 body-sm;
       }

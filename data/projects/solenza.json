@@ -318,28 +318,28 @@
           }
         },
         {
-          "name": "Category Card",
+          "name": "Input Field",
           "img": {
             "url": "/uploads/solenza/component-input.webp",
             "style": null
           }
         },
         {
-          "name": "Button",
+          "name": "Timeline",
           "img": {
             "url": "/uploads/solenza/component-timeline.webp",
             "style": null
           }
         },
         {
-          "name": "Product Card",
+          "name": "Pagination",
           "img": {
             "url": "/uploads/solenza/component-indicator.webp",
             "style": null
           }
         },
         {
-          "name": "Category Card",
+          "name": "Accordion",
           "img": {
             "url": "/uploads/solenza/component-accordion.webp",
             "style": null
